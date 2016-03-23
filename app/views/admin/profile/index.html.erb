@@ -1,0 +1,303 @@
+<!-- Main navbar -->
+    <%= render "/admin/main/navbar" %>
+<!-- /main navbar -->
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main sidebar -->
+        <div class="sidebar sidebar-main">
+            <div class="sidebar-content">
+
+                <!-- User menu -->
+                    <%= render '/admin/main/user_menu' %>
+                <!-- /user menu -->
+                
+                <!-- Main navigation -->
+                <div class="sidebar-category sidebar-category-visible">
+                    <div class="category-content no-padding">
+                        <ul class="navigation navigation-main navigation-accordion">
+
+                            <!-- Main menu-->
+                                <%= render "/admin/main/main_menu" %>
+                            <!-- /main menu -->
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- /main navigation -->
+
+            </div>
+        </div>
+        <!-- /main sidebar -->
+
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Page header -->
+            <div class="page-header">
+                <div class="page-header-content">
+                    <div class="page-title">
+                        <h4><span class="text-semibold">Home - Dashboard</span></h4>
+                    </div>
+                </div>
+
+                <div class="breadcrumb-line">
+                    <ul class="breadcrumb">
+                        <li><%= link_to "<i class='icon-home2 position-left'></i> Home".html_safe, { controller: "main", action: "index" } %></li>
+                        <li><%= link_to "Administrator", { controller: "profile", action: "index" } %></li>
+                        <li class="active">Viet Ren Joint Stock Company</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /page header -->
+            
+            <!-- Cover area -->
+            <div class="profile-cover">
+                <div class="profile-cover-img" style="background-image: url(/backend/assets/images/profile-cover.jpg)"></div>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#" class="profile-thumb">
+                            <img src="/backend/assets/images/placeholder.jpg" class="img-circle" alt="">
+                        </a>
+                    </div>
+
+                    <div class="media-body">
+                        <h1>Viet Ren Joint Stock Company <small class="display-block">Administrator</small></h1>
+                    </div>
+
+                    <div class="media-right media-middle">
+                        <ul class="list-inline list-inline-condensed no-margin-bottom text-nowrap">
+                            <li><a href="#" class="btn btn-default"><i class="icon-file-picture position-left"></i> Cover image</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /cover area -->
+
+
+            <!-- Content area -->
+            <div class="content">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h6 class="panel-title">Profile information</h6>
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="collapse"></a></li>
+                                        <li><a data-action="reload"></a></li>
+                                        <li><a data-action="close"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="tabbable tab-content-bordered">
+                                    <ul class="nav nav-tabs bg-primary">
+                                        <li class="active"><a href="#control-tab1" data-toggle="tab">Tiếng Việt</a></li>
+                                        <li><a href="#control-tab2" data-toggle="tab">English </a></li>
+                                    </ul>
+                                    
+                                    <form action="#">
+                                        <div class="tab-content">
+                                            <div class="tab-pane has-padding active" id="control-tab1">
+                                                <div class="panel-body">
+                                                    
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label>Name of the Company</label>
+                                                                    <input type="text" value="<%= @company.name_vn %>" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label>Address</label>
+                                                                    <input type="text" value="<%= @company.address_vn %>" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label>Phone</label>
+                                                                    <input type="text" value="<%= @company.phone %>" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label>Fax</label>
+                                                                    <input type="text" value="<%= @company.fax %>" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label>Company founding date</label>
+                                                                    <input type="text" value="<%= @company.founding_date %>" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label>Authorized capital</label>
+                                                                    <input type="text" value="<%= @company.authorized_capital.to_i %>" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <label>Chairman of the Board, General manager</label>
+                                                                    <input type="text" value="<%= @company.general_manager_vn %>" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label>Email</label>
+                                                                    <input type="text" value="<%= @company.email %>" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label>Tax code</label>
+                                                                    <input type="text" value="<%= @company.tax_code.to_i %>" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <label>Business registration certificate No.</label>
+                                                                    <input type="text" value="<%= @company.business_registration_certificate_no.to_i %>" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label> Date of issue</label>
+                                                                    <input type="text" value="<%= @company.date_of_issue %>" class="form-control" placeholder="dd/mm/yyyy">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label>  Place of issue</label>
+                                                                    <input type="text" value="<%= @company.place_of_issue_vn %>" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label>Account</label>
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+    
+                                                                <div class="col-md-6">
+                                                                    <label>At</label>
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label>Account</label>
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+    
+                                                                <div class="col-md-6">
+                                                                    <label>At</label>
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label>Account</label>
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+    
+                                                                <div class="col-md-6">
+                                                                    <label>At</label>
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                </div>
+                                            </div>
+    
+                                            <div class="tab-pane has-padding" id="control-tab2">
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label>Name of the Company</label>
+                                                            <input type="text" value="<%= @company.name_en %>" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label>Address</label>
+                                                            <input type="text" value="<%= @company.address_en %>" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label>Chairman of the Board, General manager</label>
+                                                            <input type="text" value="<%= @company.general_manager_en %>" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label>  Place of issue</label>
+                                                            <input type="text" value="<%= @company.place_of_issue_en %>" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="text-right">
+                                                        <button type="submit" class="btn btn-primary margin-submit">Save <i class="icon-arrow-right14 position-right"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+                <!-- /tabs -->
+
+                
+                <!-- Footer -->
+                <div class="footer text-muted">
+                    <%= render "/admin/main/footer" %>
+                </div>
+                <!-- /footer -->
+
+            </div>
+            <!-- /content area -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+<!-- Theme JS files -->
+<%= javascript_include_tag '/backend/assets/js/plugins/forms/styling/uniform.min.js' %>
+<%= javascript_include_tag '/backend/assets/js/plugins/forms/selects/select2.min.js' %>
+<%= javascript_include_tag '/backend/assets/js/plugins/ui/moment/moment.min.js' %>
+<%= javascript_include_tag '/backend/assets/js/plugins/ui/fullcalendar/fullcalendar.min.js' %>
+<%= javascript_include_tag '/backend/assets/js/plugins/visualization/echarts/echarts.js' %>
+
+<%= javascript_include_tag '/backend/assets/js/core/app.js' %>
+<%= javascript_include_tag '/backend/assets/js/pages/user_pages_profile.js' %>
+<%= javascript_include_tag '/backend/assets/js/pages/colors_primary.js' %>
+<!-- /theme JS files -->

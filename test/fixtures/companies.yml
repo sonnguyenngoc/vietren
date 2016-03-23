@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_vn: MyString
+  name_en: MyString
+  address_vn: MyString
+  address_en: MyString
+  phone: MyString
+  fax: MyString
+  founding_date: 2016-03-23 09:49:24
+  authorized_capital: 9.99
+  general_manager_vn: MyString
+  general_manager_en: MyString
+  email: MyString
+  tax_code: 9.99
+  business_registration_certificate_no: 9.99
+  date_of_issue: MyString
+  place_of_issue_vn: MyString
+  place_of_issue_en: MyString
+
+two:
+  name_vn: MyString
+  name_en: MyString
+  address_vn: MyString
+  address_en: MyString
+  phone: MyString
+  fax: MyString
+  founding_date: 2016-03-23 09:49:24
+  authorized_capital: 9.99
+  general_manager_vn: MyString
+  general_manager_en: MyString
+  email: MyString
+  tax_code: 9.99
+  business_registration_certificate_no: 9.99
+  date_of_issue: MyString
+  place_of_issue_vn: MyString
+  place_of_issue_en: MyString

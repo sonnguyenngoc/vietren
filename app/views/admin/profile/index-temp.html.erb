@@ -1,0 +1,344 @@
+<!-- Main navbar -->
+    <%= render "/admin/main/navbar" %>
+<!-- /main navbar -->
+
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main sidebar -->
+        <div class="sidebar sidebar-main">
+            <div class="sidebar-content">
+
+                <!-- User menu -->
+                    <%= render '/admin/main/user_menu' %>
+                <!-- /user menu -->
+
+
+                <!-- Main navigation -->
+                <div class="sidebar-category sidebar-category-visible">
+                    <div class="category-content no-padding">
+                        <ul class="navigation navigation-main navigation-accordion">
+
+                            <!-- Main menu-->
+                                <%= render "/admin/main/main_menu" %>
+                            <!-- /main menu -->
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- /main navigation -->
+
+            </div>
+        </div>
+        <!-- /main sidebar -->
+
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Page header -->
+            <div class="page-header">
+                <div class="page-header-content">
+                    <div class="page-title">
+                        <h4><span class="text-semibold">Home - Dashboard</span></h4>
+                    </div>
+                </div>
+
+                <div class="breadcrumb-line">
+                    <ul class="breadcrumb">
+                        <li><%= link_to "<i class='icon-home2 position-left'></i> Home".html_safe, { controller: "main", action: "index" } %></li>
+                        <li><%= link_to "Administrator", { controller: "profile", action: "index" } %></li>
+                        <li class="active">Viet Ren Joint Stock Company</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /page header -->
+			
+				<!-- Cover area -->
+				<div class="profile-cover">
+					<div class="profile-cover-img" style="background-image: url(/backend/assets/images/profile-cover.jpg)"></div>
+					<div class="media">
+						<div class="media-left">
+							<a href="#" class="profile-thumb">
+								<img src="/backend/assets/images/placeholder.jpg" class="img-circle" alt="">
+							</a>
+						</div>
+
+						<div class="media-body">
+				    		<h1>Viet Ren Joint Stock Company <small class="display-block">Administrator</small></h1>
+						</div>
+
+						<div class="media-right media-middle">
+							<ul class="list-inline list-inline-condensed no-margin-bottom text-nowrap">
+								<li><a href="#" class="btn btn-default"><i class="icon-file-picture position-left"></i> Cover image</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /cover area -->
+
+
+				<!-- Toolbar -->
+				<div class="navbar navbar-default navbar-xs content-group">
+					<ul class="nav navbar-nav visible-xs-block">
+						<li class="full-width text-center"><a data-toggle="collapse" data-target="#navbar-filter"><i class="icon-menu7"></i></a></li>
+					</ul>
+
+					<div class="navbar-collapse collapse" id="navbar-filter">
+						<ul class="nav navbar-nav element-active-slate-400">
+							<li class="active"><a href="#settings" data-toggle="tab"><i class="icon-cog3 position-left"></i> Settings</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /toolbar -->
+            
+				<!-- Content area -->
+				<div class="content">
+
+					<!-- User profile -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="tabbable">
+								<div class="tab-content">
+									<div class="tab-pane fade in active" id="settings">
+
+										<!-- Profile info -->
+										<div class="panel panel-flat">
+											<div class="panel-heading">
+												<h6 class="panel-title">Profile information</h6>
+												<div class="heading-elements">
+													<ul class="icons-list">
+								                		<li><a data-action="collapse"></a></li>
+								                		<li><a data-action="reload"></a></li>
+								                		<li><a data-action="close"></a></li>
+								                	</ul>
+							                	</div>
+											</div>
+
+											<div class="panel-body">
+												<form action="#">
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-6">
+																<label>Name of the Company</label>
+																<input type="text" value="<%= @company.name_vn %>" class="form-control">
+															</div>
+															<div class="col-md-6">
+																<label>Address</label>
+																<input type="text" value="<%= @company.address_vn %>" class="form-control">
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-6">
+																<label>Phone</label>
+																<input type="text" value="<%= @company.phone %>" class="form-control">
+															</div>
+															<div class="col-md-6">
+																<label>Fax</label>
+																<input type="text" value="<%= @company.fax %>" class="form-control">
+															</div>
+														</div>
+													</div>
+													
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-6">
+																<label>Company founding date</label>
+																<input type="text" value="<%= @company.founding_date %>" class="form-control">
+															</div>
+															<div class="col-md-6">
+																<label>Authorized capital</label>
+																<input type="text" value="<%= @company.authorized_capital.to_i %>" class="form-control">
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-4">
+																<label>Chairman of the Board, General manager</label>
+																<input type="text" value="<%= @company.general_manager_vn %>" class="form-control">
+															</div>
+															<div class="col-md-4">
+																<label>Email</label>
+																<input type="text" value="<%= @company.email %>" class="form-control">
+															</div>
+															<div class="col-md-4">
+																<label>Tax code</label>
+																<input type="text" value="<%= @company.tax_code.to_i %>" class="form-control">
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-4">
+																<label>Business registration certificate No.</label>
+																<input type="text" value="<%= @company.business_registration_certificate_no.to_i %>" class="form-control">
+															</div>
+															<div class="col-md-4">
+									                            <label> Date of issue</label>
+																<input type="text" value="<%= @company.date_of_issue %>" class="form-control" placeholder="dd/mm/yyyy">
+															</div>
+															<div class="col-md-4">
+									                            <label>  Place of issue</label>
+																<input type="text" value="<%= @company.place_of_issue_vn %>" class="form-control">
+															</div>
+														</div>
+													</div>
+
+							                        <div class="form-group">
+							                        	<div class="row">
+							                        		<div class="col-md-6">
+																<label>Account</label>
+																<input type="text" class="form-control">
+							                        		</div>
+
+															<div class="col-md-6">
+																<label>At</label>
+							                                    <input type="text" class="form-control">
+															</div>
+							                        	</div>
+							                        </div>
+													
+													<div class="form-group">
+							                        	<div class="row">
+							                        		<div class="col-md-6">
+																<label>Account</label>
+																<input type="text" class="form-control">
+							                        		</div>
+
+															<div class="col-md-6">
+																<label>At</label>
+							                                    <input type="text" class="form-control">
+															</div>
+							                        	</div>
+							                        </div>
+													
+													<div class="form-group">
+							                        	<div class="row">
+							                        		<div class="col-md-6">
+																<label>Account</label>
+																<input type="text" class="form-control">
+							                        		</div>
+
+															<div class="col-md-6">
+																<label>At</label>
+							                                    <input type="text" class="form-control">
+															</div>
+							                        	</div>
+							                        </div>
+
+							                        <div class="text-right">
+							                        	<button type="submit" class="btn btn-primary">Save <i class="icon-arrow-right14 position-right"></i></button>
+							                        </div>
+												</form>
+											</div>
+										</div>
+										<!-- /profile info -->
+
+
+										<!-- Account settings -->
+										<div class="panel panel-flat">
+											<div class="panel-heading">
+												<h6 class="panel-title">Account settings</h6>
+												<div class="heading-elements">
+													<ul class="icons-list">
+								                		<li><a data-action="collapse"></a></li>
+								                		<li><a data-action="reload"></a></li>
+								                		<li><a data-action="close"></a></li>
+								                	</ul>
+							                	</div>
+											</div>
+
+											<div class="panel-body">
+												<form action="#">
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-6">
+																<label>Username</label>
+																<input type="text" value="Kopyov" readonly="readonly" class="form-control">
+															</div>
+
+															<div class="col-md-6">
+																<label>Current password</label>
+																<input type="password" value="password" readonly="readonly" class="form-control">
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-6">
+																<label>New password</label>
+																<input type="password" placeholder="Enter new password" class="form-control">
+															</div>
+
+															<div class="col-md-6">
+																<label>Repeat password</label>
+																<input type="password" placeholder="Repeat new password" class="form-control">
+															</div>
+														</div>
+													</div>
+
+							                        <div class="text-right">
+							                        	<button type="submit" class="btn btn-primary">Save <i class="icon-arrow-right14 position-right"></i></button>
+							                        </div>
+						                        </form>
+											</div>
+										</div>
+										<!-- /account settings -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /user profile -->
+
+
+					<!-- Footer -->
+					<div class="footer text-muted">
+						<%= render "/admin/main/footer" %>
+					</div>
+					<!-- /footer -->
+
+				</div>
+				<!-- /content area -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+<!-- Theme JS files -->
+<%= javascript_include_tag '/backend/assets/js/plugins/forms/styling/uniform.min.js' %>
+<%= javascript_include_tag '/backend/assets/js/plugins/forms/selects/select2.min.js' %>
+<%= javascript_include_tag '/backend/assets/js/plugins/ui/moment/moment.min.js' %>
+<%= javascript_include_tag '/backend/assets/js/plugins/ui/fullcalendar/fullcalendar.min.js' %>
+<%= javascript_include_tag '/backend/assets/js/plugins/visualization/echarts/echarts.js' %>
+
+<%= javascript_include_tag '/backend/assets/js/core/app.js' %>
+<%= javascript_include_tag '/backend/assets/js/pages/user_pages_profile.js' %>
+<!-- /theme JS files -->
+
+<script type="text/javascript" src="/backend/assets/js/core/libraries/jquery_ui/core.min.js"></script>
+<script type="text/javascript" src="/backend/assets/js/plugins/forms/styling/switchery.min.js"></script>
+<script type="text/javascript" src="/backend/assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+<script type="text/javascript" src="/backend/assets/js/plugins/forms/selects/selectboxit.min.js"></script>
+<script type="text/javascript" src="/backend/assets/js/plugins/forms/selects/bootstrap_select.min.js"></script>
+<script type="text/javascript" src="/backend/assets/js/plugins/notifications/pnotify.min.js"></script>
+<script type="text/javascript" src="/backend/assets/js/plugins/notifications/noty.min.js"></script>
+<script type="text/javascript" src="/backend/assets/js/plugins/notifications/jgrowl.min.js"></script>
+
+<script type="text/javascript" src="/backend/assets/js/pages/colors_pink.js"></script>

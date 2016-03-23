@@ -1,0 +1,58 @@
+<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+<li class="active"><%= link_to "<i class='icon-home4'></i> <span>Dashboard</span>".html_safe, {controller: "main", action: "index"} %></li>
+<li>
+    <a href="#"><i class="icon-info3"></i> <span>Introduction</span></a>
+    <ul>
+        <li><%= link_to "Spring Letter", admin_spring_letters_path %></li>
+        <li><%= link_to "About Us", admin_abouts_path %></li>
+        <li><%= link_to "Organization", admin_organizations_path %></li>
+        <li><%= link_to "Finance", admin_finances_path %></li>
+        <li><%= link_to "Achievements / Certifications & Awards", admin_achievements_path %></li>
+    </ul>
+</li>
+<li>
+    <a href="#"><i class="icon-steering-wheel"></i> <span>Construction</span></a>
+    <ul>
+        <li><%= link_to "Completed construction projects", "" %></li>
+        <li><%= link_to "Under construction projects", "" %></li>
+        <li><%= link_to "Investment projects", "" %></li>
+    </ul>
+</li>
+<li>
+    <a href="#"><i class="icon-lifebuoy"></i> <span>Equipment</span></a>
+    <ul>
+        <li><%= link_to "Equipments Management", "" %></li>
+    </ul>
+</li>
+<li>
+    <a href="#"><i class="icon-notification2"></i> <span>Notification</span></a>
+    <ul>
+        <li><%= link_to "Notification Management", "" %></li>
+    </ul>
+</li>
+<li>
+    <a href="#"><i class="icon-newspaper"></i> <span>News</span></a>
+    <ul>
+        <li><%= link_to "Specialized News", "" %></li>
+        <li><%= link_to "Vietren news", "" %></li>
+    </ul>
+</li>
+<li>
+    <a href="#"><i class="icon-images2"></i> <span>Photo Gallery</span></a>
+    <ul>
+        <li><%= link_to "Pictures of investment projects", "" %></li>
+        <li><%= link_to "Pictures of construction works", "" %></li>
+    </ul>
+</li>
+<li>
+    <a href="#"><i class="icon-people"></i> <span>Recruitment</span></a>
+    <ul>
+        <li><%= link_to "Recruitment Management", "" %></li>
+    </ul>
+</li>
+<li>
+    <a href="#"><i class="icon-envelop3"></i> <span>Contact</span></a>
+    <ul>
+        <li><%= link_to "Contacts Management (Customers)", "" %></li>
+    </ul>
+</li>
