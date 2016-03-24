@@ -1,0 +1,65 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :name_vn %><br>
+    <%= f.text_field :name_vn %>
+  </div>
+  <div class="field">
+    <%= f.label :name_en %><br>
+    <%= f.text_field :name_en %>
+  </div>
+  <div class="field">
+    <%= f.label :total_value %><br>
+    <%= f.text_field :total_value %>
+  </div>
+  <div class="field">
+    <%= f.label :cost_performance %><br>
+    <%= f.text_field :cost_performance %>
+  </div>
+  <div class="field">
+    <%= f.label :start_at %><br>
+    <%= f.datetime_select :start_at %>
+  </div>
+  <div class="field">
+    <%= f.label :end_at %><br>
+    <%= f.datetime_select :end_at %>
+  </div>
+  <div class="field">
+    <%= f.label :name_company %><br>
+    <%= f.text_field :name_company %>
+  </div>
+  <div class="field">
+    <%= f.label :name_country %><br>
+    <%= f.text_field :name_country %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_id %><br>
+    <%= f.number_field :tag_id %>
+  </div>
+  <div class="field">
+    <%= f.label :content_vn %><br>
+    <%= f.text_area :content_vn %>
+  </div>
+  <div class="field">
+    <%= f.label :content_en %><br>
+    <%= f.text_area :content_en %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

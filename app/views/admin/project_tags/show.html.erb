@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title vn:</strong>
+  <%= @project_tag.title_vn %>
+</p>
+
+<p>
+  <strong>Content vn:</strong>
+  <%= @project_tag.content_vn %>
+</p>
+
+<p>
+  <strong>Title en:</strong>
+  <%= @project_tag.title_en %>
+</p>
+
+<p>
+  <strong>Content en:</strong>
+  <%= @project_tag.content_en %>
+</p>
+
+<%= link_to 'Edit', edit_project_tag_path(@project_tag) %> |
+<%= link_to 'Back', project_tags_path %>

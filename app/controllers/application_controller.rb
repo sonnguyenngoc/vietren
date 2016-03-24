@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
             'login'
           
       elsif controller_name == 'main' || controller_name == 'profile' || controller_name == 'spring_letters' || controller_name == 'abouts' ||
-            controller_name == 'organizations' || controller_name == 'finances' || controller_name == 'achievements'
+            controller_name == 'organizations' || controller_name == 'finances' || controller_name == 'achievements' || controller_name == 'projects' || controller_name == 'project_tags'
           
           authenticate_user!
           'backend'

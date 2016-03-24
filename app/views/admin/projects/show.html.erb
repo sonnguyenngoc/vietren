@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @project.image_url %>
+</p>
+
+<p>
+  <strong>Name vn:</strong>
+  <%= @project.name_vn %>
+</p>
+
+<p>
+  <strong>Name en:</strong>
+  <%= @project.name_en %>
+</p>
+
+<p>
+  <strong>Total value:</strong>
+  <%= @project.total_value %>
+</p>
+
+<p>
+  <strong>Cost performance:</strong>
+  <%= @project.cost_performance %>
+</p>
+
+<p>
+  <strong>Start at:</strong>
+  <%= @project.start_at %>
+</p>
+
+<p>
+  <strong>End at:</strong>
+  <%= @project.end_at %>
+</p>
+
+<p>
+  <strong>Name company:</strong>
+  <%= @project.name_company %>
+</p>
+
+<p>
+  <strong>Name country:</strong>
+  <%= @project.name_country %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @project.tag_id %>
+</p>
+
+<p>
+  <strong>Content vn:</strong>
+  <%= @project.content_vn %>
+</p>
+
+<p>
+  <strong>Content en:</strong>
+  <%= @project.content_en %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
