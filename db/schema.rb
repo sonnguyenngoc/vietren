@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160323085148) do
+ActiveRecord::Schema.define(version: 20160323095547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(version: 20160323085148) do
     t.datetime "updated_at",                           null: false
   end
 
+  create_table "completed_projects", force: :cascade do |t|
+    t.string   "image_url"
+    t.string   "tag_vn"
+    t.string   "title_vn"
+    t.text     "content_vn"
+    t.string   "tag_en"
+    t.string   "title_en"
+    t.text     "content_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "finances", force: :cascade do |t|
     t.string   "tag_vn"
     t.string   "title_vn"
@@ -66,6 +78,18 @@ ActiveRecord::Schema.define(version: 20160323085148) do
     t.string   "tag_en"
     t.string   "title_en"
     t.string   "content_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "investment_projects", force: :cascade do |t|
+    t.string   "image_url"
+    t.string   "tag_vn"
+    t.string   "title_vn"
+    t.text     "content_vn"
+    t.string   "tag_en"
+    t.string   "title_en"
+    t.text     "content_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -88,6 +112,18 @@ ActiveRecord::Schema.define(version: 20160323085148) do
     t.string   "tag_en"
     t.string   "title_en"
     t.string   "content_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "under_projects", force: :cascade do |t|
+    t.string   "image_url"
+    t.string   "tag_vn"
+    t.string   "title_vn"
+    t.text     "content_vn"
+    t.string   "tag_en"
+    t.string   "title_en"
+    t.text     "content_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

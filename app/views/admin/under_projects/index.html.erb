@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Under Projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image url</th>
+      <th>Tag vn</th>
+      <th>Title vn</th>
+      <th>Content vn</th>
+      <th>Tag en</th>
+      <th>Title en</th>
+      <th>Content en</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @under_projects.each do |under_project| %>
+      <tr>
+        <td><%= under_project.image_url %></td>
+        <td><%= under_project.tag_vn %></td>
+        <td><%= under_project.title_vn %></td>
+        <td><%= under_project.content_vn %></td>
+        <td><%= under_project.tag_en %></td>
+        <td><%= under_project.title_en %></td>
+        <td><%= under_project.content_en %></td>
+        <td><%= link_to 'Show', under_project %></td>
+        <td><%= link_to 'Edit', edit_under_project_path(under_project) %></td>
+        <td><%= link_to 'Destroy', under_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Under project', new_under_project_path %>

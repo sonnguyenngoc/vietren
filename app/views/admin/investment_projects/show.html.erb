@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @investment_project.image_url %>
+</p>
+
+<p>
+  <strong>Tag vn:</strong>
+  <%= @investment_project.tag_vn %>
+</p>
+
+<p>
+  <strong>Title vn:</strong>
+  <%= @investment_project.title_vn %>
+</p>
+
+<p>
+  <strong>Content vn:</strong>
+  <%= @investment_project.content_vn %>
+</p>
+
+<p>
+  <strong>Tag en:</strong>
+  <%= @investment_project.tag_en %>
+</p>
+
+<p>
+  <strong>Title en:</strong>
+  <%= @investment_project.title_en %>
+</p>
+
+<p>
+  <strong>Content en:</strong>
+  <%= @investment_project.content_en %>
+</p>
+
+<%= link_to 'Edit', edit_investment_project_path(@investment_project) %> |
+<%= link_to 'Back', investment_projects_path %>

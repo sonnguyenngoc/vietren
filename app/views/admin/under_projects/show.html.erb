@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @under_project.image_url %>
+</p>
+
+<p>
+  <strong>Tag vn:</strong>
+  <%= @under_project.tag_vn %>
+</p>
+
+<p>
+  <strong>Title vn:</strong>
+  <%= @under_project.title_vn %>
+</p>
+
+<p>
+  <strong>Content vn:</strong>
+  <%= @under_project.content_vn %>
+</p>
+
+<p>
+  <strong>Tag en:</strong>
+  <%= @under_project.tag_en %>
+</p>
+
+<p>
+  <strong>Title en:</strong>
+  <%= @under_project.title_en %>
+</p>
+
+<p>
+  <strong>Content en:</strong>
+  <%= @under_project.content_en %>
+</p>
+
+<%= link_to 'Edit', edit_under_project_path(@under_project) %> |
+<%= link_to 'Back', under_projects_path %>

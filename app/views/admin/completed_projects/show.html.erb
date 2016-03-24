@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @completed_project.image_url %>
+</p>
+
+<p>
+  <strong>Tag vn:</strong>
+  <%= @completed_project.tag_vn %>
+</p>
+
+<p>
+  <strong>Title vn:</strong>
+  <%= @completed_project.title_vn %>
+</p>
+
+<p>
+  <strong>Content vn:</strong>
+  <%= @completed_project.content_vn %>
+</p>
+
+<p>
+  <strong>Tag en:</strong>
+  <%= @completed_project.tag_en %>
+</p>
+
+<p>
+  <strong>Title en:</strong>
+  <%= @completed_project.title_en %>
+</p>
+
+<p>
+  <strong>Content en:</strong>
+  <%= @completed_project.content_en %>
+</p>
+
+<%= link_to 'Edit', edit_completed_project_path(@completed_project) %> |
+<%= link_to 'Back', completed_projects_path %>

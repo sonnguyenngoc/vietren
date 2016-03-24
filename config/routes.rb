@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :abouts
     resources :organizations
     resources :finances
-    resources :achievements  
+    resources :achievements
+    resources :investment_projects
+    resources :under_projects
+    resources :completed_projects
   end
 end

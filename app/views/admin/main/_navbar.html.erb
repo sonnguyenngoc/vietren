@@ -32,7 +32,10 @@
 
                 <ul class="dropdown-menu dropdown-menu-right">
                     <li><%= link_to "<i class='icon-user-plus'></i> My profile".html_safe, { controller: "profile", action: "index" } %></li>
-                    <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                    <li>
+						<% if user_signed_in? %>
+                            <%= link_to('<i class="icon-switch2"></i> Logout'.html_safe, destroy_user_session_path, :method => :delete) %>
+                        <%end%>
 					</li>
                 </ul>
             </li>
