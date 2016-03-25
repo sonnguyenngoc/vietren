@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_url: MyString
+  name_vn: MyString
+  quantity: 1
+  category_equipment_id: 1
+  manufacturer_equipment_id: 1
+  status_vn: MyString
+  capacity: MyString
+  note_vn: MyText
+  name_en: MyString
+  status_en: MyString
+  note_en: MyText
+
+two:
+  image_url: MyString
+  name_vn: MyString
+  quantity: 1
+  category_equipment_id: 1
+  manufacturer_equipment_id: 1
+  status_vn: MyString
+  capacity: MyString
+  note_vn: MyText
+  name_en: MyString
+  status_en: MyString
+  note_en: MyText

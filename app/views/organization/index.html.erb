@@ -1,119 +1,58 @@
-  <div class="site">
-    <!-- Site Header -->
-    <header class="site-header classic relative">
-       <%= render 'letter_spring/header' %>
-    </header>
-    <!--/ Site Header -->
-    <main class="site-main">
-       <!-- Page header -->
-       <div class="page-header page-header-sm">
-          <h1 class="text-uppercase page-title">Cơ cấu tổ chức</h1> </div>
-       <!-- /Page header -->
-       <!-- Breadcrumbs -->
-       <div class="breadcrumb">
-          <div class="container">
-             <ol>
-                <li><a href="<%= root_path %>">Trang chủ</a></li>
-                <li class="active">Cơ cấu tổ chức</li>
-             </ol>
-          </div>
-       </div>
-       <!-- /Breadcrumbs -->
-       <section class="section padding-small">
-          <div class="container">
-             <div class="row">
-                <div class="col-sm-6">
-                   <h3 class="title text-uppercase">About Construction</h3>
-                   <p> <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a enim aliquam, condimentum nisl a, laoreet lectus. Aliquam convallis sed elit nec vehicula. Praesent gravida, massa sit amet ullamcorper fringilla, tortor nunc ultrices dui, in tristique leo leo sed massa.</em>                           </p>
-                   <p>Quisque et lectus pulvinar, porttitor mi non, elementum dui. Morbi mi nisl, tincidunt sed venenatis eget, finibus eu mauris. Nullam nisi lacus, feugiat eget varius eget, pellentesque dictum odio. Sed sollicitudin viverra est, at
-                      aliquam metus ultrices id. Duis eu purus vel nisl commodo facilisis vitae ut lectus.</p>
-                   <p>Sed elementum dapibus tellus, a dictum metus interdum ac. Nullam condimentum, dui volutpat fringilla molestie, libero tortor ultrices lorem, at tempus diam purus non velit. Aliquam vel nulla eleifend, consequat elit id, tristique
-                      massa. Fusce dolor velit, blandit ac erat ac, vestibulum ornare diam. Sed sollicitudin viverra est, at aliquam metus ultrices id. Duis eu purus vel nisl commodo facilisis vitae ut lectus.</p>
-                </div>
-                <div class="col-sm-6"> <img class="shadow" src="/frontend/images/demo/our-offices.jpg" alt="Our offices"> </div>
-             </div>
-          </div>
-       </section>
-       <section class="section no-top-padding">
-          <div class="container">
-             <div class="row">
-                <div class="col-md-12">
-                   <h3 class="title text-uppercase">Experienced Team</h3> </div>
-             </div>
-             <div class="row">
-                <div class="col-md-12">
-                   <div class="team team-col-3">
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-1.jpg" alt="John Builder"></a>
-                            </div> <a href="member.html"><h3 class="member-name">John Builder</h3></a> <span class="member-title">CEO and founjder of Counstruction ltd.</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-2.jpg" alt="Steve Planer"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Steve Planer</h3></a> <span class="member-title">Construction engineer</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-3.jpg" alt="Mark Teran"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Mark Teran</h3></a> <span class="member-title">Project leader</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-4.jpg" alt="Greg Custom"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Greg Custom</h3></a> <span class="member-title">Customer relations</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-5.jpg" alt="Tony Archor"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Tony Archor</h3></a> <span class="member-title">Quality manager</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-6.jpg" alt="Frank Drive"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Frank Drive</h3></a> <span class="member-title">Vehicle park manager</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </section>
-    </main>
-    <!-- Site Footer -->
-    <footer class="site-footer">
-       <%= render 'home/footer' %>
-    </footer>
-    <!-- /Site Footer -->
-  </div>
-  <!-- Scripts -->
-  <%= javascript_include_tag '/frontend/js/jquery.min.js' %>
-  <%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
-  <%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
-  <%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
-  <%= javascript_include_tag '/frontend/js/functions.js' %>
-  <%= javascript_include_tag '/frontend/js/isotope.min.js' %>
-  <%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
-  <%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
-  <!-- /Scripts -->
-  <!-- Revolution Slider -->
-  <%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
-  <%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
-  <!-- /Revolution Slider -->
+<div class="site">
+  <!-- Site Header -->
+  <header class="site-header classic relative">
+    <%= render 'letter_spring/header' %>
+  </header>
+  <!--/ Site Header -->
+  <main class="site-main">
+     <!-- Page header -->
+     <div class="page-header page-header-sm">
+        <h1 class="text-uppercase page-title">Thư xuân</h1> </div>
+     <!-- /Page header -->
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb">
+        <div class="container">
+           <ol>
+              <li><a href="<%= root_path %>">Trang chủ</a></li>
+              <li class="active">Thư xuân</li>
+           </ol>
+        </div>
+     </div>
+     <!-- /Breadcrumbs -->
+     <div class="container">
+        <div class="row">
+           <aside class="sidebar sidebar-left col-md-3">
+              <%= render 'letter_spring/right_menu' %>
+           </aside>
+           <div class="page-content col-md-9 padding-bottom-xl">
+              <article class="post post-single">
+                    <h3 class="title small-margin text-uppercase"><%= @organizations.title_vn %></h3>
+                 </header>
+                 <div class="post-content">
+                    <%= @organizations.content_vn.html_safe %>
+                 </div>
+              </article>
+           </div>
+        </div>
+     </div>
+  </main>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <%= render 'home/footer' %>
+  </footer>
+  <!-- /Site Footer -->
+</div>
+<!-- Scripts -->
+<%= javascript_include_tag '/frontend/js/jquery.min.js' %>
+<%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
+<%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
+<%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
+<%= javascript_include_tag '/frontend/js/functions.js' %>
+<%= javascript_include_tag '/frontend/js/isotope.min.js' %>
+<%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
+<%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
+<!-- /Scripts -->
+<!-- Revolution Slider -->
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
+<!-- /Revolution Slider -->
