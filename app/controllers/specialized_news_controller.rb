@@ -1,0 +1,2 @@
+class SpecializedNewsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+module CompletedConstructionHelper
+end

@@ -1,0 +1,2 @@
+class LetterSpringController < ApplicationController
+end

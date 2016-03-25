@@ -1,0 +1,132 @@
+<div class="site">
+  <!-- Site Header -->
+  <header class="site-header classic relative">
+     <%= render 'letter_spring/header' %>
+  </header>
+  <!--/ Site Header -->
+  <main class="site-main">
+     <!-- Page header -->
+     <div class="page-header page-header-sm">
+        <h1 class="text-uppercase page-title">Liên hệ</h1> </div>
+     <!-- /Page header -->
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb">
+        <div class="container">
+           <ol>
+              <li><a href="<%= root_path %>">Trang chủ</a></li>
+              <li class="active">Liên hệ</li>
+           </ol>
+        </div>
+     </div>
+     <!-- /Breadcrumbs -->
+     <!-- Google Maps -->
+     <section class="section no-top-padding">
+        <div class="row">
+           <div class="col-sm-12">
+              <!-- Google Maps Element -->
+              <div class="map" id="map-1" data-type="ROADMAP" data-scroll="false" data-zoom="14" data-markers='[{"address": "Howard University Middle School of Mathematics and Science", "center": "true"},
+                                   {"address": "Woodley Park"},
+                                   {"address": "Langdon, Washington, D.C."}]' data-icon="images/marker.png" data-styles='[{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]'
+              style="height: 450px;"> </div>
+              <!-- /Google Maps Element -->
+           </div>
+        </div>
+     </section>
+     <!-- /Google Maps -->
+     <!-- Contact info -->
+     <section class="section no-top-padding">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12">
+                 <h3 class="title margin-bottom-small">Liên hệ với chúng tôi</h3>
+                 <p>Nội dung content ... </p>
+              </div>
+           </div>
+           <div class="row" style="margin-top: 40px;">
+              <div class="col-md-5">
+                 <!-- Info Table Element -->
+                 <table class="info-table">
+                    <tbody>
+                       <tr class="info-table-row">
+                          <th class="info-table-icon"><i class="fa fa-long-arrow-right"></i></th>
+                          <td class="info-table-content">Constructo ltd. inc.</td>
+                       </tr>
+                       <tr class="info-table-row">
+                          <th class="info-table-icon"><i class="fa fa-map-marker"></i></th>
+                          <td class="info-table-content">300 Pennsylvania Ave NW, Washington, DC 20006, USA</td>
+                       </tr>
+                       <tr class="info-table-row">
+                          <th class="info-table-icon"><i class="fa fa-phone"></i></th>
+                          <td class="info-table-content">+386 40 222 555</td>
+                       </tr>
+                       <tr class="info-table-row">
+                          <th class="info-table-icon"><i class="fa fa-fax"></i></th>
+                          <td class="info-table-content">+386 40 222 554</td>
+                       </tr>
+                       <tr class="info-table-row">
+                          <th class="info-table-icon"><i class="fa fa-mobile-phone"></i></th>
+                          <td class="info-table-content">+386 40 222 555</td>
+                       </tr>
+                       <tr class="info-table-row">
+                          <th class="info-table-icon"><i class="fa fa-envelope"></i></th>
+                          <td class="info-table-content">mail@companyname.com</td>
+                       </tr>
+                       <tr class="info-table-row">
+                          <th class="info-table-icon"><i class="fa fa-globe"></i></th>
+                          <td class="info-table-content"><strong><a href="http://www.anpsthemes.com" target="_blank">www.yoursitename.com</a></strong></td>
+                       </tr>
+                    </tbody>
+                 </table>
+                 <!-- /Info Table Element -->
+              </div>
+              <div class="col-md-7">
+                 <!-- Contact form -->
+                 <form class="contact-form row" method="post" action="email.php" novalidate>
+                    <fieldset class="form-group col-md-7">
+                       <input id="name" name="name" type="text" placeholder="Name" required>
+                       <label for="name"></label>
+                    </fieldset>
+                    <fieldset class="form-group col-md-7">
+                       <input id="email" name="email" type="email" placeholder="Email" required>
+                       <label for="email"></label>
+                    </fieldset>
+                    <fieldset class="form-group col-md-7">
+                       <input id="subject" name="subject" type="text" placeholder="Subject" required>
+                       <label for="subject"></label>
+                    </fieldset>
+                    <fieldset class="form-group col-md-12">
+                       <textarea id="message" name="message" placeholder="Message" required></textarea>
+                       <label for="message"></label>
+                       <input type="submit" class="btn btn-normal btn-md" value="Submit"> </fieldset>
+                    <div class="text-center spinner col-md-12 hidden"><i class="fa fa-spinner fa-pulse"></i></div>
+                    <div class="info col-md-12"></div>
+                 </form>
+                 <!-- /Contact form -->
+              </div>
+           </div>
+        </div>
+     </section>
+     <!-- /Contact info -->
+  </main>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+     <%= render 'home/footer' %>
+  </footer>
+  <!-- /Site Footer -->
+</div>
+<!-- Scripts -->
+<%= javascript_include_tag '/frontend/js/jquery.min.js' %>
+<%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
+<%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
+<%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
+<%= javascript_include_tag '/frontend/js/functions.js' %>
+<%= javascript_include_tag '/frontend/js/isotope.min.js' %>
+<%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
+<%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
+<!-- /Scripts -->
+<!-- Revolution Slider -->
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
+<!-- /Revolution Slider -->
+<%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js' %>
+<%= javascript_include_tag '/frontend/js/gmap3.min.js' %>

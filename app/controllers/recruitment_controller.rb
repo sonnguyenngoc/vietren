@@ -1,0 +1,2 @@
+class RecruitmentController < ApplicationController
+end

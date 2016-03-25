@@ -1,0 +1,80 @@
+<div class="site">
+  <!-- Site Header -->
+  <header class="site-header classic relative">
+    <%= render 'header' %>
+  </header>
+  <!--/ Site Header -->
+  <main class="site-main">
+     <!-- Page header -->
+     <div class="page-header page-header-sm">
+        <h1 class="text-uppercase page-title">Thư xuân</h1> </div>
+     <!-- /Page header -->
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb">
+        <div class="container">
+           <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="active">Letter Spring</li>
+           </ol>
+        </div>
+     </div>
+     <!-- /Breadcrumbs -->
+     <div class="container">
+        <div class="row">
+           <div class="page-content col-md-9 padding-bottom-xl">
+              <article class="post post-single">
+                 <header> <img src="/frontend/images/image_1.jpg" alt="THƯ XUÂN CÔNG TY CP VIỆT REN">
+                    <h3 class="post-title text-uppercase">THƯ XUÂN CÔNG TY CP VIỆT REN</h3>
+                    <ul class="post-meta">
+                       <li> <i class="fa fa-calendar"></i>
+                          <time datetime="2015-10-06 13:00">Mar 23, 2016</time>
+                       </li>
+                       <li> <i class="fa fa-commenting-o"></i> No comments </li>
+                    </ul>
+                 </header>
+                 <div class="post-content">
+                    <p style="text-indent: 20pt; text-align: justify"> Nhân dịp đón Xuân Giáp Ngọ năm 2014, Công ty CP Việt Ren (mà tiền thân là Cty CP xây lắp dầu khí I) xin gửi tới các đồng chi Lãnh đạo Tỉnh, các sở, ban, ngành, các huyện, thành, thị xã, các Lực lượng vũ trang cùng nhân dân tỉnh nhà lời chúc mừng tốt đẹp nhất. </p>
+                    <p style="text-indent: 20pt; text-align: justify"> Trong những năm qua mặc dù chúng ta vẫn còn chịu ảnh hưởng của cơn bão suy thoái kinh tế nhưng nhờ sự quan tâm chỉ đạo của lãnh đạo tỉnh cùng với sự nổ lực phấn đấu của tập thể cán bộ công nhân viên nên công ty hoàn thành kế hoạch đã đề ra, giao nộp ngân sách cho nhà nước đủ chỉ tiêu, tham gia tốt công tác an sinh xã hội, đời sống của công nhân đảm bảo. Công ty chúng tôi luôn tri ân sự giúp đỡ chân tình và hiệu quả ấy. </p>
+                    <p style="text-indent: 20pt; text-align: justify"> Bước vào năm mới, Công ty CP Việt Ren tiếp tục đầu tư chiều sâu về trang thiết bị phương tiện kỷ thuật, cũng cố bạn hàng củ trên địa bàn miền Trung, tìm kiếm mở rộng thị trường trên cả nước để nâng cao hiệu quả sản xuất kinh doanh, hướng tới sự phát triển ổn định và bền vững. Với đội ngũ cán bộ quản lý giàu kinh nghiệm thực tiễn, lực lượng công nhân lành nghề đông đảo, được sự quan tâm giúp đỡ của lãnh đạo tỉnh, các cấp các ngành, và của các đối tác, công ty chúng tôi chắc chắn sẽ vượt qua mọi trở ngại để vươn lên hoàn thành xuất sắc mọi chỉ tiêu đã đề ra. </p>
+                    <p style="text-indent: 20pt; text-align: justify"> Mùa xuân rộn rã đang náo nức trở về trên mọi nẻo đường quê hương đất nước, trong không khí thiêng liêng của khoảng khắc bước sang năm mới, Công ty CP Việt Ren kính chúc các đồng chí Lãnh đạo tỉnh, các sở, ban, ngành, huyện thị, các lực lượng vũ trang, các chiến sĩ đang làm nhiệm vụ nơi biên giới hải đảo và nhân dân tỉnh nhà lời chúc An khang – Thịnh vượng – Hạnh phúc để năm Giáp Ngọ mã đáo thành công! </p>
+                    <table cellpadding="2" style="width: 100%;">
+                        <tbody>
+                            <tr>
+                                <td style="width: 60%;">&nbsp;</td>
+                                <td style="text-align: center;"><strong><span style="text-align: justify;">Thay mặt toàn thể CBCNV Cty<br>
+                                </span><span style="text-align: justify;">Chủ tịch HĐQT<br>
+                                <br>
+                                </span><span style="text-align: justify;">Nguyễn Phi Hùng</span></strong><br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+              </article>
+           </div>
+           <aside class="sidebar sidebar-right col-md-3">
+              <%= render 'right_menu' %>
+           </aside>
+        </div>
+     </div>
+  </main>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <%= render 'home/footer' %>
+  </footer>
+  <!-- /Site Footer -->
+</div>
+<!-- Scripts -->
+<%= javascript_include_tag '/frontend/js/jquery.min.js' %>
+<%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
+<%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
+<%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
+<%= javascript_include_tag '/frontend/js/functions.js' %>
+<%= javascript_include_tag '/frontend/js/isotope.min.js' %>
+<%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
+<%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
+<!-- /Scripts -->
+<!-- Revolution Slider -->
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
+<!-- /Revolution Slider -->

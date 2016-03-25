@@ -1,0 +1,101 @@
+<div class="site">
+  <!-- Site Header -->
+  <header class="site-header classic relative">
+     <%= render 'letter_spring/header' %>
+  </header>
+  <!--/ Site Header -->
+  <main class="site-main">
+     <!-- Page header -->
+     <div class="page-header page-header-sm">
+        <h1 class="text-uppercase page-title">Tin tức từ Việt Ren</h1> </div>
+     <!-- /Page header -->
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb">
+        <div class="container">
+           <ol>
+              <li><a href="<%= root_path %>">Trang chủ</a></li>
+              <li class="active">Tin Việt Ren</li>
+           </ol>
+        </div>
+     </div>
+     <!-- /Breadcrumbs -->
+     <div class="container">
+        <div class="row">
+           <div class="page-content col-md-9">
+              <article class="post">
+                 <header> <img src="/frontend/images/demo/post-1.jpg" alt="Eco Friendly Architectural Beauty">
+                    <h3 class="post-title text-uppercase">Eco Friendly Architectural Beauty</h3>
+                    <ul class="post-meta">
+                       <li> <i class="fa fa-user"></i> <span class="text-lowercase">posted by:</span> Anpsthemes </li>
+                       <li> <i class="fa fa-calendar"></i>
+                          <time datetime="2015-10-06 13:00">October 6, 2015</time>
+                       </li>
+                       <li> <i class="fa fa-commenting-o"></i> No comments </li>
+                    </ul>
+                 </header>
+                 <div class="post-content">
+                    <p class="post-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae libero molestie, aliquet nibh eu, euismod massa. Morbi efficitur ut nisi ac fermentum. Aenean magna libero, varius vitae turpis at, iaculis placerat quam.
+                       Vivamus arcu lorem, vehicula fringilla malesuada sit amet, volutpat sed nisi. Vestibulum lectus ligula, mollis vitae ultricies non, consequat sed leo. </p> <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>                           </div>
+              </article>
+              <article class="post">
+                 <header> <img src="/frontend/images/demo/post-2.jpg" alt="Future Smart Houses">
+                    <h3 class="post-title text-uppercase">Future Smart Houses</h3>
+                    <ul class="post-meta">
+                       <li> <i class="fa fa-user"></i> <span class="text-lowercase">posted by:</span> Anpsthemes </li>
+                       <li> <i class="fa fa-calendar"></i>
+                          <time datetime="2015-10-06 13:00">October 6, 2015</time>
+                       </li>
+                       <li> <i class="fa fa-commenting-o"></i> No comments </li>
+                    </ul>
+                 </header>
+                 <div class="post-content">
+                    <p class="post-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae libero molestie, aliquet nibh eu, euismod massa. Morbi efficitur ut nisi ac fermentum. Aenean magna libero, varius vitae turpis at, iaculis placerat quam.
+                       Vivamus arcu lorem, vehicula fringilla malesuada sit amet, volutpat sed nisi. Vestibulum lectus ligula, mollis vitae ultricies non, consequat sed leo. </p> <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>                           </div>
+              </article>
+              <article class="post">
+                 <header> <img src="/frontend/images/demo/post-3.jpg" alt="From Ground Up Building">
+                    <h3 class="post-title text-uppercase">From Ground Up Building</h3>
+                    <ul class="post-meta">
+                       <li> <i class="fa fa-user"></i> <span class="text-lowercase">posted by:</span> Anpsthemes </li>
+                       <li> <i class="fa fa-calendar"></i>
+                          <time datetime="2015-10-06 13:00">October 6, 2015</time>
+                       </li>
+                       <li> <i class="fa fa-commenting-o"></i> No comments </li>
+                    </ul>
+                 </header>
+                 <div class="post-content">
+                    <p class="post-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae libero molestie, aliquet nibh eu, euismod massa. Morbi efficitur ut nisi ac fermentum. Aenean magna libero, varius vitae turpis at, iaculis placerat quam.
+                       Vivamus arcu lorem, vehicula fringilla malesuada sit amet, volutpat sed nisi. Vestibulum lectus ligula, mollis vitae ultricies non, consequat sed leo. </p> <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>                           </div>
+              </article>
+              <ul class="page-numbers">
+                 <li><span class="current">1</span></li>
+                 <li><a href="#">2</a></li>
+                 <li><a href="#" class="next">Next</a></li>
+              </ul>
+           </div>
+           <aside class="sidebar sidebar-right col-md-3">
+              <%= render 'letter_spring/right_menu' %>
+           </aside>
+        </div>
+     </div>
+  </main>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+     <%= render 'home/footer' %>
+  </footer>
+  <!-- /Site Footer -->
+</div>
+<!-- Scripts -->
+<%= javascript_include_tag '/frontend/js/jquery.min.js' %>
+<%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
+<%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
+<%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
+<%= javascript_include_tag '/frontend/js/functions.js' %>
+<%= javascript_include_tag '/frontend/js/isotope.min.js' %>
+<%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
+<%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
+<!-- /Scripts -->
+<!-- Revolution Slider -->
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
+<!-- /Revolution Slider -->

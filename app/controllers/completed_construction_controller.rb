@@ -1,0 +1,2 @@
+class CompletedConstructionController < ApplicationController
+end

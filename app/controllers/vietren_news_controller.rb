@@ -1,0 +1,2 @@
+class VietrenNewsController < ApplicationController
+end
