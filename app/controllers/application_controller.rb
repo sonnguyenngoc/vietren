@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protected
     def layout_by_resource
       if controller_name == 'home' || controller_name == 'letter_spring' || controller_name == 'under_construction' || controller_name == 'completed_construction' ||
-        controller_name == 'investment_projects' || controller_name == 'equipment' || controller_name == 'notification' || controller_name == 'specialized_news'  ||
+        controller_name == 'investment_projects' || controller_name == 'equipment_page' || controller_name == 'notification' || controller_name == 'specialized_news'  ||
         controller_name == 'vietren_news' || controller_name == 'gallery' || controller_name == 'contact' || controller_name == 'recruitment' ||
         controller_name == 'about_us' || controller_name == 'organization' || controller_name == 'finance' || controller_name == 'achivement' 
         

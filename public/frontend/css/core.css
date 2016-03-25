@@ -48,7 +48,8 @@ nav.site-navigation {
   nav.site-navigation ul li a {
     color: #fff;
     font-size: 13px;
-    font-family: "Montserrat", sans-serif;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
     text-decoration: none;
     text-transform: uppercase; }
   nav.site-navigation .above-nav-bar ul li a {
@@ -289,7 +290,7 @@ header.bottom {
           min-height: 40px;
           padding-top: 10px;
           text-transform: uppercase;
-          font-family: "Montserrat", sans-serif;
+          font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
           font-size: 13px;
           font-weight: normal; }
           .site-navigation .main-menu li a:hover, .site-navigation .main-menu li a:active, .site-navigation .main-menu li a:focus {
@@ -689,7 +690,7 @@ header.style-4 .above-nav-bar {
 .megamenu-title {
   color: #fab702;
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   padding-bottom: 15px;
   text-transform: uppercase; }
 
@@ -714,7 +715,7 @@ header.style-4 .above-nav-bar {
 body {
   color: #898989;
   line-height: 1.7em;
-  font-family: "PT Sans", sans-serif; }
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 
 a {
   color: #fab702; }
@@ -811,7 +812,7 @@ p + .panel-group {
 .h5,
 .title.h5 {
   color: #000000;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 18px; }
 
 .rev_slider_wrapper {
@@ -836,7 +837,7 @@ p + .panel-group {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000000;
-  font-family: "Montserrat", sans-serif; }
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 
 img {
   height: auto;
@@ -990,7 +991,7 @@ img {
         margin-top: 15px; } }
 
 .rev_slider {
-  font-family: "Montserrat", sans-serif; }
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 
 .rev-title,
 .rev-subtitle {

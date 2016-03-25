@@ -60,6 +60,10 @@ class Admin::CompaniesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def hsnl_vietren
+    send_file "hsnl_vietren.pdf"
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -69,6 +73,6 @@ class Admin::CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:name_vn, :name_en, :address_vn, :address_en, :phone, :fax, :founding_date, :authorized_capital, :general_manager_vn, :general_manager_en, :email, :tax_code, :business_registration_certificate_no, :date_of_issue, :place_of_issue_vn, :place_of_issue_en)
+      params.require(:company).permit(:name_vn, :name_en, :address_vn, :address_en, :phone, :phone_2, :fax, :founding_date, :authorized_capital, :general_manager_vn, :general_manager_en, :email, :tax_code, :business_registration_certificate_no, :date_of_issue, :place_of_issue_vn, :place_of_issue_en)
     end
 end

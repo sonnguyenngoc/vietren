@@ -6,7 +6,7 @@
             <!-- Top Bar Left -->
             <div class="col-xs-6">
                <ul class="contact-info transparent">
-                  <li><i class="fa fa-phone"></i> <span class="important">053.3850.222 - 053.2211.052</span></li>
+                  <li><i class="fa fa-phone"></i> <span class="important"><%= @company.phone + " - " + @company.phone_2 %></span></li>
                   <li><i class="fa fa-envelope"></i> <a href="mailto:vrc@vnn.vn">vrc@vnn.vn</a></li>
                </ul>
             </div>
@@ -35,52 +35,88 @@
          <%= render 'slideshow' %>
       </section>
       <!-- /slider -->
+      <!-- Services & Solutions -->
+      <section id="services-and-solutions" class="section background-image-center" style="background-image: url('/frontend/images/logo_info.png');">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h2 class="title">Công Ty Cổ Phần Việt Ren</h2> </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="icon">
+                     <div class="icon-header">
+                        <div class="icon-media"><i class="fa fa-building-o"></i></div>
+                        <h3 class="icon-title text-uppercase">Xây dựng</h3>
+                     </div>
+                     <p class="icon-desc">
+                        - Xây dựng các công trình giao thông từ năm 2000.<br/>
+                        - Xây dựng các công trình thuỷ lợi năm 2000.<br/>
+                        - Xây dựng các công trình điện, cấp thoát nước từ năm 2001.<br/>
+                        - Xây dựng các công trình dân dụng từ năm 2003.
+                     </p>
+                  </div>
+                  <div class="icon">
+                     <div class="icon-header">
+                        <div class="icon-media"><i class="fa fa-truck"></i></div>
+                        <h3 class="icon-title text-uppercase">San lấp</h3>
+                     </div>
+                     <p class="icon-desc">
+                        - San lấp mặt bằng công nghiệp từ năm 2000.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-md-offset-4">
+                  <div class="icon">
+                     <div class="icon-header">
+                        <div class="icon-media"><i class="fa fa-institution"></i></div>
+                        <h3 class="icon-title text-uppercase">Đầu tư</h3>
+                     </div>
+                     <p class="icon-desc">
+                        - Đầu tư kinh doanh các công trình giao thông.<br/>
+                        - Đầu tư kinh doanh các công trình thủy lợi - thủy điện, công trình công nghiệp, dân dụng.<br/>
+                        - Đầu tư kinh doanh các công trình điện, nước.<br/>
+                        - Đầu tư kinh doanh khoáng sản trong và ngoài nước.
+                     </p>
+                  </div>
+                  <div class="icon">
+                     <div class="icon-header">
+                        <div class="icon-media"><i class="fa fa-object-group"></i></div>
+                        <h3 class="icon-title text-uppercase">Sản xuất</h3>
+                     </div>
+                     <p class="icon-desc">
+                        - Sản xuất vật liệu xây dựng từ năm 2000.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- /Services & Solutions -->
       <!-- Recent News -->
       <section id="recent-news" class="recent-news section bg-gray">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h2 class="title">Tin tức</h2>
+                  <h2 class="title">Tin tức mới nhất</h2>
                   <div class="owl-nav text-right"> <span class="owlprev"><i class="fa fa-angle-left"></i></span> <span class="owlnext"><i class="fa fa-angle-right"></i></span> </div>
                </div>
             </div>
             <div class="owl-carousel">
-               <article class="post">
-                  <header> <img src="/frontend/images/news_1.jpg" alt="Renovations tips and tricks"> </header>
-                  <h3 class="post-title">QL20 về đích sớm 7 tháng, tiết kiệm 1.200 tỷ đồng</h3>
-                  <ul class="post-meta">
-                     <li> <i class="fa fa-calendar"></i>
-                        <time datetime="2015-09-23 12:00">23.09.2015</time>
-                     </li>
-                     <li> <i class="fa fa-commenting-o"></i> No comments </li>
-                  </ul>
-                  <div class="post-content">
-                     <p class="post-desc"> QL20 hoàn thành sớm không chỉ giảm được gần 3h từ TP HCM đi Đà Lạt mà còn tiết kiệm được 1.200 tỷ đồng. </p> <a href="#" class="btn btn-md btn-gradient btn-shadow">Đọc tiếp</a> </div>
-               </article>
-               <article class="post">
-                  <header> <img src="/frontend/images/news_2.jpg" alt="Starting a building plan like a pro"> </header>
-                  <h3 class="post-title">Từ TP HCM tới Đà Lạt chỉ mất 5 giờ chạy xe</h3>
-                  <ul class="post-meta">
-                     <li> <i class="fa fa-calendar"></i>
-                        <time datetime="2015-09-23 12:00">22.09.2015</time>
-                     </li>
-                     <li> <i class="fa fa-commenting-o"></i> <a href="news-single.html#comments">3 comments</a> </li>
-                  </ul>
-                  <div class="post-content">
-                     <p class="post-desc"> Ngày 28/4 tới đây, Bộ GTVT và tỉnh Đồng Nai, Lâm Đồng sẽ tổ chức lễ thông xe công trình khôi phục, cải tạo QL 20, đoạn từ Dầu Giây ... </p> <a href="#" class="btn btn-md btn-gradient btn-shadow">Đọc tiếp</a> </div>
-               </article>
-               <article class="post">
-                  <header> <img src="/frontend/images/news_3.jpg" alt="Construction conference 2015"> </header>
-                  <h3 class="post-title">Thi công xuyên Tết trên công trường QL20</h3>
-                  <ul class="post-meta">
-                     <li> <i class="fa fa-calendar"></i>
-                        <time datetime="2015-09-23 12:00">21.09.2015</time>
-                     </li>
-                     <li> <i class="fa fa-commenting-o"></i> No comments </li>
-                  </ul>
-                  <div class="post-content">
-                     <p class="post-desc"> Sáng 2/1, Đoàn công tác của Bộ GTVT do Thứ trưởng Nguyễn Ngọc Đông làm trưởng đoàn đã đi kiểm tra tiến độ thi công QL20 và chúc m ... </p> <a href="#" class="btn btn-md btn-gradient btn-shadow">Đọc tiếp</a> </div>
-               </article>
+               <% @news.each do |item| %>
+                  <article class="post">
+                     <header> <img src="/frontend/images/news_1.jpg" alt="Renovations tips and tricks"> </header>
+                     <h3 class="post-title"><%= item.title_vn %></h3>
+                     <ul class="post-meta">
+                        <li> <i class="fa fa-calendar"></i>
+                           <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
+                        </li>
+                        <li> <i class="fa fa-th-large"></i><%= item.type_vn %></li>
+                     </ul>
+                     <div class="post-content">
+                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p> <a href="#" class="btn btn-md btn-gradient btn-shadow">Đọc tiếp</a> </div>
+                  </article>
+               <% end %>
             </div>
          </div>
       </section>
@@ -98,13 +134,13 @@
                               <button data-filter="*" class="selected">Tất cả</button>
                            </li>
                            <li>
-                              <button data-filter="buildings">Đã hoàn thành</button>
+                              <button data-filter="buildings">Công trình đã hoàn thành</button>
                            </li>
                            <li>
-                              <button data-filter="interior-design">Đang thi công</button>
+                              <button data-filter="interior-design">Công trình đang thi công</button>
                            </li>
                            <li>
-                              <button data-filter="flooring">Dự án đang đầu tư</button>
+                              <button data-filter="flooring">Dự án công ty đang đầu tư</button>
                            </li>
                         </ul>
                      </div>
@@ -152,138 +188,81 @@
                            </div>
                         </div>
                      </div>
-                     <div class="projects-pagination">
-                        <button class="prev"><i class="fa fa-angle-left"></i></button>
-                        <button class="next"><i class="fa fa-angle-right"></i></button>
-                     </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
       <!-- /Recent Portfolio -->
-      <!-- About Us -->
-      <section class="bg-gray section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h2 class="title">Các phòng ban</h2> </div>
-            </div>
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"> <i class="fa fa-user"></i> </div>
-                        <h3 class="icon-title">Phòng Kế toán - Tài chính</h3> </div>
-                     <p class="icon-desc">053 3850 222</p>
-                  </div>
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"> <i class="fa fa-user"></i> </div>
-                        <h3 class="icon-title">Phòng Kỹ thuật</h3> </div>
-                     <p class="icon-desc">053 3852 925</p>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"> <i class="fa fa-user"></i> </div>
-                        <h3 class="icon-title">Phòng Tổ chức - Hành chính</h3> </div>
-                     <p class="icon-desc">053 2211 052</p>
-                  </div>
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"> <i class="fa fa-user"></i> </div>
-                        <h3 class="icon-title">Phòng Kế hoạch -Tổng hợp</h3> </div>
-                     <p class="icon-desc">053 2210 570</p>
-                  </div>
-               </div>
-               <div class="col-md-4"> <img class="shadow" src="/frontend/images/congty.jpg" alt="About Us"> </div>
-            </div>
-         </div>
-      </section>
-      <!-- /About Us -->
       <section class="section">
          <div class="container">
             <div class="row">
                <!-- Our Clients -->
-               <div class="col-md-6">
-                  <h2 class="title">Quảng cáo</h2>
-                  <ul class="clients">
-                     <li class="client">
-                        <a href="#"> <img src="/frontend/images/demo/client-1.png" alt="Client 1"> </a>
-                     </li>
-                     <li class="client">
-                        <a href="#"> <img src="/frontend/images/demo/client-2.png" alt="Client 2"> </a>
-                     </li>
-                     <li class="client">
-                        <a href="#"> <img src="/frontend/images/demo/client-3.png" alt="Client 3"> </a>
-                     </li>
-                     <li class="client">
-                        <a href="#"> <img src="/frontend/images/demo/client-4.png" alt="Client 4"> </a>
-                     </li>
-                     <li class="client">
-                        <a href="#"> <img src="/frontend/images/demo/client-5.png" alt="Client 5"> </a>
-                     </li>
-                     <li class="client">
-                        <a href="#"> <img src="/frontend/images/demo/client-6.png" alt="Client 6"> </a>
-                     </li>
-                  </ul>
+               <div class="col-md-12">
+                  <h2 class="title">Hình ảnh bằng khen</h2>
+                  <div class="gallery row">
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/demo/service-single.jpg"><img src="/frontend/images/demo/gallery-1.jpg" alt="Gallery 1"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/demo/service-single-2.jpg"><img src="/frontend/images/demo/gallery-2.jpg" alt="Gallery 2"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/demo/service-single-3.jpg"><img src="/frontend/images/demo/gallery-3.jpg" alt="Gallery 3"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/demo/service-single-4.jpg"><img src="/frontend/images/demo/gallery-4.jpg" alt="Gallery 4"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/demo/service-single-5.jpg"><img src="/frontend/images/demo/gallery-5.jpg" alt="Gallery 5"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/demo/service-single-6.jpg"><img src="/frontend/images/demo/gallery-6.jpg" alt="Gallery 6"></a>
+                              </div>
+                           </figure>
+                        </div>
+                     </div>
                </div>
                <!-- /Our Clients -->
-               <!-- Testimonials -->
-               <div class="col-md-6">
-                  <h2 class="title">Thành tích</h2>
-                  <div class="testimonials">
-                     <ul class="testimonial-wrap owl-carousel">
-                        <li class="clearfix">
-                           <p>Với bề dày lịch sử hình thành và phát triển, Việt Ren là một trong 3 đơn vị xuất sắc nhận được Huân chương do Chủ tịch nước trao tặng</p>
-                           <div
-                           class="user pull-left"> <img class="pull-left user-photo" src="/frontend/images/demo/hosearmando.jpg" alt="Harris Raybuilder">
-                              <div class="user-data pull-left">
-                                 <h3 class="name-user">Huân chương lao động hạng 3 năm 2009</h3>
-                              </div>
-                  </div>
-                  </li>
-                  <li class="clearfix">
-                     <p>Bằng khen Nhà quản lý xuất sắc năm 2013 của các nước ASEAN</p>
-                     <div class="user pull-left">
-                     <img class="pull-left user-photo" src="/frontend/images/demo/hosearmando.jpg" alt="Harris Raybuilder">
-                        <div class="user-data pull-left">
-                           <h3 class="name-user">Bằng khen Nhà quản lý xuất sắc năm 2013</h3>
-                        </div>
-                     </div>
-                  </li>
-                  <li class="clearfix">
-                     <p>Bằng khen Nhà quản lý xuất sắc năm 2013 của các nước ASEAN</p>
-                     <div class="user pull-left">
-                     <img class="pull-left user-photo" src="/frontend/images/demo/hosearmando.jpg" alt="Harris Raybuilder">
-                        <div class="user-data pull-left">
-                           <h3 class="name-user">Bằng khen Nhà quản lý xuất sắc năm 2013</h3>
-                        </div>
-                     </div>
-                  </li>
-                  <li class="clearfix">
-                     <p>Bằng khen Nhà quản lý xuất sắc năm 2013 của các nước ASEAN</p>
-                     <div class="user pull-left">
-                     <img class="pull-left user-photo" src="/frontend/images/demo/hosearmando.jpg" alt="Harris Raybuilder">
-                        <div class="user-data pull-left">
-                           <h3 class="name-user">Bằng khen Nhà quản lý xuất sắc năm 2013</h3>
-                        </div>
-                     </div>
-                  </li>
-                  </ul>
-                  <div class="testimonial-owl-nav owl-nav pull-right">
-                     <button class="owlprev"><i class="fa fa-angle-left"></i></button>
-                     <button class="owlnext"><i class="fa fa-angle-right"></i></button>
-                  </div>
-               </div>
             </div>
-            <!-- /Testimonials -->
          </div>
          </div>
       </section>
       </main>
+      <!-- Download -->
+      <section class="bg-primary">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="download">
+                     <div class="download-content text-uppercase"><i class="fa fa-file-pdf-o"></i> HỒ SƠ NĂNG LỰC CÔNG TY CỔ PHẦN VIỆT REN</div> <a href="<%= url_for(controller: "admin/companies", action: "hsnl_vietren") %>" target="_blank" class="btn btn-md btn-dark btn-shadow"><i class="fa fa-cloud-download"></i> Download</a> </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- /Download -->
       <!-- Site Footer -->
       <footer class="site-footer">
         <%= render 'footer' %>
