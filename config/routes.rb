@@ -16,5 +16,9 @@ Rails.application.routes.draw do
     resources :manufacturer_equipments
     resources :equipment
     resources :category_equipments
+    resources :notifications
+    resources :careers
+    resources :galleries
+    resources :information
   end
 end

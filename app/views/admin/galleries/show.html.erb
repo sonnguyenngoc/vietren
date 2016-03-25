@@ -48,9 +48,9 @@
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
                         <li><%= link_to "<i class='icon-home2 position-left'></i> Home".html_safe, {controller: "main", action: "index"} %></li>
-                        <li><%= link_to "Equipment", { controller: "admin/equipment", action: "index" } %></li>
-                        <li><%= link_to "Equipment Management", { controller: "admin/equipment", action: "index" } %></li>
-                        <li class="active"><%= @equipment.name_vn + " - " + @equipment.name_en %></li>
+                        <li><%= link_to "Photo Gallery", admin_galleries_path %></li>
+                        <li><%= link_to "Photo Galleries Management", admin_galleries_path %></li>
+                        <li class="active"><%= @gallery.title_vn + " - " + @gallery.title_en %></li>
                     </ul>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                 <!-- Basic datatable -->
                 <div class="panel panel-flat">
                     <div class="panel-heading">
-                        <h5 class="panel-title"><span class="text-semibold"><%= @equipment.name_vn + " - " + @equipment.name_en %></span></h5><br/>
+                        <h5 class="panel-title"><span class="text-semibold"><%= @gallery.title_vn + " - " + @gallery.title_en %></span></h5><br/>
                         
                         <p class="color-red"><%= notice %></p><br/>
                         
@@ -74,58 +74,26 @@
                                 <div class="tab-pane has-padding active" id="control-tab1">
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
-                                            <%= label "", "Name: ", class: "control-label col-sm-2 text-semibold" %>
+                                            <%= label "", "Type: ", class: "control-label col-sm-2 text-semibold" %>
                                             <div class="col-sm-10">
                                                 <%= content_tag(:p, class: "form-control-static") do %>
-                                                  <%= @equipment.name_vn %>
+                                                  <%= @gallery.type_vn %>
                                                 <% end %>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <%= label "", "Quantity: ", class: "control-label col-sm-2 text-semibold" %>
+                                            <%= label "", "Title: ", class: "control-label col-sm-2 text-semibold" %>
                                             <div class="col-sm-10">
-                                                <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.quantity %>
+                                                <%= content_tag(:p, class: "form-control-static") do %>
+                                                  <%= @gallery.title_vn %>
                                                 <% end %>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <%= label "", "Category: ", class: "control-label col-sm-2 text-semibold" %>
+                                            <%= label "", "Content: ", class: "control-label col-sm-2 text-semibold" %>
                                             <div class="col-sm-10">
                                                 <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.category_equipment.title_vn %>
-                                                <% end %>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <%= label "", "Manufacturer: ", class: "control-label col-sm-2 text-semibold" %>
-                                            <div class="col-sm-10">
-                                                <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.manufacturer_equipment.name_vn %>
-                                                <% end %>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <%= label "", "Capacity: ", class: "control-label col-sm-2 text-semibold" %>
-                                            <div class="col-sm-10">
-                                                <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.capacity %>
-                                                <% end %>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <%= label "", "Status: ", class: "control-label col-sm-2 text-semibold" %>
-                                            <div class="col-sm-10">
-                                                <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.status_vn %>
-                                                <% end %>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <%= label "", "Note: ", class: "control-label col-sm-2 text-semibold" %>
-                                            <div class="col-sm-10">
-                                                <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.note_vn %>
+                                                  <%= @gallery.description_vn.html_safe %>
                                                 <% end %>
                                             </div>
                                         </div>
@@ -133,7 +101,7 @@
                                             <%= label "", "Created At: ", class: "control-label col-sm-2 text-semibold" %>
                                             <div class="col-sm-10">
                                                 <%= content_tag(:p, class: "form-control-static") do %>
-                                                  <%= @equipment.created_at.strftime("%d/%m/%Y") %>
+                                                  <%= @gallery.created_at.strftime("%d/%m/%Y") %>
                                                 <% end %>
                                             </div>
                                         </div>
@@ -143,42 +111,26 @@
                                 <div class="tab-pane has-padding" id="control-tab2">
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
-                                            <%= label "", "Name: ", class: "control-label col-sm-2 text-semibold" %>
+                                            <%= label "", "Type: ", class: "control-label col-sm-2 text-semibold" %>
                                             <div class="col-sm-10">
                                                 <%= content_tag(:p, class: "form-control-static") do %>
-                                                  <%= @equipment.name_en %>
+                                                  <%= @gallery.type_en %>
                                                 <% end %>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <%= label "", "Category: ", class: "control-label col-sm-2 text-semibold" %>
+                                            <%= label "", "Title: ", class: "control-label col-sm-2 text-semibold" %>
                                             <div class="col-sm-10">
-                                                <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.category_equipment.title_en %>
+                                                <%= content_tag(:p, class: "form-control-static") do %>
+                                                  <%= @gallery.title_en %>
                                                 <% end %>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <%= label "", "Manufacturer: ", class: "control-label col-sm-2 text-semibold" %>
+                                            <%= label "", "Content: ", class: "control-label col-sm-2 text-semibold" %>
                                             <div class="col-sm-10">
                                                 <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.manufacturer_equipment.name_en %>
-                                                <% end %>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <%= label "", "Status: ", class: "control-label col-sm-2 text-semibold" %>
-                                            <div class="col-sm-10">
-                                                <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.status_en %>
-                                                <% end %>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <%= label "", "Note: ", class: "control-label col-sm-2 text-semibold" %>
-                                            <div class="col-sm-10">
-                                                <%= content_tag(:p, class: "form-control-static text-justify") do %>
-                                                  <%= @equipment.note_en %>
+                                                  <%= @gallery.description_en.html_safe %>
                                                 <% end %>
                                             </div>
                                         </div>
@@ -186,7 +138,7 @@
                                             <%= label "", "Created At: ", class: "control-label col-sm-2 text-semibold" %>
                                             <div class="col-sm-10">
                                                 <%= content_tag(:p, class: "form-control-static") do %>
-                                                  <%= @equipment.created_at.strftime("%d/%m/%Y") %>
+                                                  <%= @gallery.created_at.strftime("%d/%m/%Y") %>
                                                 <% end %>
                                             </div>
                                         </div>
@@ -195,7 +147,7 @@
                             </div>
                         </div>
                         
-                        <%= link_to '<i class="icon-backward2 position-left"></i> Back'.html_safe, { controller: "admin/equipment", action: "index" }, class: "btn btn-primary margin-submit" %>
+                        <%= link_to '<i class="icon-backward2 position-left"></i> Back'.html_safe, admin_galleries_path, class: "btn btn-primary margin-submit" %>
                     </div>
                 </div>
                 <!-- /basic datatable -->

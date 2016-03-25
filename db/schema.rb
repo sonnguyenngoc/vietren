@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160324091241) do
+ActiveRecord::Schema.define(version: 20160325042331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20160324091241) do
     t.string   "tag_en"
     t.string   "title_en"
     t.string   "content_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "careers", force: :cascade do |t|
+    t.string   "title_vn"
+    t.text     "content_vn"
+    t.string   "title_en"
+    t.text     "content_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -95,10 +104,49 @@ ActiveRecord::Schema.define(version: 20160324091241) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "galleries", force: :cascade do |t|
+    t.string   "type_vn"
+    t.string   "title_vn"
+    t.text     "description_vn"
+    t.integer  "gallery_detail_id"
+    t.string   "type_en"
+    t.string   "title_en"
+    t.text     "description_en"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "gallery_details", force: :cascade do |t|
+    t.string   "image_url"
+    t.string   "gallery_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "information", force: :cascade do |t|
+    t.string   "type_vn"
+    t.string   "type_en"
+    t.string   "title_vn"
+    t.text     "content_vn"
+    t.string   "title_en"
+    t.text     "content_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "manufacturer_equipments", force: :cascade do |t|
     t.string   "name_vn"
     t.text     "content_vn"
     t.string   "name_en"
+    t.text     "content_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "title_vn"
+    t.text     "content_vn"
+    t.string   "title_en"
     t.text     "content_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
