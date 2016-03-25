@@ -48,8 +48,8 @@
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
                         <li><%= link_to "<i class='icon-home2 position-left'></i> Home".html_safe, { controller: "main", action: "index" }  %></li>
-                        <li><%= link_to "Equipment", { controller: "admin/equipment", action: "index" } %></li>
-                        <li class="active">Equipment Management</li>
+                        <li><%= link_to "Notification", admin_notifications_path %></li>
+                        <li class="active">Notifacations Management</li>
                     </ul>
                 </div>
             </div>
@@ -60,48 +60,35 @@
                 <!-- Basic datatable -->
                 <div class="panel panel-flat">
                     <div class="panel-heading">
-                        <%= link_to '<i class="glyphicon glyphicon-plus"></i>  New Equipment'.html_safe, new_admin_equipment_path, class: 'btn bg-teal' %>
+                        <%= link_to '<i class="glyphicon glyphicon-plus"></i>  New Notification'.html_safe, new_admin_notification_path, class: 'btn bg-teal' %>
                         <hr/>
-                        <h5 class="panel-title">Listing Equipments</h5>
+                        <h5 class="panel-title">Listing Notifications</h5>
                     </div>
                     
-                    <table class="table datatable-equipment">
+                    <table class="table datatable-about-us">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Quantity</th>
-                                <th>Category</th>
-                                <th>Manufacturer</th>
-                                <th>Capacity</th>
+                                <th>Title</th>
+                                <th>Content</th>
                                 <th>Status</th>
                                 <th>Created At</th>
                                 <th class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <% @equipment.each do |item| %>
+                            <% @notifications.each do |item| %>
                                 <tr>
                                     <td>
-                                        <%= link_to item.name_vn, [:admin, item] %><br/>
-                                        <%= link_to item.name_en, [:admin, item] %>
+                                        <%= link_to item.title_vn, [:admin, item] %><br/>
+                                        <%= link_to item.title_en, [:admin, item] %>
                                     </td>
                                     <td>
-                                        <%= item.quantity %>
+                                        <%= truncate(strip_tags(item.content_vn), length: 50) %><br/>
+                                        <%= truncate(strip_tags(item.content_en), length: 50) %>
                                     </td>
                                     <td>
-                                        <span class="label label-success"><%= item.category_equipment.title_vn %></span><br/>
-                                        <span class="label label-success"><%= item.category_equipment.title_en %></span>
-                                    </td>
-                                    <td>
-                                        <span class="label label-warning"><%= item.manufacturer_equipment.name_vn %></span><br/>
-                                        <span class="label label-warning"><%= item.manufacturer_equipment.name_en %></span>
-                                    </td>
-                                    <td>
-                                        <%= item.capacity %>
-                                    </td>
-                                    <td>
-                                        <span class="label label-info"><%= item.status_vn %></span><br/>
-                                        <span class="label label-info"><%= item.status_en %></span>
+                                        <span class="label label-info">Thông báo</span><br/>
+                                        <span class="label label-info">Notification</span>
                                     </td>
                                     <td><%= item.created_at.strftime("%d/%m/%Y") %></td>
                                     <td class="text-center">
@@ -113,7 +100,7 @@
                 
                                                 <ul class="dropdown-menu dropdown-menu-right">
                                                     <li>
-                                                      <%= link_to '<i class="glyphicon glyphicon-edit"></i> Edit'.html_safe, edit_admin_equipment_path(item) %>
+                                                      <%= link_to '<i class="glyphicon glyphicon-edit"></i> Edit'.html_safe, edit_admin_notification_path(item) %>
                                                     </li>
                                                     <li>
                                                       <%= link_to '<i class="icon-cross2"></i> Destroy'.html_safe, [:admin, item], method: :delete, data: {confirm: 'Are you sure?'} %>
@@ -152,5 +139,5 @@
 <%= javascript_include_tag '/backend/assets/js/plugins/forms/selects/select2.min.js' %>
 
 <%= javascript_include_tag '/backend/assets/js/core/app.js' %>
-<%= javascript_include_tag '/backend/assets/javascripts/datatables_equipment.js' %>
+<%= javascript_include_tag '/backend/assets/javascripts/datatables_about_us.js' %>
 <!-- /theme JS files -->

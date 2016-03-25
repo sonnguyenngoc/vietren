@@ -44,4 +44,7 @@ group :development do
 end
 
 gem 'devise'
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'rails-i18n', '~> 4.0.0'
 

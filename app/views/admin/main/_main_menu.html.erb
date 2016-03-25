@@ -20,7 +20,7 @@
 <li>
     <a href="#"><i class="icon-lifebuoy"></i> <span>Equipment</span></a>
     <ul>
-        <li><%= link_to "Equipments Management", { controller: "admin/equipment", action: "index" } %></li>
+        <li><%= link_to "Equipment Management", { controller: "admin/equipment", action: "index" } %></li>
         <li><%= link_to "Categories Management", admin_category_equipments_path %></li>
         <li><%= link_to "Manufacturers Management", admin_manufacturer_equipments_path %></li>
     </ul>
@@ -28,27 +28,25 @@
 <li>
     <a href="#"><i class="icon-notification2"></i> <span>Notification</span></a>
     <ul>
-        <li><%= link_to "Notification List", "" %></li>
+        <li><%= link_to "Notifications Management", admin_notifications_path %></li>
     </ul>
 </li>
 <li>
     <a href="#"><i class="icon-newspaper"></i> <span>News</span></a>
     <ul>
-        <li><%= link_to "Specialized News", "" %></li>
-        <li><%= link_to "Vietren news", "" %></li>
+        <li><%= link_to "News Management", { controller: "admin/information", action: "index" } %></li>
     </ul>
 </li>
 <li>
     <a href="#"><i class="icon-images2"></i> <span>Photo Gallery</span></a>
     <ul>
-        <li><%= link_to "Pictures of investment projects", "" %></li>
-        <li><%= link_to "Pictures of construction works", "" %></li>
+        <li><%= link_to "Photo Galleries Management", admin_galleries_path %></li>
     </ul>
 </li>
 <li>
     <a href="#"><i class="icon-people"></i> <span>Career</span></a>
     <ul>
-        <li><%= link_to "Career List", "" %></li>
+        <li><%= link_to "Careers Management", admin_careers_path %></li>
     </ul>
 </li>
 <li>

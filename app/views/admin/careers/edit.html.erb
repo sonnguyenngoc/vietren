@@ -48,9 +48,9 @@
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
                         <li><%= link_to "<i class='icon-home2 position-left'></i> Home".html_safe, {controller: "main", action: "index"} %></li>
-                        <li><%= link_to "Equipment", { controller: "admin/equipment", action: "index" } %></li>
-                        <li><%= link_to "Equipment Management", { controller: "admin/equipment", action: "index" } %></li>
-                        <li class="active">Edit Equipment</li>
+                        <li><%= link_to "Career", admin_careers_path %></li>
+                        <li><%= link_to "Careers Management", admin_careers_path %></li>
+                        <li class="active">Edit Career</li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <!-- Basic layout-->
                         <div class="panel panel-flat">
                             <div class="panel-heading">
-                                <h5 class="panel-title">Edit Equipment</h5>
+                                <h5 class="panel-title">Edit Career</h5>
                                 <div class="heading-elements">
                                     <ul class="icons-list">
                                         <li><a data-action="collapse"></a></li>
