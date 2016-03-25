@@ -1,65 +1,113 @@
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+<% if @project.errors.any? %>
+  <div id="error_explanation">
+    <% @project.errors.full_messages.each do |message| %>
+      <p class="label label-warning"><%= message %></p>
+    <% end %>
+  </div>
+<% end %>
 
-      <ul>
-      <% @project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for [:admin, @project], html: {class: "form-horizontal"} do |f| %>
+    
+    <div class="tabbable tab-content-bordered">
+        <ul class="nav nav-tabs bg-primary">
+            <li class="active"><a href="#control-tab1" data-toggle="tab">Tiếng Việt</a></li>
+            <li><a href="#control-tab2" data-toggle="tab">English </a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane has-padding active" id="control-tab1">
+                <div class="form-group">
+                    <%= f.label "Project Type: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.collection_select(:project_tag_id, ProjectTag.all, :id, :title_vn, {:prompt => "Choose tag..."}, {class: "select"}) %>
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    <%= f.label "Title: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :name_vn, class: "form-control" %>
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    <%= f.label "Total Value: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-4">
+                        <%= f.text_field :total_value, class: "form-control price_input" %>
+                    </div>
+                    <%= f.label "Cost Performance: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-4">
+                        <%= f.text_field :cost_performance, class: "form-control price_input" %>
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    <%= f.label "Start At: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="icon-calendar5"></i></span>
+                            <%= f.text_field :start_at, class: "form-control pickadate-selectors" %>
+                        </div>
+                    </div>
+                    <%= f.label "End At: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="icon-calendar5"></i></span>
+                            <%= f.text_field :end_at, class: "form-control pickadate-selectors" %>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <%= f.label "Company Name: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :name_company, class: "form-control" %>
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    <%= f.label "Country Name: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :name_country, class: "form-control" %>
+                    </div>
+                </div>
+            
+                <div class="mb-15">
+                    <%= f.text_area :content_vn, rows: "4", cols: "4", id: "editor-full-vn" %>
+                </div>
+            </div>
+
+            <div class="tab-pane has-padding" id="control-tab2">
+                <div class="form-group">
+                    <%= f.label "Title: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :name_en, class: "form-control" %>
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    <%= f.label "Company Name: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :name_company_en, class: "form-control" %>
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    <%= f.label "Country Name: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :name_country_en, class: "form-control" %>
+                    </div>
+                </div>
+            
+                <div class="mb-15">
+                    <%= f.text_area :content_en, rows: "4", cols: "4", id: "editor-full-en" %>
+                </div>
+                    
+            </div>
+        </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :name_vn %><br>
-    <%= f.text_field :name_vn %>
-  </div>
-  <div class="field">
-    <%= f.label :name_en %><br>
-    <%= f.text_field :name_en %>
-  </div>
-  <div class="field">
-    <%= f.label :total_value %><br>
-    <%= f.text_field :total_value %>
-  </div>
-  <div class="field">
-    <%= f.label :cost_performance %><br>
-    <%= f.text_field :cost_performance %>
-  </div>
-  <div class="field">
-    <%= f.label :start_at %><br>
-    <%= f.datetime_select :start_at %>
-  </div>
-  <div class="field">
-    <%= f.label :end_at %><br>
-    <%= f.datetime_select :end_at %>
-  </div>
-  <div class="field">
-    <%= f.label :name_company %><br>
-    <%= f.text_field :name_company %>
-  </div>
-  <div class="field">
-    <%= f.label :name_country %><br>
-    <%= f.text_field :name_country %>
-  </div>
-  <div class="field">
-    <%= f.label :tag_id %><br>
-    <%= f.number_field :tag_id %>
-  </div>
-  <div class="field">
-    <%= f.label :content_vn %><br>
-    <%= f.text_area :content_vn %>
-  </div>
-  <div class="field">
-    <%= f.label :content_en %><br>
-    <%= f.text_area :content_en %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="text-right margin-submit">
+        <%= button_tag 'Save <i class="icon-plus22 position-right"></i>'.html_safe, class: "btn btn-primary"%>
+        <%= link_to 'Cancel <i class="icon-cross2"></i>'.html_safe, admin_projects_path,class: "btn bg-warning-400"%>
+    </div>
 <% end %>

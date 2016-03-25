@@ -14,13 +14,15 @@
     <a href="#"><i class="icon-steering-wheel"></i> <span>Construction</span></a>
     <ul>
         <li><%= link_to "Projects Management", admin_projects_path %></li>
-        <li><%= link_to "Tags Management", admin_project_tags_path %></li>
+        <li><%= link_to "Types Management", admin_project_tags_path %></li>
     </ul>
 </li>
 <li>
     <a href="#"><i class="icon-lifebuoy"></i> <span>Equipment</span></a>
     <ul>
-        <li><%= link_to "Equipment List", "" %></li>
+        <li><%= link_to "Equipments Management", { controller: "admin/equipment", action: "index" } %></li>
+        <li><%= link_to "Categories Management", admin_category_equipments_path %></li>
+        <li><%= link_to "Manufacturers Management", admin_manufacturer_equipments_path %></li>
     </ul>
 </li>
 <li>

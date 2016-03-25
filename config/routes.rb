@@ -13,5 +13,8 @@ Rails.application.routes.draw do
     resources :achievements
     resources :projects
     resources :project_tags
+    resources :manufacturer_equipments
+    resources :equipment
+    resources :category_equipments
   end
 end

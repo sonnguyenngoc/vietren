@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160324040607) do
+ActiveRecord::Schema.define(version: 20160324091241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 20160324040607) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "category_equipments", force: :cascade do |t|
+    t.string   "title_vn"
+    t.text     "content_vn"
+    t.string   "title_en"
+    t.text     "content_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "companies", force: :cascade do |t|
     t.string   "name_vn"
     t.string   "name_en"
@@ -59,6 +68,22 @@ ActiveRecord::Schema.define(version: 20160324040607) do
     t.datetime "updated_at",                           null: false
   end
 
+  create_table "equipment", force: :cascade do |t|
+    t.string   "image_url"
+    t.string   "name_vn"
+    t.integer  "quantity"
+    t.integer  "category_equipment_id"
+    t.integer  "manufacturer_equipment_id"
+    t.string   "status_vn"
+    t.string   "capacity"
+    t.text     "note_vn"
+    t.string   "name_en"
+    t.string   "status_en"
+    t.text     "note_en"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "finances", force: :cascade do |t|
     t.string   "tag_vn"
     t.string   "title_vn"
@@ -66,6 +91,15 @@ ActiveRecord::Schema.define(version: 20160324040607) do
     t.string   "tag_en"
     t.string   "title_en"
     t.string   "content_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "manufacturer_equipments", force: :cascade do |t|
+    t.string   "name_vn"
+    t.text     "content_vn"
+    t.string   "name_en"
+    t.text     "content_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,11 +134,13 @@ ActiveRecord::Schema.define(version: 20160324040607) do
     t.datetime "end_at"
     t.string   "name_company"
     t.string   "name_country"
-    t.integer  "tag_id"
     t.text     "content_vn"
     t.text     "content_en"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "name_company_en"
+    t.string   "name_country_en"
+    t.integer  "project_tag_id"
   end
 
   create_table "spring_letters", force: :cascade do |t|

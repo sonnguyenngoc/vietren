@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @equipment.image_url %>
+</p>
+
+<p>
+  <strong>Name vn:</strong>
+  <%= @equipment.name_vn %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @equipment.quantity %>
+</p>
+
+<p>
+  <strong>Category equipment:</strong>
+  <%= @equipment.category_equipment_id %>
+</p>
+
+<p>
+  <strong>Manufacturer equipment:</strong>
+  <%= @equipment.manufacturer_equipment_id %>
+</p>
+
+<p>
+  <strong>Status vn:</strong>
+  <%= @equipment.status_vn %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @equipment.capacity %>
+</p>
+
+<p>
+  <strong>Note vn:</strong>
+  <%= @equipment.note_vn %>
+</p>
+
+<p>
+  <strong>Name en:</strong>
+  <%= @equipment.name_en %>
+</p>
+
+<p>
+  <strong>Status en:</strong>
+  <%= @equipment.status_en %>
+</p>
+
+<p>
+  <strong>Note en:</strong>
+  <%= @equipment.note_en %>
+</p>
+
+<%= link_to 'Edit', edit_equipment_path(@equipment) %> |
+<%= link_to 'Back', equipment_index_path %>

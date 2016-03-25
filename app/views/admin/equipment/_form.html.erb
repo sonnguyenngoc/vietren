@@ -1,0 +1,61 @@
+<%= form_for(@equipment) do |f| %>
+  <% if @equipment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@equipment.errors.count, "error") %> prohibited this equipment from being saved:</h2>
+
+      <ul>
+      <% @equipment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :name_vn %><br>
+    <%= f.text_field :name_vn %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :category_equipment_id %><br>
+    <%= f.number_field :category_equipment_id %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer_equipment_id %><br>
+    <%= f.number_field :manufacturer_equipment_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status_vn %><br>
+    <%= f.text_field :status_vn %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br>
+    <%= f.text_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :note_vn %><br>
+    <%= f.text_area :note_vn %>
+  </div>
+  <div class="field">
+    <%= f.label :name_en %><br>
+    <%= f.text_field :name_en %>
+  </div>
+  <div class="field">
+    <%= f.label :status_en %><br>
+    <%= f.text_field :status_en %>
+  </div>
+  <div class="field">
+    <%= f.label :note_en %><br>
+    <%= f.text_area :note_en %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

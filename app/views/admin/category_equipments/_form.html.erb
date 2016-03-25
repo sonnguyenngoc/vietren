@@ -1,0 +1,56 @@
+<% if @category_equipment.errors.any? %>
+  <div id="error_explanation">
+    <% @category_equipment.errors.full_messages.each do |message| %>
+      <p class="label label-warning"><%= message %></p>
+    <% end %>
+  </div>
+<% end %>
+
+<%= form_for [:admin, @category_equipment], html: {class: "form-horizontal"} do |f| %>
+    
+    <div class="tabbable tab-content-bordered">
+        <ul class="nav nav-tabs bg-primary">
+            <li class="active"><a href="#control-tab1" data-toggle="tab">Tiếng Việt</a></li>
+            <li><a href="#control-tab2" data-toggle="tab">English </a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane has-padding active" id="control-tab1">
+                    
+                <div class="form-group">
+                    <%= f.label "Title: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :title_vn, class: "form-control" %>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <%= f.label "Description: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_area :content_vn, rows: "5", cols: "5", class: "form-control" %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane has-padding" id="control-tab2">
+                <div class="form-group">
+                    <%= f.label "Title: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :title_en, class: "form-control" %>
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    <%= f.label "Description: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <%= f.text_area :content_en, rows: "5", cols: "5", class: "form-control" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-right margin-submit">
+        <%= button_tag 'Save <i class="icon-plus22 position-right"></i>'.html_safe, class: "btn btn-primary"%>
+        <%= link_to 'Cancel <i class="icon-cross2"></i>'.html_safe, admin_category_equipments_path,class: "btn bg-warning-400"%>
+    </div>
+<% end %>

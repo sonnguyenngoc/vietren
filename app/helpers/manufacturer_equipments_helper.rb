@@ -1,0 +1,2 @@
+module ManufacturerEquipmentsHelper
+end
