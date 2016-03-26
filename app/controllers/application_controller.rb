@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
       if controller_name == 'home' || controller_name == 'letter_spring' || controller_name == 'under_construction' || controller_name == 'completed_construction' ||
         controller_name == 'investment_projects' || controller_name == 'equipment_page' || controller_name == 'notification' || controller_name == 'specialized_news'  ||
         controller_name == 'vietren_news' || controller_name == 'gallery' || controller_name == 'contact' || controller_name == 'recruitment' ||
-        controller_name == 'about_us' || controller_name == 'organization' || controller_name == 'finance' || controller_name == 'achivement' || controller_name == 'gallery_detail'
+        controller_name == 'about_us' || controller_name == 'organization' || controller_name == 'finance' || controller_name == 'achivement' || controller_name == 'gallery_detail' || controller_name == 'news_single' ||
+        controller_name == 'career_single' || controller_name == 'notification_single'
         
           'frontend'
           

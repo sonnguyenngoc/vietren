@@ -1,0 +1,2 @@
+module NotificationSingleHelper
+end

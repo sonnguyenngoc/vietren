@@ -36,15 +36,10 @@
                   </header>
                   <div class="post-content">
                         <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 50) %></p>
-                        <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>
+                        <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
                      </div>
                </article>
             <% end %>
-            <ul class="page-numbers">
-                 <li><span class="current">1</span></li>
-                 <li><a href="#">2</a></li>
-                 <li><a href="#" class="next">Next</a></li>
-              </ul>
            </div>
            <aside class="sidebar sidebar-right col-md-3">
               <%= render 'letter_spring/right_menu' %>

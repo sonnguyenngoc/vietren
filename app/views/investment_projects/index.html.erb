@@ -37,7 +37,7 @@
                      </header>
                      <div class="post-content">
                         <p class="post-desc"><%= item.description_vn %></p>
-                        <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Xem tiếp</a>
+                        <%= link_to "Xem tiếp", { controller: "gallery_detail", action: "index", gallery_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
                      </div>
                   </article>
                <% end %>

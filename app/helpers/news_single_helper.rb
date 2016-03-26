@@ -1,0 +1,2 @@
+module NewsSingleHelper
+end

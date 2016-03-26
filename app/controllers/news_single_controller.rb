@@ -1,7 +1,7 @@
-class GalleryDetailController < ApplicationController
+class NewsSingleController < ApplicationController
   def index
     @company = Company.get_company
+    @news = Information.find(params[:news_id])
     @lastest_news = Information.get_three_lastest_news
-    @gallery = Gallery.find(params[:gallery_id])
   end
 end

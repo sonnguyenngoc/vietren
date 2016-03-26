@@ -14,32 +14,38 @@
         <div class="container">
            <ol>
               <li><a href="<%= root_path %>">Trang chủ</a></li>
-              <li class="active">Thông báo</li>
+               <% if @news.type_vn == "Tin chuyên ngành" %>
+                  <li><%= link_to "Tin chuyên ngành", { controller: "specialized_news", action: "index" } %></li>
+               <% else %>
+                  <li><%= link_to "Tin Việt Ren", { controller: "vietren_news", action: "index" } %></li>
+               <% end %>
+              <li class="active"><%= @news.title_vn %></li>
            </ol>
         </div>
      </div>
      <!-- /Breadcrumbs -->
      <div class="container">
         <div class="row">
-           <div class="page-content col-md-9">
-               <% @notification.each do |item| %>
-                  <article class="post">
-                     <header>
-                        <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
-                        <ul class="post-meta">
-                           <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> Công Ty Cổ Phần Việt Ren</li>
-                           <li> <i class="fa fa-calendar"></i>
-                              <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
-                           </li>
-                           <li><i class="fa fa-th-large"></i>Thông báo</li>
-                        </ul>
-                     </header>
-                     <div class="post-content">
-                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
-                        <%= link_to "Đọc tiếp", { controller: "notification_single", action: "index", notification_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
-                     </div>
-                  </article>
-               <% end %>
+            <div class="page-content col-md-9 padding-bottom-xl">
+              <article class="post post-single">
+                 <header>
+                    <h3 class="post-title text-uppercase"><%= @news.title_vn %></h3>
+                    <ul class="post-meta">
+                        <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>
+                        <li> <i class="fa fa-calendar"></i>
+                           <time datetime="<%= @news.created_at.strftime("%d-%m-%Y") %>"><%= @news.created_at.strftime("%d-%m-%Y") %></time>
+                        </li>
+                        <% if @news.type_vn == "Tin chuyên ngành" %>
+                           <li><i class="fa fa-th-large"></i>Tin chuyên ngành</li>
+                        <% else %>
+                           <li><i class="fa fa-th-large"></i>Tin Việt Ren</li>
+                        <% end %>
+                     </ul>
+                 </header>
+                 <div class="post-content">
+                    <p><%= @news.content_vn.html_safe %></p>
+                 </div>
+              </article>
            </div>
            <aside class="sidebar sidebar-right col-md-3">
               <%= render 'letter_spring/right_menu' %>

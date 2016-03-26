@@ -27,7 +27,7 @@
                   <header>
                      <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
                      <ul class="post-meta">
-                        <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> Công Ty Cổ Phần Việt Ren</li>
+                        <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>
                         <li> <i class="fa fa-calendar"></i>
                            <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
                         </li>
@@ -36,15 +36,10 @@
                   </header>
                   <div class="post-content">
                      <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
-                     <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Đọc tiếp</a>
+                     <%= link_to "Đọc tiếp", { controller: "career_single", action: "index", career_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
                   </div>
                </article>
             <% end %>
-               <ul class="page-numbers">
-                  <li><span class="current">1</span></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#" class="next">Next</a></li>
-               </ul>
             </div>
             <aside class="sidebar sidebar-right col-md-3">
                <%= render 'letter_spring/right_menu' %>
