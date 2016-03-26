@@ -124,9 +124,13 @@
     
                                                         <div class="form-group">
                                                             <div class="row">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-3">
                                                                     <label>Phone</label>
                                                                     <input type="text" value="<%= @company.phone %>" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <label>Phone</label>
+                                                                    <input type="text" value="<%= @company.phone_2 %>" class="form-control">
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <label>Fax</label>
@@ -143,7 +147,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <label>Authorized capital</label>
-                                                                    <input type="text" value="<%= @company.authorized_capital.to_i %>" class="form-control">
+                                                                    <input type="text" value="<%= @company.authorized_capital.to_i %>" class="form-control price_input">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -301,3 +305,6 @@
 <%= javascript_include_tag '/backend/assets/js/pages/user_pages_profile.js' %>
 <%= javascript_include_tag '/backend/assets/js/pages/colors_primary.js' %>
 <!-- /theme JS files -->
+<script>
+    format_price($('input.price_input'));
+</script>

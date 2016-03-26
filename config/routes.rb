@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "under_construction" => "under_construction#index", as: :under_construction
   get "completed_construction" => "completed_construction#index", as: :completed_construction
   get "investment_projects" => "investment_projects#index", as: :investment_projects 
-  get "equipment" => "equipment#index", as: :equipment 
+  get "equipment_page" => "equipment_page#index", as: :equipment_page
   get "notification" => "notification#index", as: :notification
   get "specialized_news" => "specialized_news#index", as: :specialized_news 
   get "vietren_news" => "vietren_news#index", as: :vietren_news
@@ -20,7 +20,11 @@ Rails.application.routes.draw do
   namespace :admin, path: "vietren-admin" do
     get 'main' => 'main#index', as: :main
     get 'profile' => 'profile#index', as: :profile 
-    resources :companies
+    resources :companies do
+      collection do
+        get :hsnl_vietren
+      end
+    end
     resources :spring_letters
     resources :abouts
     resources :organizations

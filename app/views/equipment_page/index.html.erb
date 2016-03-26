@@ -1,0 +1,171 @@
+<div class="site">
+  <!-- Site Header -->
+  <header class="site-header classic relative">
+     <%= render 'letter_spring/header' %>
+  </header>
+  <!--/ Site Header -->
+  <main class="site-main">
+     <!-- Page header -->
+     <div class="page-header page-header-sm">
+        <h1 class="page-title text-uppercase">Công nghệ thiết bị</h1> </div>
+     <!-- /Page header -->
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb">
+        <div class="container">
+           <ol>
+              <li><a href="<%= root_path %>">Trang chủ</a></li>
+              <li class="active">Công nghệ thiết bị</li>
+           </ol>
+        </div>
+     </div>
+     <!-- /Breadcrumbs -->
+     <section class="section">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12">
+                 <div class="before-loop">
+                    <p class="result-count">Showing 1–12 of 20 results</p>
+                    <form class="ordering">
+                       <div class="select-wrapper">
+                          <select name="orderby" class="orderby">
+                             <option value="menu_order" selected="selected">Default sorting</option>
+                             <option value="popularity">Sort by popularity</option>
+                             <option value="rating">Sort by average rating</option>
+                             <option value="date">Sort by newness</option>
+                             <option value="price">Sort by price: low to high</option>
+                             <option value="price-desc">Sort by price: high to low</option>
+                          </select>
+                       </div>
+                    </form>
+                 </div>
+
+                 <ul class="row products">
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-1.jpg" alt="Paint Brush">
+                          <div class="add-to-cart-wrapper">
+                          xxx
+                          </div>
+                       </div> <a href="product.html"><h3 class="product-title">MÁY ĐÀO BÁNH XÍCH KOMATSU</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">Máy đào</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-3.jpg" alt="Water Level">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Water Level</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-4.jpg" alt="Trowers">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Trowers</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <span class="onsale">Sale!</span> <img src="/frontend/images/demo/product-5.jpg" alt="Tool Box">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Tool Box</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><del><span class="amount">$18.00</span></del> <ins><span class="amount">$18.00</span></ins></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-6.jpg" alt="Tool Belt">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Tool Belt</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-7.jpg" alt="Measurement Tape">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Measurement Tape</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-8.jpg" alt="Screw Set">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Screw Set</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-9.jpg" alt="Screw Driver">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Screw Driver</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-10.jpg" alt="Color Roller">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Color Roller</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-11.jpg" alt="Grass Mower">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Grass Mower</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-12.jpg" alt="Ladder">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Ladder</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-12.jpg" alt="Ladder">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Ladder</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-12.jpg" alt="Ladder">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Ladder</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-12.jpg" alt="Ladder">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Ladder</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-12.jpg" alt="Ladder">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Ladder</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3 product">
+                       <div class="product-header"> <img src="/frontend/images/demo/product-12.jpg" alt="Ladder">
+                          <div class="add-to-cart-wrapper"> <a href="product.html" rel="nofollow" class="btn btn-md">Add to cart</a> </div>
+                       </div> <a href="product.html"><h3 class="product-title">Ladder</h3></a>
+                       <div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"><strong class="rating">3.00</strong> out of 5</span></div> <span class="price"><span class="amount">$18.00</span></span>
+                    </li>
+                 </ul>
+                 <ul class="page-numbers">
+                    <li><span class="current">1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#" class="next">Next <i class="fa fa-angle-right"></i></a></li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </section>
+  </main>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+     <%= render 'home/footer' %>
+  </footer>
+  <!-- /Site Footer -->
+</div>
+<!-- Scripts -->
+<%= javascript_include_tag '/frontend/js/jquery.min.js' %>
+<%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
+<%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
+<%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
+<%= javascript_include_tag '/frontend/js/functions.js' %>
+<%= javascript_include_tag '/frontend/js/isotope.min.js' %>
+<%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
+<%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
+<!-- /Scripts -->
+<!-- Revolution Slider -->
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
+<!-- /Revolution Slider -->

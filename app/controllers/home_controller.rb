@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    #code
+    @company = Company.get_company
+    @news = Information.get_news
   end
 end
