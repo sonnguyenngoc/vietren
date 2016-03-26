@@ -16,6 +16,11 @@ User.delete_all
 User.create(:username => "Viet Ren Joint Stock Company", :email => "admin@vietren.vn", :password => "aA456321@", :password_confirmation => "aA456321@")
 #.....
 
+Information.delete_all
+#.....
+Information.create(:type_vn => "Tin tức", :type_en => "News" , title_vn: "Hối hả trên công trường Quốc lộ 20", :content_vn => "", :title_en => "", :content_en => "")
+#.....
+
 Organization.delete_all
 #.....
 Organization.create(:tag_vn => "Cơ cấu tổ chức", :title_vn => "Cơ cấu tổ chức Công ty Việt Ren", :content_vn => "<p style=\"text-align:center\"><img src=\"http://vietren.vn/portals/0/SDTC1.JPG\" /></p>
@@ -30,7 +35,7 @@ Organization.create(:tag_vn => "Cơ cấu tổ chức", :title_vn => "Cơ cấu 
 <table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" class=\"table\" style=\"line-height:20px; width:100%\">
 	<tbody>
 		<tr>
-			<td rowspan=\"3\" style=\"text-align:center; vertical-align:middle; white-space:nowrap\"><strong>&nbsp;<b>TT</b></strong></td>
+			<td rowspan=\"3\" style=\"text-align:center; vertical-align:middle; white-space:nowrap\"><strong>&nbsp;STT</strong></td>
 			<td rowspan=\"3\" style=\"text-align:center; vertical-align:middle; white-space:nowrap\"><strong>&nbsp;PH&Ograve;NG BAN, ĐƠN VỊ</strong></td>
 			<td rowspan=\"3\" style=\"text-align:center; vertical-align:middle; white-space:nowrap\"><strong>&nbsp;SỐ LƯỢNG</strong></td>
 			<td colspan=\"5\" style=\"text-align:center; vertical-align:middle; white-space:nowrap\"><strong>&nbsp;TR&Igrave;NH ĐỘ</strong></td>
@@ -505,8 +510,7 @@ SpringLetter.create(:tag_vn => "Thư xuân", :title_vn => "THƯ XUÂN CÔNG TY C
 <p style=\"text-align:center\"><strong>Thay mặt to&agrave;n thể CBCNV Cty<br />
 Chủ tịch HĐQT<br />
 <br />
-Nguyễn Phi H&ugrave;ng</strong></p>
-", :tag_vn => "Spring Letter", :title_en =>"BEST WISHES FOR THE NEW YEAR 2014", :content_en => "<p>&nbsp; &nbsp; &nbsp; On occasion to welcome the New Year 2014,&nbsp;Viet Ren Joint Stock Company&nbsp;(which was formerly known as Petroleum Construction Company No. I) would like to give the best wishes to the provincial leaders, departments, branches, districts, towns, the armed forces and all the people in the province.</p>
+Nguyễn Phi H&ugrave;ng</strong></p>", :tag_vn => "Spring Letter", :title_en =>"BEST WISHES FOR THE NEW YEAR 2014", :content_en => "<p>&nbsp; &nbsp; &nbsp; On occasion to welcome the New Year 2014,&nbsp;Viet Ren Joint Stock Company&nbsp;(which was formerly known as Petroleum Construction Company No. I) would like to give the best wishes to the provincial leaders, departments, branches, districts, towns, the armed forces and all the people in the province.</p>
 
 <p>Over the past years due to the economic downturn we have faced to the difficulties, but thanks to the attention and guidance of provincial leaders along with the efforts of officers and employees, the company has completed the proposed plan and remitted the budget according to the state indicators, taken part in the social welfare and employees&rsquo; life have been assured. Our company is always grateful for the sincere and effective help of the provincial leaders.</p>
 
@@ -521,8 +525,7 @@ Nguyễn Phi H&ugrave;ng</strong></p>
 Chairman of the Board</p>
 
 <p style=\"text-align:center\"><br />
-<strong><em>Nguyen Phi Hung</em></strong></p>
-")
+<strong><em>Nguyen Phi Hung</em></strong></p>")
 #.....
 
 Finance.delete_all
