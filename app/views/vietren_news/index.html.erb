@@ -35,8 +35,9 @@
                      </ul>
                   </header>
                   <div class="post-content">
-                     <p class="post-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae libero molestie, aliquet nibh eu, euismod massa. Morbi efficitur ut nisi ac fermentum. Aenean magna libero, varius vitae turpis at, iaculis placerat quam.
-                        Vivamus arcu lorem, vehicula fringilla malesuada sit amet, volutpat sed nisi. Vestibulum lectus ligula, mollis vitae ultricies non, consequat sed leo. </p> <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>                           </div>
+                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 50) %></p>
+                        <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>
+                     </div>
                </article>
             <% end %>
             <ul class="page-numbers">

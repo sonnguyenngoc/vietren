@@ -64,6 +64,14 @@ class Admin::CompaniesController < ApplicationController
   def hsnl_vietren
     send_file "hsnl_vietren.pdf"
   end
+  
+  def hatc1_vietren
+    send_file "Hinh anh(2015 Web VR)1.pdf"
+  end
+  
+  def hatc2_vietren
+    send_file "Hinh anh(2015 Web VR)2.pdf"
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

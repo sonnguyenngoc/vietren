@@ -106,7 +106,7 @@
             <div class="owl-carousel">
                <% @news.each do |item| %>
                   <article class="post">
-                     <header> <img src="/frontend/images/news_1.jpg" alt="Renovations tips and tricks"> </header>
+                     <header> <img src="<%= item.image_url.medium_news %>" alt="Renovations tips and tricks"> </header>
                      <h3 class="post-title"><%= item.title_vn %></h3>
                      <ul class="post-meta">
                         <li> <i class="fa fa-calendar"></i>

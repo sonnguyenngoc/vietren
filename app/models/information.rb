@@ -26,4 +26,9 @@ class Information < ActiveRecord::Base
       self.order("created_at DESC").first(3)
     end
   end
+  def self.get_lastest_news
+    if self.count > 0
+      self.order("created_at DESC").first(9)
+    end
+  end
 end

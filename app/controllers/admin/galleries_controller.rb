@@ -75,6 +75,6 @@ class Admin::GalleriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gallery_params
-      params.require(:gallery).permit(:type_vn, :title_vn, :description_vn, :gallery_detail_id, :type_en, :title_en, :description_en, gallery_details_attributes: [:id, :image_url, :gallery_id, :_destroy])
+      params.require(:gallery).permit(:image_url, :type_vn, :title_vn, :description_vn, :gallery_detail_id, :type_en, :title_en, :description_en, gallery_details_attributes: [:id, :image_url, :gallery_id, :_destroy])
     end
 end

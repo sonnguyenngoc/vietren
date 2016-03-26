@@ -48,9 +48,9 @@
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
                         <li><%= link_to "<i class='icon-home2 position-left'></i> Home".html_safe, {controller: "main", action: "index"} %></li>
-                        <li><%= link_to "News", { controller: "admin/information", action: "index" } %></li>
-                        <li><%= link_to "News Management", { controller: "admin/information", action: "index" } %></li>
-                        <li class="active">New News</li>
+                        <li><%= link_to "Photo Gallery", admin_galleries_path %></li>
+                        <li><%= link_to "Photo Galleries Management", admin_galleries_path %></li>
+                        <li class="active">New Gallery</li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <!-- Basic layout-->
                         <div class="panel panel-flat">
                             <div class="panel-heading">
-                                <h5 class="panel-title">New News</h5>
+                                <h5 class="panel-title">New Gallery</h5>
                                 <div class="heading-elements">
                                     <ul class="icons-list">
                                         <li><a data-action="collapse"></a></li>

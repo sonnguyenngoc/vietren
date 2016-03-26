@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "specialized_news" => "specialized_news#index", as: :specialized_news 
   get "vietren_news" => "vietren_news#index", as: :vietren_news
   get "gallery" => "gallery#index", as: :gallery
+  get "gallery_detail" => "gallery_detail#index", as: :gallery_detail
   get "contact" => "contact#index", as: :contact
   get "recruitment" => "recruitment#index", as: :recruitment
   get "about_us" => "about_us#index", as: :about_us
@@ -23,6 +24,8 @@ Rails.application.routes.draw do
     resources :companies do
       collection do
         get :hsnl_vietren
+        get :hatc1_vietren
+        get :hatc2_vietren
       end
     end
     resources :spring_letters

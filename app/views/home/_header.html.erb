@@ -52,21 +52,12 @@
               </li>
               <li class="menu-item  menu-item-has-children"><a href="#">Thư viện ảnh</a>
                  <ul class="sub-menu">
-                    <li class="menu-item"><%= link_to "Dự án đầu tư", { controller: "gallery", action: "index" } %></li>
-                    <li class="menu-item"><%= link_to "Công trình thi công", { controller: "gallery", action: "index" } %></li>
+                    <li class="menu-item"><%= link_to "Hình ảnh các dự án đầu tư", { controller: "investment_projects", action: "index" } %></li>
+                    <li class="menu-item"><%= link_to "Hình ảnh các công trình thi công", { controller: "gallery", action: "index" } %></li>
                  </ul>
               </li>
               <li class="menu-item"><%= link_to "Tuyển dụng", { controller: "recruitment", action: "index" } %></li>
               <li class="menu-item"><%= link_to "Liên hệ", { controller: "contact", action: "index" } %></li>
-              <!-- Search -->
-              <li class="menu-search">
-                 <button class="menu-search-toggle"><i class="fa fa-search"></i></button>
-                 <div class="menu-search-form hide">
-                    <form method="get">
-                       <input class="menu-search-field" name="s" type="text" placeholder="Search..."> </form>
-                 </div>
-              </li>
-              <!-- /Search -->
            </ul>
            <!-- /Main menu -->
         </div>

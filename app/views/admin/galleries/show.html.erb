@@ -105,6 +105,16 @@
                                                 <% end %>
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <%= label "", "Related Images: ", class: "control-label col-sm-2 text-semibold" %>
+                                            <div class="col-sm-10">
+                                                <% @gallery.gallery_details.each do |item| %>
+                                                    <div class="col-sm-3">
+                                                        <%= image_tag(item.image_url.small_gallery, size: "125x75", alt: "Gallery Listing", class: "img-rouded padding-bottom") %>
+                                                    </div>
+                                                <% end %>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                     

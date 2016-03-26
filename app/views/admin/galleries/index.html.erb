@@ -68,6 +68,7 @@
                     <table class="table datatable-about-us">
                         <thead>
                             <tr>
+                                <th>Picture</th>
                                 <th>Title</th>
                                 <th>Content</th>
                                 <th>Status</th>
@@ -78,6 +79,11 @@
                         <tbody>
                             <% @galleries.each do |item| %>
                                 <tr>
+                                    <td>
+                                        <div class="media-left">
+                                            <img src="<%= item.image_url.small_gallery if item.image_url? %>" class="img-rounded">
+                                        </div>
+                                    </td>
                                     <td>
                                         <%= link_to item.title_vn, [:admin, item] %><br/>
                                         <%= link_to item.title_en, [:admin, item] %>
