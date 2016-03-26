@@ -13,7 +13,7 @@
         max-width: 34%;
     }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 500px) {
     .logo-img {
         height: auto;
         max-width: 34%;
