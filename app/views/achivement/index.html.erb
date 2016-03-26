@@ -14,7 +14,7 @@
           <div class="container">
              <ol>
                 <li><a href="<%= root_path %>">Trang chủ</a></li>
-                <li class="active">Thành tích đạt được</li>
+                <li class="active"><%= @achievements.tag_vn if !@achievements.nil? %></li>
              </ol>
           </div>
        </div>
@@ -23,12 +23,8 @@
           <div class="container">
              <div class="row">
                 <div class="col-sm-6">
-                   <h3 class="title text-uppercase">About Construction</h3>
-                   <p> <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a enim aliquam, condimentum nisl a, laoreet lectus. Aliquam convallis sed elit nec vehicula. Praesent gravida, massa sit amet ullamcorper fringilla, tortor nunc ultrices dui, in tristique leo leo sed massa.</em>                           </p>
-                   <p>Quisque et lectus pulvinar, porttitor mi non, elementum dui. Morbi mi nisl, tincidunt sed venenatis eget, finibus eu mauris. Nullam nisi lacus, feugiat eget varius eget, pellentesque dictum odio. Sed sollicitudin viverra est, at
-                      aliquam metus ultrices id. Duis eu purus vel nisl commodo facilisis vitae ut lectus.</p>
-                   <p>Sed elementum dapibus tellus, a dictum metus interdum ac. Nullam condimentum, dui volutpat fringilla molestie, libero tortor ultrices lorem, at tempus diam purus non velit. Aliquam vel nulla eleifend, consequat elit id, tristique
-                      massa. Fusce dolor velit, blandit ac erat ac, vestibulum ornare diam. Sed sollicitudin viverra est, at aliquam metus ultrices id. Duis eu purus vel nisl commodo facilisis vitae ut lectus.</p>
+                   <h3 class="title text-uppercase"><%= @achievements.title_vn if !@achievements.nil? %></h3>
+                   <%= @achievements.content_vn.html_safe if !@achievements.nil? %>
                 </div>
                 <div class="col-sm-6"> <img class="shadow" src="/frontend/images/demo/our-offices.jpg" alt="Our offices"> </div>
              </div>
@@ -38,60 +34,54 @@
           <div class="container">
              <div class="row">
                 <div class="col-md-12">
-                   <h3 class="title text-uppercase">Experienced Team</h3> </div>
+                   <h3 class="title text-uppercase">Hình ảnh - Thành tích</h3> </div>
              </div>
              <div class="row">
-                <div class="col-md-12">
-                   <div class="team team-col-3">
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-1.jpg" alt="John Builder"></a>
-                            </div> <a href="member.html"><h3 class="member-name">John Builder</h3></a> <span class="member-title">CEO and founjder of Counstruction ltd.</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-2.jpg" alt="Steve Planer"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Steve Planer</h3></a> <span class="member-title">Construction engineer</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-3.jpg" alt="Mark Teran"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Mark Teran</h3></a> <span class="member-title">Project leader</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-4.jpg" alt="Greg Custom"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Greg Custom</h3></a> <span class="member-title">Customer relations</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-5.jpg" alt="Tony Archor"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Tony Archor</h3></a> <span class="member-title">Quality manager</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                      <div class="member">
-                         <div class="member-wrap">
-                            <div class="member-image">
-                               <a href="member.html"><img src="/frontend/images/demo/team-6.jpg" alt="Frank Drive"></a>
-                            </div> <a href="member.html"><h3 class="member-name">Frank Drive</h3></a> <span class="member-title">Vehicle park manager</span>
-                            <p class="member-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacinia enim vel blandit. In placerat, ex nec sodales elementum.</p>
-                         </div>
-                      </div>
-                   </div>
+                <div class="col-md-12 page-content padding-bottom-xl">
+                     <div class="gallery row">
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/thanh-tich-01.jpg"><img src="/frontend/images/thanh-tich-01.jpg" alt="Gallery 1"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/thanh-tich-02.jpg"><img src="/frontend/images/thanh-tich-02.jpg" alt="Gallery 2"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/thanh-tich-03.jpg"><img src="/frontend/images/thanh-tich-03.jpg" alt="Gallery 3"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/thanh-tich-04.jpg"><img src="/frontend/images/thanh-tich-04.jpg" alt="Gallery 4"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/thanh-tich-05.jpg"><img src="/frontend/images/thanh-tich-05.jpg" alt="Gallery 4"></a>
+                              </div>
+                           </figure>
+                        </div>
+                        <div class="col-xs-2">
+                           <figure class="gallery-item">
+                              <div class="gallery-icon">
+                                 <a href="/frontend/images/thanh-tich-06.jpg"><img src="#" alt="Gallery 4"></a>
+                              </div>
+                           </figure>
+                        </div>
+                     </div>
                 </div>
              </div>
           </div>

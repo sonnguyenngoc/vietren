@@ -23,10 +23,10 @@
                  <li><i class="fa fa-envelope"></i> <a href="mailto:vrc@vnn.vn">vrc@vnn.vn</a></li>
               </ul>
               <ul class="social social-transparent-border">
-                 <li><a href="https://twitter.com/anpsthemes"><i class="fa fa-twitter"></i></a></li>
-                 <li><a href="https://www.facebook.com/anpsthemes"><i class="fa fa-facebook"></i></a></li>
-                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                 <li><a href="https://profiles.wordpress.org/anpsthemes/"><i class="fa fa-wordpress"></i></a></li>
+                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#"><i class="fa fa-google"></i></a></li>
+                 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
               </ul>
            </div>
            <!-- /Above Navbar -->
@@ -47,7 +47,13 @@
                  <ul class="sub-menu">
                     <li class="menu-item"><%= link_to "Công trình đã hoàn thành", { controller: "completed_construction", action: "index" } %></li>
                     <li class="menu-item"><%= link_to "Công trình đang thi công", { controller: "under_construction", action: "index" } %></li>
-                    <li class="menu-item"><a href="#">Dự án công ty đang đầu tư</a></li>
+                    <li class="menu-item menu-item-has-children"><a href="#">Dự án công ty đang đầu tư</a>
+                      <ul class="sub-menu">
+                        <li class="menu-item"><a href="#">Dự án khai thác vàng tại Lào</a></li>
+                        <li class="menu-item"><a href="#">Thủy điện sông Tranh</a></li>
+                        <li class="menu-item"><a href="#">Các dự án mỏ đá</a></li>
+                     </ul>
+                    </li>
                  </ul>
               </li>
               <li class="menu-item"><%= link_to "Công nghệ thiết bị", { controller: "equipment_page", action: "index" } %></li>
