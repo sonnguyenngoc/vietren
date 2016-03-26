@@ -22,52 +22,24 @@
      <div class="container">
         <div class="row">
            <div class="page-content col-md-9">
-              <article class="post">
-                 <header> <img src="/frontend/images/demo/post-1.jpg" alt="Eco Friendly Architectural Beauty">
-                    <h3 class="post-title text-uppercase">Eco Friendly Architectural Beauty</h3>
-                    <ul class="post-meta">
-                       <li> <i class="fa fa-user"></i> <span class="text-lowercase">posted by:</span> Anpsthemes </li>
-                       <li> <i class="fa fa-calendar"></i>
-                          <time datetime="2015-10-06 13:00">October 6, 2015</time>
-                       </li>
-                       <li> <i class="fa fa-commenting-o"></i> No comments </li>
-                    </ul>
-                 </header>
-                 <div class="post-content">
-                    <p class="post-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae libero molestie, aliquet nibh eu, euismod massa. Morbi efficitur ut nisi ac fermentum. Aenean magna libero, varius vitae turpis at, iaculis placerat quam.
-                       Vivamus arcu lorem, vehicula fringilla malesuada sit amet, volutpat sed nisi. Vestibulum lectus ligula, mollis vitae ultricies non, consequat sed leo. </p> <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>                           </div>
-              </article>
-              <article class="post">
-                 <header> <img src="/frontend/images/demo/post-2.jpg" alt="Future Smart Houses">
-                    <h3 class="post-title text-uppercase">Future Smart Houses</h3>
-                    <ul class="post-meta">
-                       <li> <i class="fa fa-user"></i> <span class="text-lowercase">posted by:</span> Anpsthemes </li>
-                       <li> <i class="fa fa-calendar"></i>
-                          <time datetime="2015-10-06 13:00">October 6, 2015</time>
-                       </li>
-                       <li> <i class="fa fa-commenting-o"></i> No comments </li>
-                    </ul>
-                 </header>
-                 <div class="post-content">
-                    <p class="post-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae libero molestie, aliquet nibh eu, euismod massa. Morbi efficitur ut nisi ac fermentum. Aenean magna libero, varius vitae turpis at, iaculis placerat quam.
-                       Vivamus arcu lorem, vehicula fringilla malesuada sit amet, volutpat sed nisi. Vestibulum lectus ligula, mollis vitae ultricies non, consequat sed leo. </p> <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>                           </div>
-              </article>
-              <article class="post">
-                 <header> <img src="/frontend/images/demo/post-3.jpg" alt="From Ground Up Building">
-                    <h3 class="post-title text-uppercase">From Ground Up Building</h3>
-                    <ul class="post-meta">
-                       <li> <i class="fa fa-user"></i> <span class="text-lowercase">posted by:</span> Anpsthemes </li>
-                       <li> <i class="fa fa-calendar"></i>
-                          <time datetime="2015-10-06 13:00">October 6, 2015</time>
-                       </li>
-                       <li> <i class="fa fa-commenting-o"></i> No comments </li>
-                    </ul>
-                 </header>
-                 <div class="post-content">
-                    <p class="post-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae libero molestie, aliquet nibh eu, euismod massa. Morbi efficitur ut nisi ac fermentum. Aenean magna libero, varius vitae turpis at, iaculis placerat quam.
-                       Vivamus arcu lorem, vehicula fringilla malesuada sit amet, volutpat sed nisi. Vestibulum lectus ligula, mollis vitae ultricies non, consequat sed leo. </p> <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>                           </div>
-              </article>
-              <ul class="page-numbers">
+            <% @vietren_news.each do |item| %>
+               <article class="post">
+                  <header> <img src="<%= item.image_url.big_news %>" alt="<%= item.title_vn %>">
+                     <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
+                     <ul class="post-meta">
+                        <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>
+                        <li> <i class="fa fa-calendar"></i>
+                           <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
+                        </li>
+                        <li><i class="fa fa-th-large"></i><%= item.type_vn %></li>
+                     </ul>
+                  </header>
+                  <div class="post-content">
+                     <p class="post-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae libero molestie, aliquet nibh eu, euismod massa. Morbi efficitur ut nisi ac fermentum. Aenean magna libero, varius vitae turpis at, iaculis placerat quam.
+                        Vivamus arcu lorem, vehicula fringilla malesuada sit amet, volutpat sed nisi. Vestibulum lectus ligula, mollis vitae ultricies non, consequat sed leo. </p> <a href="news-single.html" class="btn btn-md btn-gradient btn-shadow">Read More</a>                           </div>
+               </article>
+            <% end %>
+            <ul class="page-numbers">
                  <li><span class="current">1</span></li>
                  <li><a href="#">2</a></li>
                  <li><a href="#" class="next">Next</a></li>

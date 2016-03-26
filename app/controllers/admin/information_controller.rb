@@ -4,7 +4,7 @@ class Admin::InformationController < ApplicationController
   # GET /information
   # GET /information.json
   def index
-    @information = Information.all
+    @information = Information.get_all_news
   end
 
   # GET /information/1
@@ -69,6 +69,6 @@ class Admin::InformationController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def information_params
-      params.require(:information).permit(:type_vn, :type_en, :title_vn, :content_vn, :title_en, :content_en)
+      params.require(:information).permit(:image_url, :type_vn, :type_en, :title_vn, :content_vn, :title_en, :content_en)
     end
 end

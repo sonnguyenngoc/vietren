@@ -492,9 +492,9 @@ Organization.create(:tag_vn => "Cơ cấu tổ chức", :title_vn => "Cơ cấu 
 </table>")
 #.....
 
-SpringLatter.delete_all
+SpringLetter.delete_all
 #.....
-SpringLatter.create(:tag_vn => "Thư xuân", :title_vn => "THƯ XUÂN CÔNG TY CP VIỆT REN", :content_vn => "<p style=\"text-align:justify\">&nbsp; &nbsp; &nbsp; &nbsp;Nh&acirc;n dịp đ&oacute;n Xu&acirc;n Gi&aacute;p Ngọ năm 2014, C&ocirc;ng ty CP Việt Ren (m&agrave; tiền th&acirc;n l&agrave; Cty CP x&acirc;y lắp dầu kh&iacute; I) xin gửi tới c&aacute;c đồng chi L&atilde;nh đạo Tỉnh, c&aacute;c sở, ban, ng&agrave;nh, c&aacute;c huyện, th&agrave;nh, thị x&atilde;, c&aacute;c Lực lượng vũ trang c&ugrave;ng nh&acirc;n d&acirc;n tỉnh nh&agrave; lời ch&uacute;c mừng tốt đẹp nhất.<br />
+SpringLetter.create(:tag_vn => "Thư xuân", :title_vn => "THƯ XUÂN CÔNG TY CP VIỆT REN", :content_vn => "<p style=\"text-align:justify\">&nbsp; &nbsp; &nbsp; &nbsp;Nh&acirc;n dịp đ&oacute;n Xu&acirc;n Gi&aacute;p Ngọ năm 2014, C&ocirc;ng ty CP Việt Ren (m&agrave; tiền th&acirc;n l&agrave; Cty CP x&acirc;y lắp dầu kh&iacute; I) xin gửi tới c&aacute;c đồng chi L&atilde;nh đạo Tỉnh, c&aacute;c sở, ban, ng&agrave;nh, c&aacute;c huyện, th&agrave;nh, thị x&atilde;, c&aacute;c Lực lượng vũ trang c&ugrave;ng nh&acirc;n d&acirc;n tỉnh nh&agrave; lời ch&uacute;c mừng tốt đẹp nhất.<br />
 <br />
 &nbsp; &nbsp; &nbsp; &nbsp;Trong những năm qua mặc d&ugrave; ch&uacute;ng ta vẫn c&ograve;n chịu ảnh hưởng của cơn b&atilde;o suy tho&aacute;i kinh tế nhưng nhờ sự quan t&acirc;m chỉ đạo của l&atilde;nh đạo tỉnh c&ugrave;ng với sự nổ lực phấn đấu của tập thể c&aacute;n bộ c&ocirc;ng nh&acirc;n vi&ecirc;n n&ecirc;n c&ocirc;ng ty ho&agrave;n th&agrave;nh kế hoạch đ&atilde; đề ra, giao nộp ng&acirc;n s&aacute;ch cho nh&agrave; nước đủ chỉ ti&ecirc;u, tham gia tốt c&ocirc;ng t&aacute;c an sinh x&atilde; hội, đời sống của c&ocirc;ng nh&acirc;n đảm bảo. C&ocirc;ng ty ch&uacute;ng t&ocirc;i lu&ocirc;n tri &acirc;n sự gi&uacute;p đỡ ch&acirc;n t&igrave;nh v&agrave; hiệu quả ấy.<br />
 <br />

@@ -1,4 +1,4 @@
-class EquipmentController < ApplicationController
+class EquipmentPageController < ApplicationController
   def index
     @company = Company.get_company
   end
