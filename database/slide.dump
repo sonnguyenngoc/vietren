@@ -1,0 +1,62 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+--
+-- Data for Name: slides; Type: TABLE DATA; Schema: public; Owner: nguyenngocson0811
+--
+
+COPY slides (id, image_url, title_vn, content_vn, title_en, content_en, created_at, updated_at) FROM stdin;
+1	quoc-lo-20-02.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH	CẢI TẠO QUỐC LỘ 20			2016-03-29 08:31:32.838855	2016-03-29 08:31:52.117617
+2	quoc-lo-20-03.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH	CẢI TẠO QUỐC LỘ 20			2016-03-29 08:44:09.725113	2016-03-29 08:44:09.725113
+3	cua-viet-01.jpg	CÔNG TRÌNH ĐÃ HOÀN THÀNH	CỬA VIỆT			2016-03-29 08:48:02.647374	2016-03-29 08:48:02.647374
+4	cua-viet-02.jpg	CÔNG TRÌNH ĐÃ HOÀN THÀNH	CỬA VIỆT			2016-03-29 08:48:24.845693	2016-03-29 08:48:24.845693
+5	thuy-dien-song-tranh-01.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH - ĐANG ĐẦU TƯ	THỦY ĐIỆN SÔNG TRANH			2016-03-29 08:50:11.451524	2016-03-29 08:50:11.451524
+6	thuy-dien-song-tranh-02.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH - ĐANG ĐẦU TƯ	THỦY ĐIỆN SÔNG TRANH			2016-03-29 08:50:21.29682	2016-03-29 08:50:21.29682
+7	thuy-dien-song-tranh-03.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH - ĐANG ĐẦU TƯ	THỦY ĐIỆN SÔNG TRANH			2016-03-29 08:50:30.926641	2016-03-29 08:50:30.926641
+8	thuy-dien-song-tranh-04.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH - ĐANG ĐẦU TƯ	THỦY ĐIỆN SÔNG TRANH			2016-03-29 08:50:41.744183	2016-03-29 08:50:41.744183
+9	thuy-dien-song-tranh-05.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH - ĐANG ĐẦU TƯ	THỦY ĐIỆN SÔNG TRANH			2016-03-29 08:50:59.575205	2016-03-29 08:50:59.575205
+10	thuy-dien-song-tranh-06.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH - ĐANG ĐẦU TƯ	THỦY ĐIỆN SÔNG TRANH			2016-03-29 08:51:18.226821	2016-03-29 08:51:18.226821
+11	thuy-dien-song-tranh-07.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH - ĐANG ĐẦU TƯ	THỦY ĐIỆN SÔNG TRANH			2016-03-29 08:52:13.852807	2016-03-29 08:52:13.852807
+12	thuy-dien-song-tranh-08.JPG	CÔNG TRÌNH ĐÃ HOÀN THÀNH - ĐANG ĐẦU TƯ	THỦY ĐIỆN SÔNG TRANH			2016-03-29 08:52:25.728389	2016-03-29 08:52:25.728389
+13	mo-da-01.jpg	CÔNG TRÌNH ĐANG ĐẦU TƯ	MỎ ĐÁ			2016-03-29 08:53:43.011452	2016-03-29 08:53:43.011452
+14	mo-da-02.jpg	CÔNG TRÌNH ĐANG ĐẦU TƯ	MỎ ĐÁ			2016-03-29 08:53:59.308516	2016-03-29 08:53:59.308516
+15	mo-da-03.jpg	CÔNG TRÌNH ĐANG ĐẦU TƯ	MỎ ĐÁ			2016-03-29 08:54:13.445218	2016-03-29 08:54:13.445218
+16	mo-da-04.jpg	CÔNG TRÌNH ĐANG ĐẦU TƯ	MỎ ĐÁ			2016-03-29 08:54:30.43838	2016-03-29 08:54:30.43838
+23	thiet-bi-tau-vietren-01.JPG	CÔNG NGHỆ THIẾT BỊ	TÀU VIETREN TH-02			2016-03-29 08:59:31.83907	2016-03-29 08:59:31.83907
+24	thiet-bi-tau-vietren-02.JPG	CÔNG NGHỆ THIẾT BỊ	TÀU VIETREN TH-02			2016-03-29 08:59:44.008589	2016-03-29 08:59:44.008589
+27	thiet-bi-xuong-luyen-kim-01.JPG	CÔNG NGHỆ THIẾT BỊ	XƯỞNG LUYỆN KIM			2016-03-29 09:00:52.126409	2016-03-29 09:00:52.126409
+28	thiet-bi-xuong-luyen-kim-02.JPG	CÔNG NGHỆ THIẾT BỊ	XƯỞNG LUYỆN KIM			2016-03-29 09:01:03.246787	2016-03-29 09:01:03.246787
+19	thiet-bi-may-chuyen-da-300-tan-01.jpg	CÔNG NGHỆ THIẾT BỊ	MÁY CHUYỀN ĐÁ			2016-03-29 08:56:57.990489	2016-03-29 09:08:04.089271
+17	khai-thac-vang-01.JPG	CÔNG TRÌNH ĐANG ĐẦU TƯ	DỰ ÁN KHAI THÁC VÀNG			2016-03-29 08:55:13.104657	2016-03-29 09:08:19.820966
+18	khai-thac-vang-02.JPG	CÔNG TRÌNH ĐANG ĐẦU TƯ	DỰ ÁN KHAI THÁC VÀNG			2016-03-29 08:55:36.876462	2016-03-29 09:08:51.950005
+20	thiet-bi-may-chuyen-da-300-tan-02.jpg	CÔNG NGHỆ THIẾT BỊ	MÁY CHUYỀN ĐÁ			2016-03-29 08:57:12.10918	2016-03-29 09:09:06.889909
+21	thiet-bi-may-chuyen-da-350-tan-01.jpg	CÔNG NGHỆ THIẾT BỊ	MÁY CHUYỀN ĐÁ			2016-03-29 08:57:23.128565	2016-03-29 09:09:16.873091
+22	thiet-bi-may-chuyen-da-350-tan-02.jpg	CÔNG NGHỆ THIẾT BỊ	MÁY CHUYỀN ĐÁ			2016-03-29 08:57:47.949205	2016-03-29 09:09:30.970228
+25	thiet-bi-tron-be-tong-120-tan-01.jpg	CÔNG NGHỆ THIẾT BỊ	DÀN TRỘN BÊ TÔNG			2016-03-29 09:00:21.085912	2016-03-29 09:09:45.27733
+26	thiet-bi-tron-be-tong-120-tan-02.jpg	CÔNG NGHỆ THIẾT BỊ	DÀN TRỘN BÊ TÔNG			2016-03-29 09:00:31.51803	2016-03-29 09:09:54.897083
+29	le-cau-sieu-01.JPG	TIN VIỆT REN	ĐẠI LỄ CẦU SIÊU			2016-03-29 09:02:14.719758	2016-03-29 09:10:17.55984
+30	le-cau-sieu-02.JPG	TIN VIỆT REN	ĐẠI LỄ CẦU SIÊU			2016-03-29 09:02:31.351626	2016-03-29 09:10:32.016764
+\.
+
+
+--
+-- Name: slides_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nguyenngocson0811
+--
+
+SELECT pg_catalog.setval('slides_id_seq', 30, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
