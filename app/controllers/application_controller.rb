@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
       elsif controller_name == 'main' || controller_name == 'profile' || controller_name == 'spring_letters' || controller_name == 'abouts' ||
             controller_name == 'organizations' || controller_name == 'finances' || controller_name == 'achievements' || controller_name == 'projects' || controller_name == 'project_tags' ||
             controller_name == 'equipment' || controller_name == 'category_equipments' || controller_name == 'manufacturer_equipments' || controller_name == 'notifications' || controller_name == 'careers' ||
-            controller_name == 'information' || controller_name == 'galleries'
+            controller_name == 'information' || controller_name == 'galleries' || controller_name == 'slides'
           authenticate_user!
           'backend'
           

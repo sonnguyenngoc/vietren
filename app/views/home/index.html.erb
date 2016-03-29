@@ -47,7 +47,7 @@
                <div class="col-md-4">
                   <div class="icon">
                      <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-building-o"></i></div>
+                        <div class="icon-media"><i class="fa fa-anchor"></i></div>
                         <h3 class="icon-title text-uppercase">Xây dựng</h3>
                      </div>
                      <p class="icon-desc">
@@ -59,7 +59,7 @@
                   </div>
                   <div class="icon">
                      <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-truck"></i></div>
+                        <div class="icon-media"><i class="fa fa-train"></i></div>
                         <h3 class="icon-title text-uppercase">San lấp</h3>
                      </div>
                      <p class="icon-desc">
@@ -82,7 +82,7 @@
                   </div>
                   <div class="icon">
                      <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-object-group"></i></div>
+                        <div class="icon-media"><i class="fa fa-building-o"></i></div>
                         <h3 class="icon-title text-uppercase">Sản xuất</h3>
                      </div>
                      <p class="icon-desc">
@@ -115,7 +115,9 @@
                         <li> <i class="fa fa-th-large"></i><%= item.type_vn %></li>
                      </ul>
                      <div class="post-content">
-                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p> <a href="#" class="btn btn-md btn-gradient btn-shadow">Đọc tiếp</a> </div>
+                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
+                        <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
+                     </div>
                   </article>
                <% end %>
             </div>
@@ -293,7 +295,7 @@
             {
                sliderType: "standard",
                sliderLayout: "auto",
-               delay: 9000,
+               delay: 2000,
                navigation:
                {
                   arrows:

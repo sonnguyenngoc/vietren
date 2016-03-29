@@ -45,5 +45,6 @@ Rails.application.routes.draw do
     resources :careers
     resources :galleries
     resources :information
+    resources :slides
   end
 end
