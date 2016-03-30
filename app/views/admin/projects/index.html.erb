@@ -68,6 +68,7 @@
                     <table class="table datatable-projects">
                         <thead>
                             <tr>
+                                <th>Picture</th>
                                 <th>Name</th>
                                 <th>Total Value<br/>Cost Performance</th>
                                 <th>Start<br/>Finish</th>
@@ -80,8 +81,16 @@
                             <% @projects.each do |item| %>
                                 <tr>
                                     <td>
+                                        <div class="media-left">
+                                            <img src="<%= item.image_url.small_image if item.image_url? %>" class="img-rounded">
+                                        </div>
+                                    </td>
+                                    <td>
                                         <%= link_to item.name_vn, [:admin, item] %><br/>
-                                        <%= link_to item.name_en, [:admin, item] %>
+                                        <%= link_to item.name_en, [:admin, item] %><br/>
+                                        <% if item.success == 'True' %>
+                                            <span class="label label-success">HOME PAGE - PROJECTS</span>
+                                        <% end %>
                                     </td>
                                     <td>
                                         <%= number_with_delimiter item.total_value.to_i %><br/>

@@ -1,6 +1,13 @@
 class ApplicationController < ActionController::Base
+  before_action :set_locale
   layout :layout_by_resource
   protect_from_forgery with: :exception
+  
+  after_filter  :set_access_control_headers
+
+  def set_access_control_headers
+    headers['Access-Control-Allow-Origin'] = '*'
+  end   
   
   protected
     def layout_by_resource
@@ -8,7 +15,7 @@ class ApplicationController < ActionController::Base
         controller_name == 'investment_projects' || controller_name == 'equipment_page' || controller_name == 'notification' || controller_name == 'specialized_news'  ||
         controller_name == 'vietren_news' || controller_name == 'gallery' || controller_name == 'contact' || controller_name == 'recruitment' ||
         controller_name == 'about_us' || controller_name == 'organization' || controller_name == 'finance' || controller_name == 'achivement' || controller_name == 'gallery_detail' || controller_name == 'news_single' ||
-        controller_name == 'career_single' || controller_name == 'notification_single'
+        controller_name == 'career_single' || controller_name == 'notification_single' || controller_name == 'project_detail'
         
           'frontend'
           
@@ -25,4 +32,17 @@ class ApplicationController < ActionController::Base
           
       end
     end
+ 
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+  
+  def extract_locale_from_tld
+    parsed_locale = request.host.split('.').last
+    I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
+  end
+  
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
+  end
 end

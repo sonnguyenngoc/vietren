@@ -23,10 +23,10 @@
                  <li><i class="fa fa-envelope"></i> <a href="mailto:vrc@vnn.vn">vrc@vnn.vn</a></li>
               </ul>
               <ul class="social social-transparent-border">
-                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                 <li><a href="#"><i class="fa fa-google"></i></a></li>
-                 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.facebook.com/vietren02032009/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.pinterest.com/vietren999999/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCcVOqTLu33lURWPwBWLCZIg" target="_blank"><i class="fa fa-youtube" target="_blank"></i></a></li>
               </ul>
            </div>
            <!-- /Above Navbar -->
@@ -49,9 +49,9 @@
                     <li class="menu-item"><%= link_to "Công trình đang thi công", { controller: "under_construction", action: "index" } %></li>
                     <li class="menu-item menu-item-has-children"><a href="#">Dự án công ty đang đầu tư</a>
                       <ul class="sub-menu">
-                        <li class="menu-item"><a href="#">Dự án khai thác vàng tại Lào</a></li>
-                        <li class="menu-item"><a href="#">Thủy điện sông Tranh</a></li>
-                        <li class="menu-item"><a href="#">Các dự án mỏ đá</a></li>
+                        <% @menu_projects.each do |item| %>
+                          <li class="menu-item"><%= link_to item.name_vn, { controller: "project_detail", action: "index", project_id: item.id } %></li>
+                        <% end %>
                      </ul>
                     </li>
                  </ul>
@@ -72,6 +72,7 @@
               </li>
               <li class="menu-item"><%= link_to "Tuyển dụng", { controller: "recruitment", action: "index" } %></li>
               <li class="menu-item"><%= link_to "Liên hệ", { controller: "contact", action: "index" } %></li>
+              <li class="menu-item color-red"><a href="" style="color: red;">VI</a><a href="" style="color: blue;">EN</a></li>
            </ul>
            <!-- /Main menu -->
         </div>

@@ -1,6 +1,7 @@
 class CompletedConstructionController < ApplicationController
   def index
     @company = Company.get_company
-    @completed_construction = Project.get_completed_construcstion
+    @menu_projects = Project.get_success_true_projects
+    @completed_construction = Project.get_completed_construction
   end
 end

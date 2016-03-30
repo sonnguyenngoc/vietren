@@ -15,7 +15,7 @@
            <ol>
               <li><a href="<%= root_path %>">Trang chủ</a></li>
               <li><%= link_to "Thư viện ảnh", { controller: "gallery", action: "index" } %></li>
-              <li><%= link_to @gallery.type_vn, { controller: "gallery", action: "index" } %></li>
+              <li><%= link_to @gallery.type_vn, "#" %></li>
               <li class="active"><%= @gallery.title_vn %></li>
            </ol>
         </div>
