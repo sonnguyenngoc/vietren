@@ -34,3 +34,17 @@ en:
   constructions: "Constructions"
   all: "All"
   certificates_images: "Certificates Images"
+  home_construction: "Construction"
+  home_leveling: "Leveling"
+  home_investment: "Investment"
+  home_production: "Production"
+  home_construction_detail: "- Construction of roads since 2000.<br/>
+                        - Construction of irrigation works since 2000.<br/>
+                        - Construction of electrical works and water supply and drainage since 2001.<br/>
+                        - Construction of civil works since 2003."
+  home_leveling_detail: "- Leveling the industrial works since 2000."
+  home_investment_detail: "- Investment and trading traffic works.<br/>
+                        - Investment and trading irrigation - hydropower, industrial and civil works.<br/>
+                        - Investment and trading electrical and water works.<br/>
+                        - Investment and trading domestic and foreign minerals."
+  home_production_detail: "- Production of building materials since 2000."

@@ -34,3 +34,17 @@ vi:
   constructions: "Các công trình"
   all: "Tất cả"
   certificates_images: "Hình ảnh bằng khen"
+  home_construction: "Xây dựng"
+  home_leveling: "San lấp"
+  home_investment: "Đầu tư"
+  home_production: "Sản xuất"
+  home_construction_detail: "- Xây dựng các công trình giao thông từ năm 2000.<br/>
+                     - Xây dựng các công trình thuỷ lợi năm 2000.<br/>
+                     - Xây dựng các công trình điện, cấp thoát nước từ năm 2001.<br/>
+                     - Xây dựng các công trình dân dụng từ năm 2003."
+  home_leveling_detail: "- San lấp mặt bằng công nghiệp từ năm 2000."
+  home_investment_detail: "- Đầu tư kinh doanh các công trình giao thông.<br/>
+                     - Đầu tư kinh doanh các công trình thủy lợi - thủy điện, công trình công nghiệp, dân dụng.<br/>
+                     - Đầu tư kinh doanh các công trình điện, nước.<br/>
+                     - Đầu tư kinh doanh khoáng sản trong và ngoài nước."
+  home_production_detail: "- Sản xuất vật liệu xây dựng từ năm 2000."
