@@ -44,101 +44,46 @@
                <h2 class="title"><%= t(:company_name) %></h2> </div>
          </div>
          <div class="row">
-            <% if params[:locale] == "vi" %>
-               <div class="col-md-4">
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-anchor"></i></div>
-                        <h3 class="icon-title text-uppercase">Xây dựng</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Xây dựng các công trình giao thông từ năm 2000.<br/>
-                        - Xây dựng các công trình thuỷ lợi năm 2000.<br/>
-                        - Xây dựng các công trình điện, cấp thoát nước từ năm 2001.<br/>
-                        - Xây dựng các công trình dân dụng từ năm 2003.
-                     </p>
+            <div class="col-md-4">
+               <div class="icon">
+                  <div class="icon-header">
+                     <div class="icon-media"><i class="fa fa-anchor"></i></div>
+                     <h3 class="icon-title text-uppercase"><%= t(:home_construction) %></h3>
                   </div>
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-train"></i></div>
-                        <h3 class="icon-title text-uppercase">San lấp</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - San lấp mặt bằng công nghiệp từ năm 2000.
-                     </p>
-                  </div>
+                  <p class="icon-desc">
+                     <%= t(:home_construction_detail).html_safe %>
+                  </p>
                </div>
-               <div class="col-md-4 col-md-offset-4">
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-institution"></i></div>
-                        <h3 class="icon-title text-uppercase">Đầu tư</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Đầu tư kinh doanh các công trình giao thông.<br/>
-                        - Đầu tư kinh doanh các công trình thủy lợi - thủy điện, công trình công nghiệp, dân dụng.<br/>
-                        - Đầu tư kinh doanh các công trình điện, nước.<br/>
-                        - Đầu tư kinh doanh khoáng sản trong và ngoài nước.
-                     </p>
+               <div class="icon">
+                  <div class="icon-header">
+                     <div class="icon-media"><i class="fa fa-train"></i></div>
+                     <h3 class="icon-title text-uppercase"><%= t(:home_leveling) %></h3>
                   </div>
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-building-o"></i></div>
-                        <h3 class="icon-title text-uppercase">Sản xuất</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Sản xuất vật liệu xây dựng từ năm 2000.
-                     </p>
-                  </div>
+                  <p class="icon-desc">
+                     <%= t(:home_leveling_detail).html_safe %>
+                  </p>
                </div>
-            <% else %>
-               <div class="col-md-4">
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-anchor"></i></div>
-                        <h3 class="icon-title text-uppercase">Construction</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Construction of roads since 2000.<br/>
-                        - Construction of irrigation works since 2000.<br/>
-                        - Construction of electrical works and water supply and drainage since 2001.<br/>
-                        - Construction of civil works since 2003.
-                     </p>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+               <div class="icon">
+                  <div class="icon-header">
+                     <div class="icon-media"><i class="fa fa-institution"></i></div>
+                     <h3 class="icon-title text-uppercase"><%= t(:home_investment) %></h3>
                   </div>
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-train"></i></div>
-                        <h3 class="icon-title text-uppercase">Leveling</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Leveling the industrial works since 2000.
-                     </p>
-                  </div>
+                  <p class="icon-desc">
+                     <%= t(:home_investment_detail).html_safe %>
+                  </p>
                </div>
-               <div class="col-md-4 col-md-offset-4">
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-institution"></i></div>
-                        <h3 class="icon-title text-uppercase">Investment</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Investment and trading traffic works.<br/>
-                        - Investment and trading irrigation - hydropower, industrial and civil works.<br/>
-                        - Investment and trading electrical and water works.<br/>
-                        - Investment and trading domestic and foreign minerals.
-                     </p>
+               <div class="icon">
+                  <div class="icon-header">
+                     <div class="icon-media"><i class="fa fa-building-o"></i></div>
+                     <h3 class="icon-title text-uppercase"><%= t(:home_production) %></h3>
                   </div>
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-building-o"></i></div>
-                        <h3 class="icon-title text-uppercase">Production</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Production of building materials since 2000.
-                     </p>
-                  </div>
+                  <p class="icon-desc">
+                     <%= t(:home_production_detail).html_safe %>
+                  </p>
                </div>
-            <% end %>
+            </div>
          </div>
       </div>
    </section>
@@ -153,21 +98,40 @@
             </div>
          </div>
          <div class="owl-carousel">
-            <% @news.each do |item| %>
-               <article class="post">
-                  <header><a href="<%= item.image_url.big_news %>" target="_blank"><img src="<%= item.image_url.medium_news %>" alt="Renovations tips and tricks"></a></header>
-                  <h3 class="post-title"><%= item.title_vn %></h3>
-                  <ul class="post-meta">
-                     <li> <i class="fa fa-calendar"></i>
-                        <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
-                     </li>
-                     <li> <i class="fa fa-th-large"></i><%= item.type_vn %></li>
-                  </ul>
-                  <div class="post-content">
-                     <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
-                     <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
-                  </div>
-               </article>
+            <% if params[:locale] == "en" %>
+               <% @news.each do |item| %>
+                  <article class="post">
+                     <header><a href="<%= item.image_url.big_news %>" target="_blank"><img src="<%= item.image_url.medium_news %>" alt="<%= item.title_en %>"></a></header>
+                     <h3 class="post-title"><%= item.title_en %></h3>
+                     <ul class="post-meta">
+                        <li> <i class="fa fa-calendar"></i>
+                           <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
+                        </li>
+                        <li> <i class="fa fa-th-large"></i><%= item.type_en %></li>
+                     </ul>
+                     <div class="post-content">
+                        <p class="post-desc"><%= truncate(strip_tags(item.content_en), length: 150) %></p>
+                        <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
+                     </div>
+                  </article>
+               <% end %>
+            <% else %>
+               <% @news.each do |item| %>
+                  <article class="post">
+                     <header><a href="<%= item.image_url.big_news %>" target="_blank"><img src="<%= item.image_url.medium_news %>" alt="<%= item.title_vn %>"></a></header>
+                     <h3 class="post-title"><%= item.title_vn %></h3>
+                     <ul class="post-meta">
+                        <li> <i class="fa fa-calendar"></i>
+                           <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
+                        </li>
+                        <li> <i class="fa fa-th-large"></i><%= item.type_vn %></li>
+                     </ul>
+                     <div class="post-content">
+                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
+                        <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
+                     </div>
+                  </article>
+               <% end %>
             <% end %>
          </div>
       </div>
@@ -185,24 +149,46 @@
                         <li>
                            <button data-filter="*" class="selected"><%= t(:all) %></button>
                         </li>
-                        <% @project_tags.each do |item| %>
-                           <li>
-                              <button data-filter="<%= item.id %>"><%= item.title_vn %></button>
-                           </li>
+                        <% if params[:locale] == "en" %>
+                           <% @project_tags.each do |item| %>
+                              <li>
+                                 <button data-filter="<%= item.id %>"><%= item.title_en %></button>
+                              </li>
+                           <% end %>
+                        <% else %>
+                           <% @project_tags.each do |item| %>
+                              <li>
+                                 <button data-filter="<%= item.id %>"><%= item.title_vn %></button>
+                              </li>
+                           <% end %>
                         <% end %>
                      </ul>
                   </div>
                   <div class="row projects-content">
-                     <% @projects.each do |item| %>
-                        <div class="projects-item col-xs-6 col-md-4 <%= item.project_tag_id %>">
-                           <div class="projects-item-wrap"> <img src="<%= item.image_url.medium_image %>" alt="<%= item.name_vn %>">
-                              <div class="project-hover">
-                                 <h3 class="project-title text-uppercase"><%= item.project_tag.title_vn %></h3>
-                                 <p class="project-desc"><%= item.name_vn %></p>
-                                 <%= link_to "Chi tiết", { controller: "project_detail", action: "index", project_id: item.id }, class: "btn btn-md" %>
+                     <% if params[:locale] == "en" %>
+                        <% @projects.each do |item| %>
+                           <div class="projects-item col-xs-6 col-md-4 <%= item.project_tag_id %>">
+                              <div class="projects-item-wrap"> <img src="<%= item.image_url.medium_image %>" alt="<%= item.name_vn %>">
+                                 <div class="project-hover">
+                                    <h3 class="project-title text-uppercase"><%= item.project_tag.title_en %></h3>
+                                    <p class="project-desc"><%= item.name_en %></p>
+                                    <%= link_to "Read more", { controller: "project_detail", action: "index", project_id: item.id }, class: "btn btn-md" %>
+                                 </div>
                               </div>
                            </div>
-                        </div>
+                        <% end %>
+                     <% else %>
+                        <% @projects.each do |item| %>
+                           <div class="projects-item col-xs-6 col-md-4 <%= item.project_tag_id %>">
+                              <div class="projects-item-wrap"> <img src="<%= item.image_url.medium_image %>" alt="<%= item.name_vn %>">
+                                 <div class="project-hover">
+                                    <h3 class="project-title text-uppercase"><%= item.project_tag.title_vn %></h3>
+                                    <p class="project-desc"><%= item.name_vn %></p>
+                                    <%= link_to "Chi tiết", { controller: "project_detail", action: "index", project_id: item.id }, class: "btn btn-md" %>
+                                 </div>
+                              </div>
+                           </div>
+                        <% end %>
                      <% end %>
                   </div>
                </div>
