@@ -4,7 +4,7 @@ class Admin::EquipmentController < ApplicationController
   # GET /equipment
   # GET /equipment.json
   def index
-    @equipment = Equipment.all
+    @equipment = Equipment.get_all_equipment
   end
 
   # GET /equipment/1

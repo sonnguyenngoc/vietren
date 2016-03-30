@@ -25,7 +25,8 @@
             <div class="page-content col-md-9">
                <% @galleries.each do |item| %>
                   <article class="post">
-                     <header> <img src="<%= item.image_url.big_gallery %>" alt="Eco Friendly Architectural Beauty">
+                     <header>
+                        <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.big_gallery %>" alt="<%= item.title_vn %>"></a>
                         <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
                         <ul class="post-meta">
                            <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>

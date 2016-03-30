@@ -68,6 +68,7 @@
                     <table class="table datatable-equipment">
                         <thead>
                             <tr>
+                                <th>Picture</th>
                                 <th>Name</th>
                                 <th>Quantity</th>
                                 <th>Category</th>
@@ -81,6 +82,11 @@
                         <tbody>
                             <% @equipment.each do |item| %>
                                 <tr>
+                                    <td>
+                                        <div class="media-left">
+                                            <img src="<%= item.image_url.small_equipment if item.image_url? %>" class="img-rounded">
+                                        </div>
+                                    </td>
                                     <td>
                                         <%= link_to item.name_vn, [:admin, item] %><br/>
                                         <%= link_to item.name_en, [:admin, item] %>

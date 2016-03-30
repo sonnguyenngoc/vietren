@@ -15,12 +15,18 @@ class Admin::ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    30.times do
+      @project.project_details.build
+    end
     @project.start_at = (Time.now).strftime("%Y-%m-%d")
     @project.end_at = (Time.now).strftime("%Y-%m-%d")
   end
 
   # GET /projects/1/edit
   def edit
+    (30-@project.project_details.count).times do
+      @project.project_details.build
+    end
     @project.start_at = (@project.start_at).strftime("%Y-%m-%d")
     @project.end_at = (@project.end_at).strftime("%Y-%m-%d")
   end
@@ -73,6 +79,6 @@ class Admin::ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:image_url, :name_vn, :name_en, :total_value, :cost_performance, :start_at, :end_at, :name_company, :name_company_en, :name_country, :name_country_en, :project_tag_id, :content_vn, :content_en)
+      params.require(:project).permit(:image_url, :success, :name_vn, :name_en, :total_value, :cost_performance, :start_at, :end_at, :name_company, :name_company_en, :name_country, :name_country_en, :project_tag_id, :content_vn, :content_en, :project_detail_id, project_details_attributes: [:id, :image_url, :project_id, :_destroy])
     end
 end

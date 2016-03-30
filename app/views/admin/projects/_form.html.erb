@@ -16,9 +16,21 @@
         <div class="tab-content">
             <div class="tab-pane has-padding active" id="control-tab1">
                 <div class="form-group">
-                    <%= f.label "Project Type: ", class: "col-lg-2 control-label" %>
+                    <%= f.label "Picture: ", class: "col-lg-2 control-label" %>
                     <div class="col-lg-10">
+                      <%= f.file_field :image_url, class: "file-styled" %>
+                      <span class="help-block">Accepted formats: gif, png, jpg.</span>
+                      <%= image_tag(@project.image_url.small_image, size: "356x237", class: "img-rouded") %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label "Project Type: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-4">
                         <%= f.collection_select(:project_tag_id, ProjectTag.all, :id, :title_vn, {:prompt => "Choose tag..."}, {class: "select"}) %>
+                    </div>
+                    <%= f.label "Success (Frontend): ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-4">
+                        <%= f.select(:success, ['False', 'True'], {}, { :class => 'select' })%>
                     </div>
                 </div>
                     
@@ -73,6 +85,33 @@
             
                 <div class="mb-15">
                     <%= f.text_area :content_vn, rows: "4", cols: "4", id: "editor-full-vn" %>
+                </div>
+                <div class="form-group">
+                  <%= f.label "Listing Photos: ", class: "col-lg-2 control-label" %>
+                  <div class="col-lg-10">
+                      <% index = 0 %>
+                      <%= f.fields_for :project_details do |ff| %>
+                          <% g = @project.project_details[index] %>
+                          <%= ff.hidden_field :id %>
+                          
+                          <div class="col-lg-8 padding-bottom">
+                              <%= ff.file_field :image_url, class: "file-styled margin-bottom" %>
+                              <br /><br />
+                          </div>
+                          <% if g.image_url? %>
+                            <div class="col-lg-3 padding-bottom">
+                                <img style="width: 100%; margin-bottom: 10px;" src="<%= g.image_url if g.image_url? %>" />
+                            </div>
+                          <% end %>
+                          <% if g.image_url? %>
+                            <div class="col-lg-1 padding-bottom">
+                                <%= ff.check_box :_destroy %>
+                                <%= ff.label :_destroy, 'Remove' %>
+                            </div>
+                          <% end %>
+                        <% index += 1 %>
+                      <% end %>
+                  </div>
                 </div>
             </div>
 

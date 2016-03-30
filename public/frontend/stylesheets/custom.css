@@ -32,3 +32,18 @@
 .position-btn-relative {
     position: relative;
 }
+.icon-desc {
+    color: #000000;
+}
+body {
+    color: #000000;
+}
+.sidebar a {
+    color: #000000;
+}
+.widget-recent-posts span {
+    color: #000000;
+}
+.color-red {
+    color: #ff0000;
+}

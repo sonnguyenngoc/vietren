@@ -1,329 +1,296 @@
-   <div class="site">
-   <!-- Top Bar -->
-   <div class="top-bar clearfix">
-      <div class="container">
-         <div class="row">
-            <!-- Top Bar Left -->
-            <div class="col-xs-6">
-               <ul class="contact-info transparent">
-                  <li><i class="fa fa-phone"></i> <span class="important"><%= @company.phone + " - " + @company.phone_2 %></span></li>
-                  <li><i class="fa fa-envelope"></i> <a href="mailto:vrc@vnn.vn">vrc@vnn.vn</a></li>
-               </ul>
-            </div>
-            <!-- /Top Bar Left -->
-            <!-- Top Bar Left -->
-            <div class="above-nav-bar col-xs-6 text-right">
-              <ul class="social social-transparent-border">
-                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                 <li><a href="#"><i class="fa fa-google"></i></a></li>
-                 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-              </ul>
-           </div>
-            <!-- /Top Bar Left -->
+<div class="site">
+<!-- Top Bar -->
+<div class="top-bar clearfix">
+   <div class="container">
+      <div class="row">
+         <!-- Top Bar Left -->
+         <div class="col-xs-6">
+            <ul class="contact-info transparent">
+               <li><i class="fa fa-phone"></i> <span class="important"><%= @company.phone + " - " + @company.phone_2 %></span></li>
+               <li><i class="fa fa-envelope"></i> <a href="mailto:vrc@vnn.vn">vrc@vnn.vn</a></li>
+            </ul>
          </div>
+         <!-- /Top Bar Left -->
+         <!-- Top Bar Left -->
+         <div class="above-nav-bar col-xs-6 text-right">
+           <ul class="social social-transparent-border">
+               <li><a href="https://www.facebook.com/vietren02032009/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="https://www.pinterest.com/vietren999999/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+               <li><a href="https://www.youtube.com/channel/UCcVOqTLu33lURWPwBWLCZIg" target="_blank"><i class="fa fa-youtube" target="_blank"></i></a></li>
+           </ul>
+        </div>
+         <!-- /Top Bar Left -->
       </div>
    </div>
-   <!-- /Top Bar -->
-   <!-- Site Header -->
-   <header class="site-header classic relative">
-      <%= render 'header' %>
-   </header>
-   <!-- Site Header -->
-   <main class="site-main">
-      <!-- slider -->
-      <section>
-         <%= render 'slideshow' %>
-      </section>
-      <!-- /slider -->
-      <!-- Services & Solutions -->
-      <section id="services-and-solutions" class="section background-image-center" style="background-image: url('/frontend/images/logo_info.png');">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h2 class="title">Công Ty Cổ Phần Việt Ren</h2> </div>
-            </div>
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-building-o"></i></div>
-                        <h3 class="icon-title text-uppercase">Xây dựng</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Xây dựng các công trình giao thông từ năm 2000.<br/>
-                        - Xây dựng các công trình thuỷ lợi năm 2000.<br/>
-                        - Xây dựng các công trình điện, cấp thoát nước từ năm 2001.<br/>
-                        - Xây dựng các công trình dân dụng từ năm 2003.
-                     </p>
+</div>
+<!-- /Top Bar -->
+<!-- Site Header -->
+<header class="site-header classic relative">
+   <%= render 'header' %>
+</header>
+<!-- Site Header -->
+<main class="site-main">
+   <!-- slider -->
+   <section>
+      <%= render 'slideshow' %>
+   </section>
+   <!-- /slider -->
+   <!-- Services & Solutions -->
+   <section id="services-and-solutions" class="section background-image-center" style="background-image: url('/frontend/images/logo_info.png');">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h2 class="title">Công Ty Cổ Phần Việt Ren</h2> </div>
+         </div>
+         <div class="row">
+            <div class="col-md-4">
+               <div class="icon">
+                  <div class="icon-header">
+                     <div class="icon-media"><i class="fa fa-anchor"></i></div>
+                     <h3 class="icon-title text-uppercase">Xây dựng</h3>
                   </div>
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-truck"></i></div>
-                        <h3 class="icon-title text-uppercase">San lấp</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - San lấp mặt bằng công nghiệp từ năm 2000.
-                     </p>
+                  <p class="icon-desc">
+                     - Xây dựng các công trình giao thông từ năm 2000.<br/>
+                     - Xây dựng các công trình thuỷ lợi năm 2000.<br/>
+                     - Xây dựng các công trình điện, cấp thoát nước từ năm 2001.<br/>
+                     - Xây dựng các công trình dân dụng từ năm 2003.
+                  </p>
+               </div>
+               <div class="icon">
+                  <div class="icon-header">
+                     <div class="icon-media"><i class="fa fa-train"></i></div>
+                     <h3 class="icon-title text-uppercase">San lấp</h3>
                   </div>
+                  <p class="icon-desc">
+                     - San lấp mặt bằng công nghiệp từ năm 2000.
+                  </p>
                </div>
-               <div class="col-md-4 col-md-offset-4">
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-institution"></i></div>
-                        <h3 class="icon-title text-uppercase">Đầu tư</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Đầu tư kinh doanh các công trình giao thông.<br/>
-                        - Đầu tư kinh doanh các công trình thủy lợi - thủy điện, công trình công nghiệp, dân dụng.<br/>
-                        - Đầu tư kinh doanh các công trình điện, nước.<br/>
-                        - Đầu tư kinh doanh khoáng sản trong và ngoài nước.
-                     </p>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+               <div class="icon">
+                  <div class="icon-header">
+                     <div class="icon-media"><i class="fa fa-institution"></i></div>
+                     <h3 class="icon-title text-uppercase">Đầu tư</h3>
                   </div>
-                  <div class="icon">
-                     <div class="icon-header">
-                        <div class="icon-media"><i class="fa fa-object-group"></i></div>
-                        <h3 class="icon-title text-uppercase">Sản xuất</h3>
-                     </div>
-                     <p class="icon-desc">
-                        - Sản xuất vật liệu xây dựng từ năm 2000.
-                     </p>
+                  <p class="icon-desc">
+                     - Đầu tư kinh doanh các công trình giao thông.<br/>
+                     - Đầu tư kinh doanh các công trình thủy lợi - thủy điện, công trình công nghiệp, dân dụng.<br/>
+                     - Đầu tư kinh doanh các công trình điện, nước.<br/>
+                     - Đầu tư kinh doanh khoáng sản trong và ngoài nước.
+                  </p>
+               </div>
+               <div class="icon">
+                  <div class="icon-header">
+                     <div class="icon-media"><i class="fa fa-building-o"></i></div>
+                     <h3 class="icon-title text-uppercase">Sản xuất</h3>
                   </div>
+                  <p class="icon-desc">
+                     - Sản xuất vật liệu xây dựng từ năm 2000.
+                  </p>
                </div>
             </div>
          </div>
-      </section>
-      <!-- /Services & Solutions -->
-      <!-- Recent News -->
-      <section id="recent-news" class="recent-news section bg-gray">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h2 class="title">Tin tức mới nhất</h2>
-                  <div class="owl-nav text-right"> <span class="owlprev"><i class="fa fa-angle-left"></i></span> <span class="owlnext"><i class="fa fa-angle-right"></i></span> </div>
-               </div>
-            </div>
-            <div class="owl-carousel">
-               <% @news.each do |item| %>
-                  <article class="post">
-                     <header> <img src="<%= item.image_url.medium_news %>" alt="Renovations tips and tricks"> </header>
-                     <h3 class="post-title"><%= item.title_vn %></h3>
-                     <ul class="post-meta">
-                        <li> <i class="fa fa-calendar"></i>
-                           <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
-                        </li>
-                        <li> <i class="fa fa-th-large"></i><%= item.type_vn %></li>
-                     </ul>
-                     <div class="post-content">
-                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p> <a href="#" class="btn btn-md btn-gradient btn-shadow">Đọc tiếp</a> </div>
-                  </article>
-               <% end %>
-            </div>
-         </div>
-      </section>
-      <!-- /Recent News -->
-      <!-- Recent Portfolio -->
-      <section class="bg-dark section padding-after" id="projects">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="projects">
-                     <div class="projects-header clearfix">
-                        <h2 class="title projects-title visible-lg pull-left">Các công trình</h2>
-                        <ul class="filter filter-dark pull-right">
-                           <li>
-                              <button data-filter="*" class="selected">Tất cả</button>
-                           </li>
-                           <li>
-                              <button data-filter="buildings">Công trình đã hoàn thành</button>
-                           </li>
-                           <li>
-                              <button data-filter="interior-design">Công trình đang thi công</button>
-                           </li>
-                           <li>
-                              <button data-filter="flooring">Dự án công ty đang đầu tư</button>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="row projects-content">
-                        <div class="projects-item col-xs-6 col-md-4 buildings plumbing">
-                           <div class="projects-item-wrap"> <img src="/frontend/images/973D7E40C6E840D19D915F71D809808D.jpg" alt="Stunning New Pool Villa">
-                              <div class="project-hover">
-                                 <h3 class="project-title text-uppercase">Nhà máy thủy điện</h3>
-                                 <p class="project-desc">Nhà máy thủy điện sông Tranh 3</p> <a class="btn btn-md" href="project-single.html">Chi tiết</a> </div>
-                           </div>
-                        </div>
-                        <div class="projects-item col-xs-6 col-md-4 buildings interior-design">
-                           <div class="projects-item-wrap"> <img src="/frontend/images/973D7E40C6E840D19D915F71D809808D.jpg" alt="Stunning New Pool Villa">
-                              <div class="project-hover">
-                                 <h3 class="project-title text-uppercase">Tàu American</h3>
-                                 <p class="project-desc">Tàu American.</p> <a class="btn btn-md" href="project-single.html">Chi tiết</a> </div>
-                           </div>
-                        </div>
-                        <div class="projects-item col-xs-6 col-md-4 tiling plumbing">
-                           <div class="projects-item-wrap"> <img src="/frontend/images/973D7E40C6E840D19D915F71D809808D.jpg" alt="Stunning New Pool Villa">
-                              <div class="project-hover">
-                                 <h3 class="project-title text-uppercase">American</h3>
-                                 <p class="project-desc">Tàu American</p> <a class="btn btn-md" href="project-single.html">Chi tiết</a> </div>
-                           </div>
-                        </div>
-                        <div class="projects-item col-xs-6 col-md-4 tiling flooring">
-                           <div class="projects-item-wrap"> <img src="/frontend/images/973D7E40C6E840D19D915F71D809808D.jpg" alt="Stunning New Pool Villa">
-                              <div class="project-hover">
-                                 <h3 class="project-title text-uppercase">Sà Lan</h3>
-                                 <p class="project-desc">Sà Lan chở American</p> <a class="btn btn-md" href="project-single.html">Chi tiết</a> </div>
-                           </div>
-                        </div>
-                        <div class="projects-item col-xs-6 col-md-4 plumbing interior-design">
-                           <div class="projects-item-wrap"> <img src="/frontend/images/IMG_0307.jpg" alt="Stunning New Pool Villa">
-                              <div class="project-hover">
-                                 <h3 class="project-title text-uppercase">Tàu Việt Ren</h3>
-                                 <p class="project-desc">Tàu Việt Ren</p> <a class="btn btn-md" href="project-single.html">Chi tiết</a> </div>
-                           </div>
-                        </div>
-                        <div class="projects-item col-xs-6 col-md-4 buildings flooring">
-                           <div class="projects-item-wrap"> <img src="/frontend/images/D446ACA53A5A4F14B87986BDB5B32F3A.jpg" alt="Stunning New Pool Villa">
-                              <div class="project-hover">
-                                 <h3 class="project-title text-uppercase">Nhà máy thủy điện</h3>
-                                 <p class="project-desc">Nhà máy thủy điện</p> <a class="btn btn-md" href="project-single.html">Chi tiết</a> </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- /Recent Portfolio -->
-      <section class="section">
-         <div class="container">
-            <div class="row">
-               <!-- Our Clients -->
-               <div class="col-md-12">
-                  <h2 class="title">Hình ảnh bằng khen</h2>
-                  <div class="gallery row">
-                        <div class="col-xs-2">
-                           <figure class="gallery-item">
-                              <div class="gallery-icon">
-                                 <a href="/frontend/images/bang-khen/big-2.jpg"><img src="/frontend/images/bang-khen/small-2.jpg" alt="Gallery 2"></a>
-                              </div>
-                           </figure>
-                        </div>
-                        <div class="col-xs-2">
-                           <figure class="gallery-item">
-                              <div class="gallery-icon">
-                                 <a href="/frontend/images/bang-khen/big-3.jpg"><img src="/frontend/images/bang-khen/small-3.jpg" alt="Gallery 3"></a>
-                              </div>
-                           </figure>
-                        </div>
-                        <div class="col-xs-2">
-                           <figure class="gallery-item">
-                              <div class="gallery-icon">
-                                 <a href="/frontend/images/bang-khen/big-4.jpg"><img src="/frontend/images/bang-khen/small-4.jpg" alt="Gallery 4"></a>
-                              </div>
-                           </figure>
-                        </div>
-                        <div class="col-xs-2">
-                           <figure class="gallery-item">
-                              <div class="gallery-icon">
-                                 <a href="/frontend/images/bang-khen/big-5.jpg"><img src="/frontend/images/bang-khen/small-5.jpg" alt="Gallery 5"></a>
-                              </div>
-                           </figure>
-                        </div>
-                        <div class="col-xs-2">
-                           <figure class="gallery-item">
-                              <div class="gallery-icon">
-                                 <a href="/frontend/images/bang-khen/big-6.png"><img src="/frontend/images/bang-khen/small-6.png" alt="Gallery 6"></a>
-                              </div>
-                           </figure>
-                        </div>
-                        <div class="col-xs-2">
-                           <figure class="gallery-item">
-                              <div class="gallery-icon">
-                                 <a href="/frontend/images/bang-khen/big-1.jpg"><img src="/frontend/images/bang-khen/small-1.jpg" alt="Gallery 6"></a>
-                              </div>
-                           </figure>
-                        </div>
-                     </div>
-               </div>
-               <!-- /Our Clients -->
-            </div>
-         </div>
-         </div>
-      </section>
-      </main>
-      <!-- Download -->
-      <section class="bg-primary">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="download">
-                     <div class="download-content text-uppercase"><i class="fa fa-file-pdf-o"></i> HỒ SƠ NĂNG LỰC CÔNG TY CỔ PHẦN VIỆT REN</div> <a href="<%= url_for(controller: "admin/companies", action: "hsnl_vietren") %>" target="_blank" class="btn btn-md btn-dark btn-shadow"><i class="fa fa-cloud-download"></i> Download</a> </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- /Download -->
-      <!-- Site Footer -->
-      <footer class="site-footer">
-        <%= render 'footer' %>
-      </footer>
-      <!-- /Site Footer -->
       </div>
-      <!-- Scripts -->
-      <%= javascript_include_tag '/frontend/js/jquery.min.js' %>
-      <%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
-      <%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
-      <%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
-      <%= javascript_include_tag '/frontend/js/functions.js' %>
-      <%= javascript_include_tag '/frontend/js/isotope.min.js' %>
-      <%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
-      <%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
-      <!-- /Scripts -->
-      <!-- Revolution Slider -->
-      <%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
-      <%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
-      <!-- /Revolution Slider -->
-      <script>
-         /* Revolution Slider Settings */
-         /* Documentation: http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/ */
-         jQuery(document).ready(function()
+   </section>
+   <!-- /Services & Solutions -->
+   <!-- Recent News -->
+   <section id="recent-news" class="recent-news section bg-gray">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h2 class="title">Tin tức mới nhất</h2>
+               <div class="owl-nav text-right"> <span class="owlprev"><i class="fa fa-angle-left"></i></span> <span class="owlnext"><i class="fa fa-angle-right"></i></span> </div>
+            </div>
+         </div>
+         <div class="owl-carousel">
+            <% @news.each do |item| %>
+               <article class="post">
+                  <header><a href="<%= item.image_url.big_news %>" target="_blank"><img src="<%= item.image_url.medium_news %>" alt="Renovations tips and tricks"></a></header>
+                  <h3 class="post-title"><%= item.title_vn %></h3>
+                  <ul class="post-meta">
+                     <li> <i class="fa fa-calendar"></i>
+                        <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
+                     </li>
+                     <li> <i class="fa fa-th-large"></i><%= item.type_vn %></li>
+                  </ul>
+                  <div class="post-content">
+                     <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
+                     <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
+                  </div>
+               </article>
+            <% end %>
+         </div>
+      </div>
+   </section>
+   <!-- /Recent News -->
+   <!-- Recent Portfolio -->
+   <section class="bg-dark section padding-after" id="projects">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="projects">
+                  <div class="projects-header clearfix">
+                     <h2 class="title projects-title visible-lg pull-left">Các công trình</h2>
+                     <ul class="filter filter-dark pull-right">
+                        <li>
+                           <button data-filter="*" class="selected">Tất cả</button>
+                        </li>
+                        <% @project_tags.each do |item| %>
+                           <li>
+                              <button data-filter="<%= item.id %>"><%= item.title_vn %></button>
+                           </li>
+                        <% end %>
+                     </ul>
+                  </div>
+                  <div class="row projects-content">
+                     <% @projects.each do |item| %>
+                        <div class="projects-item col-xs-6 col-md-4 <%= item.project_tag_id %>">
+                           <div class="projects-item-wrap"> <img src="<%= item.image_url.medium_image %>" alt="<%= item.name_vn %>">
+                              <div class="project-hover">
+                                 <h3 class="project-title text-uppercase"><%= item.project_tag.title_vn %></h3>
+                                 <p class="project-desc"><%= item.name_vn %></p>
+                                 <%= link_to "Chi tiết", { controller: "project_detail", action: "index", project_id: item.id }, class: "btn btn-md" %>
+                              </div>
+                           </div>
+                        </div>
+                     <% end %>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- /Recent Portfolio -->
+   <section class="section">
+      <div class="container">
+         <div class="row">
+            <!-- Our Clients -->
+            <div class="col-md-12">
+               <h2 class="title">Hình ảnh bằng khen</h2>
+               <div class="gallery row">
+                     <div class="col-xs-2">
+                        <figure class="gallery-item">
+                           <div class="gallery-icon">
+                              <a href="/frontend/images/bang-khen/big-2.jpg"><img src="/frontend/images/bang-khen/small-2.jpg" alt="Gallery 2"></a>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="col-xs-2">
+                        <figure class="gallery-item">
+                           <div class="gallery-icon">
+                              <a href="/frontend/images/bang-khen/big-3.jpg"><img src="/frontend/images/bang-khen/small-3.jpg" alt="Gallery 3"></a>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="col-xs-2">
+                        <figure class="gallery-item">
+                           <div class="gallery-icon">
+                              <a href="/frontend/images/bang-khen/big-4.jpg"><img src="/frontend/images/bang-khen/small-4.jpg" alt="Gallery 4"></a>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="col-xs-2">
+                        <figure class="gallery-item">
+                           <div class="gallery-icon">
+                              <a href="/frontend/images/bang-khen/big-5.jpg"><img src="/frontend/images/bang-khen/small-5.jpg" alt="Gallery 5"></a>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="col-xs-2">
+                        <figure class="gallery-item">
+                           <div class="gallery-icon">
+                              <a href="/frontend/images/bang-khen/big-6.png"><img src="/frontend/images/bang-khen/small-6.png" alt="Gallery 6"></a>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="col-xs-2">
+                        <figure class="gallery-item">
+                           <div class="gallery-icon">
+                              <a href="/frontend/images/bang-khen/big-1.jpg"><img src="/frontend/images/bang-khen/small-1.jpg" alt="Gallery 6"></a>
+                           </div>
+                        </figure>
+                     </div>
+                  </div>
+            </div>
+            <!-- /Our Clients -->
+         </div>
+      </div>
+      </div>
+   </section>
+   </main>
+   <!-- Download -->
+   <section class="bg-primary">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="download">
+                  <div class="download-content text-uppercase"><i class="fa fa-file-pdf-o"></i> HỒ SƠ NĂNG LỰC CÔNG TY CỔ PHẦN VIỆT REN</div> <a href="<%= url_for(controller: "admin/companies", action: "hsnl_vietren") %>" target="_blank" class="btn btn-md btn-dark btn-shadow"><i class="fa fa-cloud-download"></i> Download</a> </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- /Download -->
+   <!-- Site Footer -->
+   <footer class="site-footer">
+     <%= render 'footer' %>
+   </footer>
+   <!-- /Site Footer -->
+   </div>
+   <!-- Scripts -->
+   <%= javascript_include_tag '/frontend/js/jquery.min.js' %>
+   <%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
+   <%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
+   <%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
+   <%= javascript_include_tag '/frontend/js/functions.js' %>
+   <%= javascript_include_tag '/frontend/js/isotope.min.js' %>
+   <%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
+   <%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
+   <!-- /Scripts -->
+   <!-- Revolution Slider -->
+   <%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
+   <%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
+   <!-- /Revolution Slider -->
+   <script>
+      /* Revolution Slider Settings */
+      /* Documentation: http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/ */
+      jQuery(document).ready(function()
+      {
+         jQuery("#slider1").revolution(
          {
-            jQuery("#slider1").revolution(
+            sliderType: "standard",
+            sliderLayout: "auto",
+            delay: 2000,
+            navigation:
             {
-               sliderType: "standard",
-               sliderLayout: "auto",
-               delay: 9000,
-               navigation:
+               arrows:
                {
-                  arrows:
-                  {
-                     enable: true
-                  }
-               },
-               gridwidth: 1230,
-               gridheight: 560,
-               responsiveLevels: [1200, 992, 786, 480],
-               navigation:
+                  enable: true
+               }
+            },
+            gridwidth: 1230,
+            gridheight: 560,
+            responsiveLevels: [1200, 992, 786, 480],
+            navigation:
+            {
+               arrows:
                {
-                  arrows:
+                  style: "construction-arrows",
+                  enable: true,
+                  left:
                   {
-                     style: "construction-arrows",
-                     enable: true,
-                     left:
-                     {
-                        h_offset: 0
-                     },
-                     right:
-                     {
-                        h_offset: 0
-                     },
+                     h_offset: 0
+                  },
+                  right:
+                  {
+                     h_offset: 0
                   },
                },
-            });
+            },
          });
-      </script>
+      });
+   </script>
 
-      <%= javascript_include_tag '/frontend/revolution/js/extensions/revolution.extension.slideanims.min.js' %>
-      <%= javascript_include_tag '/frontend/revolution/js/extensions/revolution.extension.layeranimation.min.js' %>
-      <%= javascript_include_tag '/frontend/revolution/js/extensions/revolution.extension.navigation.min.js' %>
+   <%= javascript_include_tag '/frontend/revolution/js/extensions/revolution.extension.slideanims.min.js' %>
+   <%= javascript_include_tag '/frontend/revolution/js/extensions/revolution.extension.layeranimation.min.js' %>
+   <%= javascript_include_tag '/frontend/revolution/js/extensions/revolution.extension.navigation.min.js' %>

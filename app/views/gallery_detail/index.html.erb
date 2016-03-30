@@ -15,44 +15,32 @@
            <ol>
               <li><a href="<%= root_path %>">Trang chủ</a></li>
               <li><%= link_to "Thư viện ảnh", { controller: "gallery", action: "index" } %></li>
-              <li><%= link_to @gallery.type_vn, { controller: "gallery", action: "index" } %></li>
+              <li><%= link_to @gallery.type_vn, "#" %></li>
               <li class="active"><%= @gallery.title_vn %></li>
            </ol>
         </div>
      </div>
      <!-- /Breadcrumbs -->
-            <section class="section">
-               <div class="container">
-                  <div class="row">
-                     <aside class="sidebar sidebar-right col-md-3">
-                        <%= render '/letter_spring/right_menu' %>
-                     </aside>
-                     <div class="col-md-9">
-                        <div class="gallery-fs">
-                           <figure> <img src="<%= @gallery.image_url.big_gallery %>" alt="A modern smart house system">
-                              <figcaption><%= @gallery.description_vn %></figcaption>
-                           </figure>
-                           <div class="gallery-fs-nav">
-                              <button class="gallery-fs-fullscreen"><i class="fa fa-arrows-alt"></i></button>
+      <div class="container">
+         <div class="row">
+            <div class="page-content col-md-12 padding-bottom-xl">
+               <h3 class="title text-uppercase"><%= @gallery.title_vn %></h3>
+               <p>&nbsp;</p>
+               <p>&nbsp;</p>
+               <div class="gallery row">
+                  <% @gallery.gallery_details.each do |item| %>
+                     <div class="col-xs-3">
+                        <figure class="gallery-item">
+                           <div class="gallery-icon">
+                              <a href="<%= item.image_url.big_gallery %>"><img src="<%= item.image_url.small_gallery %>" alt="<%= @gallery.title_vn %>"></a>
                            </div>
-                           <% count = 0 %>
-                           <div class="gallery-fs-thumbnails gallery-fs-thumbnails-col-5">
-                              <% @gallery.gallery_details.each do |item| %>
-                                 <% if count == 0 %>
-                                    <a href="<%= item.image_url.big_gallery %>" title="<%= @gallery.title_vn %>" class="selected"> <img src="<%= item.image_url.small_gallery %>" alt="<%= @gallery.description_vn %>"> </a>
-                                 <% else %>
-                                    <a href="<%= item.image_url.big_gallery %>" title="<%= @gallery.title_vn %>"> <img src="<%= item.image_url.small_gallery %>" alt="<%= @gallery.description_vn %>"> </a>
-                                 <% end %>
-                                 <% count = count + 1 %>
-                              <% end %>
-                           </div>
-                        </div>
-                        <p>&nbsp;</p>
-                        
+                        </figure>
                      </div>
-                  </div>
+                  <% end %>
                </div>
-            </section>
+            </div>
+         </div>
+      </div>
    </main>
   <!-- Site Footer -->
   <footer class="site-footer">

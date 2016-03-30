@@ -1,4 +1,5 @@
 class Equipment < ActiveRecord::Base
+  mount_uploader :image_url, EquipmentUploader
   belongs_to :category_equipment
   belongs_to :manufacturer_equipment
   
