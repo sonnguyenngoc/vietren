@@ -1,5 +1,5 @@
 <div class="widget widget-recent-posts">
-  <h3 class="widget-title text-uppercase">Tin mới</h3>
+  <h3 class="widget-title text-uppercase"><%= t(:lastest_news) %></h3>
   <ul>
     <% @lastest_news.each do |item| %>
       <li>
@@ -12,19 +12,19 @@
   </ul>
 </div>
 <div class="widget widget-categories">
-  <h3 class="widget-title text-uppercase">Công trình</h3>
+  <h3 class="widget-title text-uppercase"><%= t(:construction) %></h3>
   <ul>
-     <li><%= link_to "Công trình đã hoàn thành", { controller: "completed_construction", action: "index" } %></li>
-     <li><%= link_to "Công trình đang thi công", { controller: "under_construction", action: "index" } %></li>
-     <li><%= link_to "Dự án công ty đang đầu tư", { controller: "investment_projects", action: "index" } %></li>
+     <li><%= link_to t(:completed_construction_works), { controller: "completed_construction", action: "index" } %></li>
+     <li><%= link_to t(:implementing_construction_works), { controller: "under_construction", action: "index" } %></li>
+     <li><%= link_to t(:investment_projects), { controller: "investment_projects", action: "index" } %></li>
   </ul>
 </div>
 <div class="widget">
-  <h3 class="widget-title small-margin text-uppercase">Liên hệ hỗ trợ</h3>
+  <h3 class="widget-title small-margin text-uppercase"><%= t(:contact) %></h3>
   <ul class="contact-info">
-     <li><i class="fa fa-home"></i> <%= @company.name_vn %></li>
-     <li><i class="fa fa-map-marker"></i> <%= @company.address_vn %></li>
-     <li><i class="fa fa-phone"></i> <a href="#" class="important"><%= @company.phone + " - " + @company.phone_2 %></a></li>
-     <li><i class="fa fa-fax"></i> <a href="#"><%= @company.fax %></a></li>
+    <li><i class="fa fa-home"></i> <%= t(:company_name) %></li>
+    <li><i class="fa fa-map-marker"></i> <%= t(:company_address) %></li>
+    <li><i class="fa fa-phone"></i> <a href="#" class="important"><%= @company.phone + " - " + @company.phone_2 %></a></li>
+    <li><i class="fa fa-fax"></i> <a href="#"><%= @company.fax %></a></li>
   </ul>
 </div>

@@ -2,28 +2,28 @@
   <div class="row">
      <div class="col-md-3">
         <div class="widget widget-image">
-           <h3 class="widget-title">Giới thiệu</h3>
+           <h3 class="widget-title"><%= t(:intro) %></h3>
            <ul class="menu about">
-              <li><%= link_to "Về chúng tôi", { controller: "about_us", action: "index" } %></li>
-              <li><%= link_to "Cơ cấu tổ chức", { controller: "organization", action: "index" } %></li>
-              <li><%= link_to "Thành tích đạt được", { controller: "achivement", action: "index" } %></li>
-              <li><%= link_to "Tài chính", { controller: "finance", action: "index" } %></li>
+              <li><%= link_to t(:about_us), { controller: "about_us", action: "index" } %></li>
+              <li><%= link_to t(:organizational_structure), { controller: "organization", action: "index" } %></li>
+              <li><%= link_to t(:achievements), { controller: "achivement", action: "index" } %></li>
+              <li><%= link_to t(:finance), { controller: "finance", action: "index" } %></li>
            </ul>
         </div>
      </div>
      <div class="col-md-3">
         <!-- Navigation Widget -->
         <div class="widget widget-nav-menu">
-           <h3 class="widget-title">Menu</h3>
+           <h3 class="widget-title"><%= t(:menu) %></h3>
            <ul class="menu">
-              <li><%= link_to "Giới thiệu", { controller: "about_us", action: "index" } %></li>
-              <li><%= link_to "Liên hệ", { controller: "contact", action: "index" } %></li>
-              <li><%= link_to "Thông báo", { controller: "notification", action: "index" } %></li>
-              <li><%= link_to "Tin tức", { controller: "specialized_news", action: "index" } %></li>
-              <li><%= link_to "Tuyển dụng", { controller: "recruitment", action: "index" } %></li>
-              <li><%= link_to "Thư viện ảnh", { controller: "gallery", action: "index" } %></li>
-              <li><%= link_to "Công trình", { controller: "completed_construction", action: "index" } %></li>
-              <li><%= link_to "Công nghệ thiết bị", { controller: "equipment_page", action: "index" } %></li>
+              <li><%= link_to t(:about_us), { controller: "about_us", action: "index" } %></li>
+              <li><%= link_to t(:contact), { controller: "contact", action: "index" } %></li>
+              <li><%= link_to t(:notification), { controller: "notification", action: "index" } %></li>
+              <li><%= link_to t(:news), { controller: "specialized_news", action: "index" } %></li>
+              <li><%= link_to t(:recruitment), { controller: "recruitment", action: "index" } %></li>
+              <li><%= link_to t(:gallery), { controller: "gallery", action: "index" } %></li>
+              <li><%= link_to t(:construction), { controller: "completed_construction", action: "index" } %></li>
+              <li><%= link_to t(:equipment), { controller: "equipment_page", action: "index" } %></li>
            </ul>
         </div>
         <!-- /Navigation Widget -->
@@ -31,9 +31,9 @@
      <div class="col-md-3">
         <!-- Contact Info Widget -->
         <div class="widget widget-contact-info">
-           <h3 class="widget-title">Liên hệ</h3>
+           <h3 class="widget-title"><%= t(:contact) %></h3>
            <ul class="contact-info">
-              <li><i class="fa fa-map-marker"></i> <%= @company.address_vn %></li>
+              <li><i class="fa fa-map-marker"></i> <%= t(:company_address) %></li>
               <li><i class="fa fa-phone"></i> <a href="#" class="important"><%= @company.phone + " - " + @company.phone_2 %></a></li>
               <li><i class="fa fa-fax"></i> <a href="#"><%= @company.fax %></a></li>
               <li><i class="fa fa-envelope"></i> <a href="mailto:<%= @company.email %>"><%= @company.email %></a></li>
@@ -44,7 +44,7 @@
      <div class="col-md-3">
         <!-- Text Widget -->
         <div class="widget widget-text">
-           <h3 class="widget-title">Phòng ban</h3>
+           <h3 class="widget-title"><%= t(:departments) %></h3>
         </div>
         <!-- /Text Widget -->
         <!-- Working Hours Widget -->
@@ -52,19 +52,19 @@
            <table class="working-hours">
               <tbody>
                   <tr>
-                     <th>Kế toán - Tài chính</th>
+                     <th><%= t(:department_of_accounting_finance) %></th>
                      <td>053 3850222</td>
                   </tr>
                   <tr>
-                     <th>Kỹ thuật</th>
+                     <th><%= t(:technical_department) %></th>
                      <td>053 3852925</td>
                   </tr>
                   <tr>
-                     <th>Tổ chức hành chính</th>
+                     <th><%= t(:department_of_organization) %></th>
                      <td>053 2211052</td>
                   </tr>
                   <tr>
-                     <th>Kế hoạch tổng hợp</th>
+                     <th><%= t(:department_of_planning_general_affairs) %></th>
                      <td>053 2210570</td>
                   </tr>
               </tbody>
@@ -81,7 +81,7 @@
         <div class="col-md-6">
            <!-- Text Widget -->
            <div class="widget widget-text">
-              <p>Copyright © 2016 Công Ty Cổ Phần Việt Ren - Developed by <a href="http://hoangkhang.com.vn/" target="_blank">Hoang Khang Incotech</a></p>
+              <p>Copyright © 2016 <%= t(:company_name) %> - Developed by <a href="http://hoangkhang.com.vn/" target="_blank">Hoang Khang Incotech</a></p>
            </div>
            <!-- /Text Widget -->
         </div>
