@@ -12,9 +12,9 @@ class Project < ActiveRecord::Base
     end
   end
   def total_value=(new_total_value)
-      self[:total_value] = new_total_value.to_s.gsub(/[\,]/, ',')
+      self[:total_value] = new_total_value.to_s.gsub(/[\,]/, '')
   end
   def cost_performance=(new_cost_performance)
-      self[:cost_performance] = new_cost_performance.to_s.gsub(/[\,]/, ',')
+      self[:cost_performance] = new_cost_performance.to_s.gsub(/[\,]/, '')
   end
 end
