@@ -77,8 +77,8 @@
               <li class="menu-item"><%= link_to t(:recruitment), { controller: "recruitment", action: "index" } %></li>
               <li class="menu-item"><%= link_to t(:contact), { controller: "contact", action: "index" } %></li>
               <li class="menu-item color-red">
-                <% params[:locale] = 'vi' %><a href="<%= url_for( params ) %>" style="color: red;">VI</a>
-                <% params[:locale] = 'en' %><a href="<%= url_for( params ) %>" style="color: blue;">EN</a>
+                <a href="<%= url_for( :locale => 'vi' ) %>" style="color: red;">VI</a>
+                <a href="<%= url_for( :locale => 'en' ) %>" style="color: blue;">EN</a>
               </li>
            </ul>
            <!-- /Main menu -->
