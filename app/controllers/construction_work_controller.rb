@@ -1,4 +1,4 @@
-class GalleryController < ApplicationController
+class ConstructionWorkController < ApplicationController
   def index
     @company = Company.get_company
     @lastest_news = Information.get_three_lastest_news

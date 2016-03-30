@@ -33,7 +33,7 @@
                  <ul class="sub-menu">
                     <li class="menu-item"><%= link_to t(:completed_construction_works), { controller: "completed_construction", action: "index" } %></li>
                     <li class="menu-item"><%= link_to t(:implementing_construction_works), { controller: "under_construction", action: "index" } %></li>
-                    <li class="menu-item menu-item-has-children"><%= link_to t(:investment_projects), "#" %>
+                    <li class="menu-item menu-item-has-children"><%= link_to t(:investment_projects), { controller: "all_investment_projects", action: "index" } %>
                       <ul class="sub-menu">
                         <% @menu_projects.each do |item| %>
                           <% if params[:locale] == "vi" %>
@@ -56,8 +56,8 @@
               </li>
               <li class="menu-item  menu-item-has-children"><%= link_to t(:gallery), "#" %>
                  <ul class="sub-menu">
-                    <li class="menu-item"><%= link_to t(:investment_projects), { controller: "investment_projects", action: "index" } %></li>
-                    <li class="menu-item"><%= link_to t(:construction_works), { controller: "gallery", action: "index" } %></li>
+                    <li class="menu-item"><%= link_to t(:picture_investment_projects), { controller: "investment_projects", action: "index" } %></li>
+                    <li class="menu-item"><%= link_to t(:picture_construction_works), { controller: "construction_work", action: "index" } %></li>
                  </ul>
               </li>
               <li class="menu-item"><%= link_to t(:recruitment), { controller: "recruitment", action: "index" } %></li>
