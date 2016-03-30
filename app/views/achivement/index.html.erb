@@ -24,10 +24,17 @@
           <div class="container">
              <div class="row">
                 <div class="col-sm-8">
-                   <h3 class="title text-uppercase"><%= @achievements.title_vn if !@achievements.nil? %></h3>
-                   <%= @achievements.content_vn.html_safe if !@achievements.nil? %>
+                  <% if params[:locale] == "en" %>
+                     <h3 class="title text-uppercase"><%= @achievements.title_en %></h3>
+                     <%= @achievements.content_en.html_safe %>
+                  <% else %>
+                     <h3 class="title text-uppercase"><%= @achievements.title_vn if !@achievements.nil? %></h3>
+                     <%= @achievements.content_vn.html_safe if !@achievements.nil? %>
+                  <% end %>
                 </div>
-                <div class="col-sm-4"> <img class="shadow" src="/frontend/images/bang-khen/giai-thuong-01.jpg" alt="Vietnam Quality Award 2006"> </div>
+                <div class="col-sm-4">
+                  <img class="shadow" src="/frontend/images/bang-khen/giai-thuong-01.jpg" alt="Vietnam Quality Award 2006">
+                </div>
              </div>
           </div>
        </section>

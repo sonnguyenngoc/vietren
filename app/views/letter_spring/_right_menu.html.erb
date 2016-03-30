@@ -1,14 +1,25 @@
 <div class="widget widget-recent-posts">
   <h3 class="widget-title text-uppercase"><%= t(:lastest_news) %></h3>
   <ul>
-    <% @lastest_news.each do |item| %>
-      <li>
-         <a href="#">
-           <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_news %>" alt="<%= item.title_vn %>"></a>
-           <span><%= link_to item.title_vn, { controller: "news_single", action: "index", news_id: item.id } %></span>
-         </a>
-      </li>
-    <% end %>
+    <% if params[:locale] == "en" %>
+        <% @lastest_news.each do |item| %>
+          <li>
+             <a href="#">
+               <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_news %>" alt="<%= item.title_en %>"></a>
+               <span><%= link_to item.title_en, { controller: "news_single", action: "index", news_id: item.id } %></span>
+             </a>
+          </li>
+        <% end %>
+     <% else %>
+        <% @lastest_news.each do |item| %>
+          <li>
+             <a href="#">
+               <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_news %>" alt="<%= item.title_vn %>"></a>
+               <span><%= link_to item.title_vn, { controller: "news_single", action: "index", news_id: item.id } %></span>
+             </a>
+          </li>
+        <% end %>
+     <% end %>    
   </ul>
 </div>
 <div class="widget widget-categories">

@@ -48,3 +48,12 @@ vi:
                      - Đầu tư kinh doanh các công trình điện, nước.<br/>
                      - Đầu tư kinh doanh khoáng sản trong và ngoài nước."
   home_production_detail: "- Sản xuất vật liệu xây dựng từ năm 2000."
+  completed_construction_name: "Tên công trình"
+  completed_construction_total_value: "Tổng giá trị hợp đồng" 
+  completed_construction_cost_performance: "Giá trị do nhà thầu thực hiện"
+  completed_construction_duration: "Thời gian hợp đồng"
+  completed_construction_start_at: "Khởi công"
+  completed_construction_end_at: "Hoàn thành"
+  completed_construction_name_company: "Tên cơ quan thực hiện"
+  completed_construction_name_country: "Tên nước"
+  somes_picture_of_construction: "MỘT SỐ HÌNH ẢNH THI CÔNG CÔNG TRÌNH"

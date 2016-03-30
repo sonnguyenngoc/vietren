@@ -9,7 +9,15 @@
                <!-- MAIN IMAGE --><img src="<%= item.image_url.slide_image %>" alt="" width="1920" height="1280">
                <!-- LAYER NR. 1 -->
                <div class="tp-caption text-uppercase rev-title " data-x="center" data-hoffset="" data-y="center" data-voffset="-60" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="o:1;s:500" data-transform_out="o:0;s:500"
-               data-visibility="['on','on','on','off']" data-start="500"><div style="text-align: center; color: #99cc00"><%= item.content_vn %></div></div>
+               data-visibility="['on','on','on','off']" data-start="500">
+                <div style="text-align: center; color: #99cc00">
+                  <% if params[:locale] == "en" %>
+                    <%= item.content_en %>
+                  <% else %>
+                    <%= item.content_vn %>
+                  <% end %>
+                </div>
+               </div>
                <!-- LAYER NR. 3 -->
                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="-75" data-y="center" data-voffset="43" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="o:1;s:500" data-transform_out="o:0;s:500" data-visibility="['on','on','on','off']"
                data-start="500">
@@ -27,7 +35,15 @@
                <!-- MAIN IMAGE --><img src="<%= item.image_url.slide_image %>" alt="" width="1920" height="1280">
                <!-- LAYER NR. 1 -->
                <div class="tp-caption text-uppercase rev-title " data-x="center" data-hoffset="" data-y="center" data-voffset="-60" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="o:1;s:500" data-transform_out="o:0;s:500"
-               data-visibility="['on','on','on','off']" data-start="500"><div style="text-align: center; color: #99cc00;"><%= item.content_vn %></div></div>
+               data-visibility="['on','on','on','off']" data-start="500">
+                  <div style="text-align: center; color: #99cc00;">
+                      <% if params[:locale] == "en" %>
+                        <%= item.content_en %>
+                      <% else %>
+                        <%= item.content_vn %>
+                      <% end %>
+                  </div>
+               </div>
                <!-- LAYER NR. 3 -->
                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="-75" data-y="center" data-voffset="43" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="o:1;s:500" data-transform_out="o:0;s:500" data-visibility="['on','on','on','off']"
                data-start="500">

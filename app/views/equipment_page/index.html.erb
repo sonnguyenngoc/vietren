@@ -31,15 +31,29 @@
                               <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_equipment %>" alt="<%= item.name_vn %>"></a>
                            <% end %>
                         </div>
-                        <div class="featured-content">
-                           <h3 class="featured-title text-uppercase nowrap-ellipsis" title="<%= item.name_vn %>"><%= item.name_vn %></h3>
-                           <p class="featured-desc">
-                              Chuyên mục: <%= item.category_equipment.title_vn %><br/>
-                              Số lượng: <%= item.quantity %><br/>
-                              Nước sản xuất: <%= item.manufacturer_equipment.name_vn %><br/>
-                              Công suất: <%= item.capacity %>
-                           </p>
-                        </div>
+                        <% if params[:locale] == "en" %>
+                           <div class="featured-content">
+                              <h3 class="featured-title text-uppercase nowrap-ellipsis" title="<%= item.name_en %>"><%= item.name_en %></h3>
+                              <p class="featured-desc">
+                                 Category: <%= item.category_equipment.title_en %><br/>
+                                 Quantity: <%= item.quantity %><br/>
+                                 Place of manufacture: <%= item.manufacturer_equipment.name_en %><br/>
+                                 Capacity: <%= item.capacity %><br/>
+                                 Notes: <%= item.note_en %>
+                              </p>
+                           </div>
+                        <% else %>
+                           <div class="featured-content">
+                              <h3 class="featured-title text-uppercase nowrap-ellipsis" title="<%= item.name_vn %>"><%= item.name_vn %></h3>
+                              <p class="featured-desc">
+                                 Chuyên mục: <%= item.category_equipment.title_vn %><br/>
+                                 Số lượng: <%= item.quantity %><br/>
+                                 Nước sản xuất: <%= item.manufacturer_equipment.name_vn %><br/>
+                                 Công suất: <%= item.capacity %><br/>
+                                 Ghi chú: <%= item.note_vn %>
+                              </p>
+                           </div>
+                        <% end %>
                      </div>
                   </div>
                   <% if index%3 == 2 %>

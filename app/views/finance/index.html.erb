@@ -26,13 +26,23 @@
               <%= render 'letter_spring/right_menu' %>
            </aside>
            <div class="page-content col-md-9 padding-bottom-xl">
+            <% if params[:locale] == "en" %>
               <article class="post post-single">
-                    <h3 class="title small-margin text-uppercase"><%= @finances.title_vn if !@finances.nil? %></h3>
+                    <h3 class="title small-margin text-uppercase"><%= @finances.title_en %></h3>
                  </header>
                  <div class="post-content">
-                    <%= @finances.content_vn.html_safe if !@finances.nil? %>
+                    <%= @finances.content_en.html_safe %>
                  </div>
               </article>
+            <% else %>
+              <article class="post post-single">
+                    <h3 class="title small-margin text-uppercase"><%= @finances.title_vn %></h3>
+                 </header>
+                 <div class="post-content">
+                    <%= @finances.content_vn.html_safe %>
+                 </div>
+              </article>
+            <% end %>
            </div>
         </div>
      </div>
