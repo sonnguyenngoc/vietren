@@ -4,7 +4,7 @@
     <% @lastest_news.each do |item| %>
       <li>
          <a href="#">
-           <img src="<%= item.image_url.small_news %>" alt="<%= item.title_vn %>">
+           <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_news %>" alt="<%= item.title_vn %>"></a>
            <span><%= link_to item.title_vn, { controller: "news_single", action: "index", news_id: item.id } %></span>
          </a>
       </li>

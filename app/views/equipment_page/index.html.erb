@@ -27,7 +27,7 @@
                      <div class="featured">
                         <div class="featured-header">
                            <% if !item.image_url.nil? %>
-                              <img src="images/demo/services-1.jpg" alt="Construction">
+                              <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_equipment %>" alt="<%= item.name_vn %>"></a>
                            <% end %>
                         </div>
                         <div class="featured-content">
