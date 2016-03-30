@@ -31,29 +31,43 @@
                            <table class="table table-bordered">
                               <thead class="bg-primary">
                                  <tr>
-                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold">Tên công trình</th>
-                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold">Tổng giá trị hợp đồng</th>
-                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold">Giá trị do nhà thầu thực hiện</th>
-                                    <th colspan="2" style="text-align:center; vertical-align:middle; font-weight: bold">Thời gian hợp đồng</th>
-                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold">Tên cơ quan thực hiện</th>
-                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold">Tên nước</th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_name) %></th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_total_value) %></th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_cost_performance) %></th>
+                                    <th colspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_duration) %></th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_name_company) %></th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_name_country) %></th>
                                  </tr>
                                  <tr>
-                                    <th style="text-align:center; vertical-align:middle; font-weight: bold">Khởi công</th>
-                                    <th style="text-align:center; vertical-align:middle; font-weight: bold">Hoàn thành</th>
+                                    <th style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_start_at) %></th>
+                                    <th style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_end_at) %></th>
                                  </tr>
                               </thead>
                               <tbody>
-                                 <% @completed_construction.each do |item| %>
-                                    <tr>
-                                       <td style="vertical-align:middle"><%= item.name_vn %></td>
-                                       <td style="text-align:right; vertical-align:middle"><%= format_number(item.total_value) %></td>
-                                       <td style="text-align:right; vertical-align:middle"><%= format_number(item.cost_performance) %></td>
-                                       <td style="text-align:center; vertical-align:middle"><%= item.start_at.strftime("%Y") %></td>
-                                       <td style="text-align:center; vertical-align:middle"><%= item.end_at.strftime("%Y") %></td>
-                                       <td style="vertical-align:middle"><%= item.name_company %></td>
-                                       <td style="text-align:center; vertical-align:middle"><%= item.name_country %></td>
-                                    </tr>
+                                 <% if params[:locale] == "en" %>
+                                    <% @completed_construction.each do |item| %>
+                                       <tr>
+                                          <td style="vertical-align:middle"><%= item.name_en %></td>
+                                          <td style="text-align:right; vertical-align:middle"><%= format_number(item.total_value) %></td>
+                                          <td style="text-align:right; vertical-align:middle"><%= format_number(item.cost_performance) %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.start_at.strftime("%Y") %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.end_at.strftime("%Y") %></td>
+                                          <td style="vertical-align:middle"><%= item.name_company_en %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.name_country_en %></td>
+                                       </tr>
+                                    <% end %>
+                                 <% else %>
+                                    <% @completed_construction.each do |item| %>
+                                       <tr>
+                                          <td style="vertical-align:middle"><%= item.name_vn %></td>
+                                          <td style="text-align:right; vertical-align:middle"><%= format_number(item.total_value) %></td>
+                                          <td style="text-align:right; vertical-align:middle"><%= format_number(item.cost_performance) %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.start_at.strftime("%Y") %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.end_at.strftime("%Y") %></td>
+                                          <td style="vertical-align:middle"><%= item.name_company %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.name_country %></td>
+                                       </tr>
+                                    <% end %>
                                  <% end %>
                               </tbody>
                            </table>
@@ -71,7 +85,7 @@
          <div class="row">
             <div class="col-md-12">
                <div class="download">
-                  <div class="download-content text-uppercase"><i class="fa fa-file-pdf-o"></i> MỘT SỐ HÌNH ẢNH THI CÔNG CÔNG TRÌNH</div> <a href="<%= url_for(controller: "admin/companies", action: "hatc1_vietren") %>" target="_blank" class="btn btn-md btn-dark btn-shadow"><i class="fa fa-cloud-download"></i> Link 1</a> </div>
+                  <div class="download-content text-uppercase"><i class="fa fa-file-pdf-o"></i> <%= t(:somes_picture_of_construction) %></div> <a href="<%= url_for(controller: "admin/companies", action: "hatc1_vietren") %>" target="_blank" class="btn btn-md btn-dark btn-shadow"><i class="fa fa-cloud-download"></i> Link 1</a> </div>
             </div>
          </div>
       </div>

@@ -23,25 +23,47 @@
      <div class="container">
         <div class="row">
            <div class="page-content col-md-9">
-            <% @vietren_news.each do |item| %>
-               <article class="post">
-                  <header>
-                     <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.big_news %>" alt="<%= item.title_vn %>"></a>
-                     <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
-                     <ul class="post-meta">
-                        <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>
-                        <li> <i class="fa fa-calendar"></i>
-                           <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
-                        </li>
-                        <li><i class="fa fa-th-large"></i><%= item.type_vn %></li>
-                     </ul>
-                  </header>
-                  <div class="post-content">
-                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 50) %></p>
-                        <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
-                     </div>
-               </article>
-            <% end %>
+            <% if params[:locale] == "en" %>
+                  <% @vietren_news.each do |item| %>
+                     <article class="post">
+                        <header>
+                           <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.big_news %>" alt="<%= item.title_en %>"></a>
+                           <h3 class="post-title text-uppercase"><%= item.title_en %></h3>
+                           <ul class="post-meta">
+                              <li> <i class="fa fa-user"></i> <span class="text-uppercase">POSTED BY:</span> <%= @company.name_en %></li>
+                              <li> <i class="fa fa-calendar"></i>
+                                 <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
+                              </li>
+                              <li><i class="fa fa-th-large"></i><%= item.type_en %></li>
+                           </ul>
+                        </header>
+                        <div class="post-content">
+                           <p class="post-desc"><%= truncate(strip_tags(item.content_en), length: 250) %></p>
+                           <%= link_to "Read more", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
+                        </div>
+                     </article>
+                  <% end %>
+               <% else %>
+                  <% @vietren_news.each do |item| %>
+                     <article class="post">
+                        <header>
+                           <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.big_news %>" alt="<%= item.title_vn %>"></a>
+                           <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
+                           <ul class="post-meta">
+                              <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>
+                              <li> <i class="fa fa-calendar"></i>
+                                 <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
+                              </li>
+                              <li><i class="fa fa-th-large"></i><%= item.type_vn %></li>
+                           </ul>
+                        </header>
+                        <div class="post-content">
+                           <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 250) %></p>
+                           <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
+                        </div>
+                     </article>
+                  <% end %>
+               <% end %>
            </div>
            <aside class="sidebar sidebar-right col-md-3">
               <%= render 'letter_spring/right_menu' %>

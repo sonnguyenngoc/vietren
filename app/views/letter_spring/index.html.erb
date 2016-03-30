@@ -31,7 +31,7 @@
                        <h3 class="post-title text-uppercase"><%= @spring_letters.title_en %></h3>
                        <ul class="post-meta">
                           <li> <i class="fa fa-calendar"></i>
-                             <time datetime="<%= @spring_letters.created_at %>"><%= @spring_letters.created_at %></time>
+                             <time datetime="<%= @spring_letters.created_at.strftime("%d-%m-%Y") %>"><%= @spring_letters.created_at.strftime("%d-%m-%Y") %></time>
                           </li>
                        </ul>
                     </header>
@@ -45,7 +45,7 @@
                        <h3 class="post-title text-uppercase"><%= @spring_letters.title_vn %></h3>
                        <ul class="post-meta">
                           <li> <i class="fa fa-calendar"></i>
-                             <time datetime="<%= @spring_letters.created_at %>"><%= @spring_letters.created_at %></time>
+                             <time datetime="<%= @spring_letters.created_at.strftime("%d-%m-%Y") %>"><%= @spring_letters.created_at.strftime("%d-%m-%Y") %></time>
                           </li>
                        </ul>
                     </header>
