@@ -43,4 +43,22 @@ class Project < ActiveRecord::Base
     end
   end
   
+  def self.get_all_completed_construction
+    if self.count > 0
+      self.joins(:project_tag).where("project_tags.title_vn = 'Công trình đã hoàn thành'").order("created_at DESC")
+    end
+  end
+  
+  def self.get_all_implementing_construction
+    if self.count > 0
+      self.joins(:project_tag).where("project_tags.title_vn = 'Công trình đang thi công'").order("created_at DESC")
+    end
+  end
+  
+  def self.get_all_investment_construction
+    if self.count > 0
+      self.joins(:project_tag).where("project_tags.title_vn = 'Dự án công ty đang đầu tư'").order("created_at DESC")
+    end
+  end
+  
 end

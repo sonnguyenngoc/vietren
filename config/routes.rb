@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     get "news_single" => "news_single#index", as: :news_single
     get "career_single" => "career_single#index", as: :career_single
     get "notification_single" => "notification_single#index", as: :notification_single
-    get "gallery" => "gallery#index", as: :gallery
+    get "construction_work" => "construction_work#index", as: :construction_work
     get "gallery_detail" => "gallery_detail#index", as: :gallery_detail
     get "project_detail" => "project_detail#index", as: :project_detail
     get "contact" => "contact#index", as: :contact
@@ -22,6 +22,9 @@ Rails.application.routes.draw do
     get "organization" => "organization#index", as: :organization
     get "finance" => "finance#index", as: :finance
     get "achivement" => "achivement#index", as: :achivement
+    get "all_construction" => "all_construction#index", as: :all_construction
+    get "all_investment_projects" => "all_investment_projects#index", as: :all_investment_projects
+    get "all_implementing_projects" => "all_implementing_projects#index", as: :all_implementing_projects
   end
   
   namespace :admin, path: "vietren-admin" do

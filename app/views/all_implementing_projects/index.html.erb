@@ -1,0 +1,125 @@
+<div class="site">
+  <!-- Site Header -->
+  <header class="site-header classic relative">
+     <%= render 'letter_spring/header' %>
+  </header>
+  <!--/ Site Header -->
+  <main class="site-main">
+     <!-- Page header -->
+     <div class="page-header page-header-sm">
+        <h1 class="text-uppercase page-title"><%= t(:implementing_construction_works) %></h1>
+     </div>
+     <!-- /Page header -->
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb">
+        <div class="container">
+           <ol>
+              <li><a href="<%= root_path %>"><%= t(:home) %></a></li>
+              <li class="active"><%= t(:implementing_construction_works) %></li>
+           </ol>
+        </div>
+     </div>
+     <!-- /Breadcrumbs -->
+      <div class="container">
+         <div class="row">
+            <div class="page-content col-md-12">
+               <h3 class="title text-uppercase"><%= t(:implementing_construction_works) %></h3>
+               <div class="post-content">
+                  <div class="col-md-12">
+                     <div class="row">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <thead class="bg-primary">
+                                 <tr>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_name) %></th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_total_value) %></th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_cost_performance) %></th>
+                                    <th colspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_duration) %></th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_name_company) %></th>
+                                    <th rowspan="2" style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_name_country) %></th>
+                                 </tr>
+                                 <tr>
+                                    <th style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_start_at) %></th>
+                                    <th style="text-align:center; vertical-align:middle; font-weight: bold"><%= t(:completed_construction_end_at) %></th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <% if params[:locale] == "en" %>
+                                    <% @all_implementing_contrucstion.each do |item| %>
+                                       <tr>
+                                          <td style="vertical-align:middle"><%= item.name_en %></td>
+                                          <td style="text-align:right; vertical-align:middle"><%= format_number(item.total_value) %></td>
+                                          <td style="text-align:right; vertical-align:middle"><%= format_number(item.cost_performance) %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.start_at.strftime("%Y") %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.end_at.strftime("%Y") %></td>
+                                          <td style="vertical-align:middle"><%= item.name_company_en %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.name_country_en %></td>
+                                       </tr>
+                                    <% end %>
+                                 <% else %>
+                                    <% @all_implementing_contrucstion.each do |item| %>
+                                       <tr>
+                                          <td style="vertical-align:middle"><%= item.name_vn %></td>
+                                          <td style="text-align:right; vertical-align:middle"><%= format_number(item.total_value) %></td>
+                                          <td style="text-align:right; vertical-align:middle"><%= format_number(item.cost_performance) %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.start_at.strftime("%Y") %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.end_at.strftime("%Y") %></td>
+                                          <td style="vertical-align:middle"><%= item.name_company %></td>
+                                          <td style="text-align:center; vertical-align:middle"><%= item.name_country %></td>
+                                       </tr>
+                                    <% end %>
+                                 <% end %>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+  </main>
+  <!-- Download -->
+   <section class="bg-primary">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="download">
+                  <div class="download-content text-uppercase"><i class="fa fa-file-pdf-o"></i> <%= t(:somes_picture_of_construction) %></div> <a href="<%= url_for(controller: "admin/companies", action: "hatc1_vietren") %>" target="_blank" class="btn btn-md btn-dark btn-shadow"><i class="fa fa-cloud-download"></i> Link 1</a> </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- /Download -->
+   <!-- Download -->
+   <section class="bg-primary">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="download">
+                  <div class="download-content text-uppercase"></div> <a href="<%= url_for(controller: "admin/companies", action: "hatc2_vietren") %>" target="_blank" class="btn btn-md btn-dark btn-shadow"><i class="fa fa-cloud-download"></i> Link 2</a> </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- /Download -->
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <%= render 'home/footer' %>
+  </footer>
+  <!-- /Site Footer -->
+</div>
+<!-- Scripts -->
+<%= javascript_include_tag '/frontend/js/jquery.min.js' %>
+<%= javascript_include_tag '/frontend/js/bootstrap/bootstrap.min.js' %>
+<%= javascript_include_tag '/frontend/js/doubletaptogo.js' %>
+<%= javascript_include_tag '/frontend/js/owlcarousel/owl.carousel.min.js' %>
+<%= javascript_include_tag '/frontend/js/functions.js' %>
+<%= javascript_include_tag '/frontend/js/isotope.min.js' %>
+<%= javascript_include_tag '/frontend/js/jquery.swipebox.js' %>
+<%= javascript_include_tag '/frontend/js/waypoints/jquery.waypoints.min.js' %>
+<!-- /Scripts -->
+<!-- Revolution Slider -->
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %>
+<%= javascript_include_tag '/frontend/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %>
+<!-- /Revolution Slider -->
