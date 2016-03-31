@@ -3,7 +3,7 @@ class Slide < ActiveRecord::Base
   
   def self.get_all_slideshows
     if self.count > 0
-        self.order("created_at ASC")
+        self.order("display_no ASC, created_at ASC")
     end
   end
 end
