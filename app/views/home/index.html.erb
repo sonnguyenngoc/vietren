@@ -119,7 +119,7 @@
                <% @news.each do |item| %>
                   <article class="post">
                      <header><a href="<%= item.image_url.big_news %>" target="_blank"><img src="<%= item.image_url.medium_news %>" alt="<%= item.title_vn %>"></a></header>
-                     <h3 class="post-title"><%= item.title_vn %></h3>
+                     <h3 class="post-title nowrap-ellipsis" title="<%= item.title_vn %>"><%= item.title_vn %></h3>
                      <ul class="post-meta">
                         <li> <i class="fa fa-calendar"></i>
                            <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
@@ -127,7 +127,7 @@
                         <li> <i class="fa fa-th-large"></i><%= item.type_vn %></li>
                      </ul>
                      <div class="post-content">
-                        <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
+                        <p class="post-desc nowrap-ellipsis"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
                         <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
                      </div>
                   </article>
