@@ -6,7 +6,7 @@
           <li>
              <a href="#">
                <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_news %>" alt="<%= item.title_en %>"></a>
-               <span><%= link_to item.title_en, { controller: "news_single", action: "index", news_id: item.id } %></span>
+               <span title="<%= item.title_en %>"><%= link_to truncate(strip_tags(item.title_en), length: 50), { controller: "news_single", action: "index", news_id: item.id } %></span>
              </a>
           </li>
         <% end %>
@@ -15,7 +15,7 @@
           <li>
              <a href="#">
                <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_news %>" alt="<%= item.title_vn %>"></a>
-               <span><%= link_to item.title_vn, { controller: "news_single", action: "index", news_id: item.id } %></span>
+               <span title="<%= item.title_vn %>"><%= link_to truncate(strip_tags(item.title_vn), length: 50), { controller: "news_single", action: "index", news_id: item.id } %></span>
              </a>
           </li>
         <% end %>
@@ -27,7 +27,7 @@
   <ul>
      <li><%= link_to t(:completed_construction_works), { controller: "completed_construction", action: "index" } %></li>
      <li><%= link_to t(:implementing_construction_works), { controller: "under_construction", action: "index" } %></li>
-     <li><%= link_to t(:investment_projects), { controller: "investment_projects", action: "index" } %></li>
+     <li><%= link_to t(:investment_projects), { controller: "all_investment_projects", action: "index" } %></li>
   </ul>
 </div>
 <div class="widget">

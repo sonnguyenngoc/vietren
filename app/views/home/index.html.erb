@@ -107,7 +107,11 @@
                         <li> <i class="fa fa-calendar"></i>
                            <time datetime="<%= item.created_at.strftime("%d-%m-%Y") %>"><%= item.created_at.strftime("%d-%m-%Y") %></time>
                         </li>
-                        <li> <i class="fa fa-th-large"></i><%= item.type_en %></li>
+                        <% if item.type_vn == "Tin chuyên ngành" %>
+                           <li><i class="fa fa-th-large"></i><%= link_to item.type_en, { controller: "specialized_news", action: "index" } %></li>
+                        <% else %>
+                           <li><i class="fa fa-th-large"></i><%= link_to item.type_en, { controller: "vietren_news", action: "index" } %></li>
+                        <% end %>
                      </ul>
                      <div class="post-content">
                         <p class="post-desc"><%= truncate(strip_tags(item.content_en), length: 150) %></p>
