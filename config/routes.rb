@@ -10,12 +10,12 @@ Rails.application.routes.draw do
     get "notification" => "notification#index", as: :notification
     get "specialized_news" => "specialized_news#index", as: :specialized_news 
     get "vietren_news" => "vietren_news#index", as: :vietren_news
-    get "news_single" => "news_single#index", as: :news_single
-    get "career_single" => "career_single#index", as: :career_single
-    get "notification_single" => "notification_single#index", as: :notification_single
+    get "news_single/:news_id" => "news_single#index", as: :news_single
+    get "career_single/:career_id" => "career_single#index", as: :career_single
+    get "notification_single/:notification_id" => "notification_single#index", as: :notification_single
     get "construction_work" => "construction_work#index", as: :construction_work
-    get "gallery_detail" => "gallery_detail#index", as: :gallery_detail
-    get "project_detail" => "project_detail#index", as: :project_detail
+    get "gallery_detail/:gallery_id" => "gallery_detail#index", as: :gallery_detail
+    get "project_detail/:project_id" => "project_detail#index", as: :project_detail
     get "contact" => "contact#index", as: :contact
     get "recruitment" => "recruitment#index", as: :recruitment
     get "about_us" => "about_us#index", as: :about_us

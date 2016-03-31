@@ -39,7 +39,7 @@ class NewsUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [78, 62]
   end
   version :medium_news do
-    process :resize_to_fit => [356, 237]
+    process :resize_to_fil => [356, 237]
   end
   version :big_news do
     process :resize_to_fill => [871, 430]
