@@ -54,3 +54,12 @@ strong {
 .tp-caption {
     font-size: 50px !important;
 }
+.center-screen {
+    width: 60%;
+    height:300px;
+    margin: 0 auto;
+    background-color:teal;
+}
+.form-confirm {
+    padding: 40px;
+}
