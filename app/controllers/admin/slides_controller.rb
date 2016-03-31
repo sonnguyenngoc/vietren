@@ -4,7 +4,7 @@ class Admin::SlidesController < ApplicationController
   # GET /slides
   # GET /slides.json
   def index
-    @slides = Slide.all
+    @slides = Slide.order("display_no ASC, created_at DESC")
   end
 
   # GET /slides/1
