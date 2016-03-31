@@ -42,7 +42,7 @@ class GalleryUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [871, 430]
   end
   version :small_gallery do
-    process :resize_to_fit => [270, 200]
+    process :resize_to_fill => [270, 200]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

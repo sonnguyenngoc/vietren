@@ -47,7 +47,7 @@
                                  <% if params[:locale] == "en" %>
                                     <% @all_investment_contrucstion.each do |item| %>
                                        <tr>
-                                          <td style="vertical-align:middle"><%= item.name_en %></td>
+                                          <td style="vertical-align:middle"><%= link_to item.name_en, { controller: "project_detail", action: "index", project_id: item.id } %></td>
                                           <td style="text-align:right; vertical-align:middle"><%= format_number(item.total_value) %></td>
                                           <td style="text-align:right; vertical-align:middle"><%= format_number(item.cost_performance) %></td>
                                           <td style="text-align:center; vertical-align:middle"><%= item.start_at.strftime("%Y") %></td>
@@ -59,7 +59,7 @@
                                  <% else %>
                                     <% @all_investment_contrucstion.each do |item| %>
                                        <tr>
-                                          <td style="vertical-align:middle"><%= item.name_vn %></td>
+                                          <td style="vertical-align:middle"><%= link_to item.name_vn, { controller: "project_detail", action: "index", project_id: item.id } %></td>
                                           <td style="text-align:right; vertical-align:middle"><%= format_number(item.total_value) %></td>
                                           <td style="text-align:right; vertical-align:middle"><%= format_number(item.cost_performance) %></td>
                                           <td style="text-align:center; vertical-align:middle"><%= item.start_at.strftime("%Y") %></td>

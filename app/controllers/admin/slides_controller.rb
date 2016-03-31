@@ -69,6 +69,6 @@ class Admin::SlidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def slide_params
-      params.require(:slide).permit(:image_url, :title_vn, :content_vn, :title_en, :content_en)
+      params.require(:slide).permit(:image_url, :display_no, :title_vn, :content_vn, :title_en, :content_en)
     end
 end

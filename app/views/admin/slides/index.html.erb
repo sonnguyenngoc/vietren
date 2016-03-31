@@ -85,7 +85,8 @@
                                     </td>
                                     <td>
                                         <%= link_to item.title_vn, [:admin, item] %><br/>
-                                        <%= link_to item.title_en, [:admin, item] %>
+                                        <%= link_to item.title_en, [:admin, item] %><br/>
+                                        <span class="label label-success"><%= item.display_no %></span>
                                     </td>
                                     <td>
                                         <%= truncate(strip_tags(item.content_vn), length: 50) %><br/>
