@@ -25,7 +25,8 @@ Rails.application.routes.draw do
     get "all_construction" => "all_construction#index", as: :all_construction
     get "all_investment_projects" => "all_investment_projects#index", as: :all_investment_projects
     get "all_implementing_projects" => "all_implementing_projects#index", as: :all_implementing_projects
-    get "confirm_download" => "confirm_download#index", as: :confirm_download
+    get "confirm_download" => "confirm_download#index"
+    post "confirm_download" => "confirm_download#index"
   end
   
   namespace :admin, path: "vietren-admin" do
