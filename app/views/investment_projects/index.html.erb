@@ -28,7 +28,7 @@
                   <% @galleries.each do |item| %>
                      <article class="post">
                         <header>
-                           <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.big_gallery %>" alt="<%= item.title_en %>"></a>
+                           <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.medium_gallery %>" alt="<%= item.title_en %>"></a>
                            <h3 class="post-title text-uppercase"><%= item.title_en %></h3>
                            <ul class="post-meta">
                               <li> <i class="fa fa-user"></i> <span class="text-uppercase">POSTED BY:</span> <%= @company.name_en %></li>
@@ -48,7 +48,7 @@
                   <% @galleries.each do |item| %>
                      <article class="post">
                         <header>
-                           <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.big_gallery %>" alt="<%= item.title_vn %>"></a>
+                           <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.medium_gallery %>" alt="<%= item.title_vn %>"></a>
                            <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
                            <ul class="post-meta">
                               <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>
