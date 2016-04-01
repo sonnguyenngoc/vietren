@@ -51,7 +51,7 @@ class Project < ActiveRecord::Base
   
   def self.get_all_implementing_construction
     if self.count > 0
-      self.joins(:project_tag).where("project_tags.title_vn = 'Công trình đang thi công'").order("created_at DESC")
+      self.joins(:project_tag).where("project_tags.title_vn = 'Công trình đang thi công' and projects.success = 'False'").order("created_at DESC")
     end
   end
   
