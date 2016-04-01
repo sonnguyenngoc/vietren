@@ -36,13 +36,13 @@ class NewsUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
   version :small_news do
-    process :resize_to_fit => [78, 62]
+    process :resize_to_fill => [78, 62]
   end
   version :medium_news do
-    process :resize_to_fil => [356, 237]
+    process :resize_to_fill => [356, 237]
   end
   version :big_news do
-    process :resize_to_fill => [871, 430]
+    process :resize_to_fit => [871, 430]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

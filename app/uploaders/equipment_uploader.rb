@@ -36,7 +36,7 @@ class EquipmentUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
   version :small_equipment do
-    process :resize_to_fit => [370, 188]
+    process :resize_to_fill => [370, 188]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

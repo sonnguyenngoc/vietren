@@ -36,7 +36,7 @@ class GalleryUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
   version :big_gallery do
-    process :resize_to_fill => [871, 430]
+    process :resize_to_fit => [871, 430]
   end
   version :medium_gallery do
     process :resize_to_fit => [871, 430]
