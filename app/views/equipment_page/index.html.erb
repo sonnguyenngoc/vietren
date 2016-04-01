@@ -27,7 +27,7 @@
                   <div class="col-md-4">
                      <div class="featured">
                         <div class="featured-header">
-                           <% if !item.image_url.nil? %>
+                           <% if item.image_url.present? %>
                               <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.small_equipment %>" alt="<%= item.name_vn %>"></a>
                            <% end %>
                         </div>
