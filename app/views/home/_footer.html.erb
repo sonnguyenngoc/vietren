@@ -16,7 +16,7 @@
         <div class="widget widget-nav-menu">
            <h3 class="widget-title"><%= t(:menu) %></h3>
            <ul class="menu">
-              <li><%= link_to t(:about_us), { controller: "about_us", action: "index" } %></li>
+              <li><%= link_to t(:letter_spring), { controller: "letter_spring", action: "index" } %></li>
               <li><%= link_to t(:contact), { controller: "contact", action: "index" } %></li>
               <li><%= link_to t(:notification), { controller: "notification", action: "index" } %></li>
               <li><%= link_to t(:news), { controller: "specialized_news", action: "index" } %></li>
@@ -36,7 +36,7 @@
               <li><i class="fa fa-map-marker"></i> <%= t(:company_address) %></li>
               <li><i class="fa fa-phone"></i> <a href="#" class="important"><%= @company.phone + " - " + @company.phone_2 %></a></li>
               <li><i class="fa fa-fax"></i> <a href="#"><%= @company.fax %></a></li>
-              <li><i class="fa fa-envelope"></i> <a href="mailto:<%= @company.email %>"><%= @company.email %></a></li>
+              <li><i class="fa fa-envelope"></i> <a href="mailto:<%= @company.email %>"><%= @company.email %></a> - <a href="mailto:<%= @company.email_2 %>"><%= @company.email_2 %></li>
            </ul>
         </div>
         <!-- /Contact Info Widget -->

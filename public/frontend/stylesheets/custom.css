@@ -63,3 +63,14 @@ strong {
 .form-confirm {
     padding: 40px;
 }
+.img-flags {
+    margin-bottom: 6px;
+}
+.login-logo {
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px;
+    border-style: solid;
+    padding: 20px;
+    display: inline-block;
+}
