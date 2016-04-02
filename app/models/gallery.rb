@@ -8,9 +8,15 @@ class Gallery < ActiveRecord::Base
       self.where("type_vn = 'Hình ảnh các công trình thi công'").order("created_at DESC")
     end
   end
+  def self.get_completed_construction_galleries
+    if self.count > 0
+      self.where("type_vn = 'Hình ảnh các công trình đã hoàn thành'").order("created_at DESC")
+    end
+  end
   def self.get_investment_projects_galleries
     if self.count > 0
       self.where("type_vn = 'Hình ảnh các dự án đầu tư'").order("created_at DESC")
     end
   end
+  
 end

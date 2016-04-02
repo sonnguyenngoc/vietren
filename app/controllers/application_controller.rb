@@ -15,7 +15,8 @@ class ApplicationController < ActionController::Base
         controller_name == 'investment_projects' || controller_name == 'equipment_page' || controller_name == 'notification' || controller_name == 'specialized_news'  ||
         controller_name == 'vietren_news' || controller_name == 'construction_work' || controller_name == 'contact' || controller_name == 'recruitment' ||
         controller_name == 'about_us' || controller_name == 'organization' || controller_name == 'finance' || controller_name == 'achivement' || controller_name == 'gallery_detail' || controller_name == 'news_single' ||
-        controller_name == 'career_single' || controller_name == 'notification_single' || controller_name == 'project_detail' || controller_name == 'all_construction' || controller_name == 'all_investment_projects' || controller_name == 'all_implementing_projects' || controller_name == 'confirm_download'
+        controller_name == 'career_single' || controller_name == 'notification_single' || controller_name == 'project_detail' || controller_name == 'all_construction' || controller_name == 'all_investment_projects' || controller_name == 'all_implementing_projects' || controller_name == 'confirm_download' ||
+        controller_name == 'gallery_completed_construction'
         
           'frontend'
           

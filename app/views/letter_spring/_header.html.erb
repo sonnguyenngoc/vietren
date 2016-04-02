@@ -19,14 +19,14 @@
            <!-- Above Navbar -->
            <div class="above-nav-bar">
               <ul class="contact-info transparent">
-                 <li><i class="fa fa-phone"></i> <span class="important">053.3850.222 - 053.2211.052</span></li>
-                 <li><i class="fa fa-envelope"></i> <a href="mailto:vrc@vnn.vn">vrc@vnn.vn</a></li>
-              </ul>
+                <li><i class="fa fa-phone"></i> <span class="important"><%= @company.phone + " - " + @company.phone_2 %></span></li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:<%= @company.email %>"><%= @company.email %></a> - <a href="mailto:<%= @company.email_2 %>"><%= @company.email_2 %></a></li>
+             </ul>
               <ul class="social social-transparent-border">
-                <li><a href="https://www.facebook.com/vietren02032009/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="https://www.pinterest.com/vietren999999/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCcVOqTLu33lURWPwBWLCZIg" target="_blank"><i class="fa fa-youtube" target="_blank"></i></a></li>
+                <li><a href="https://www.facebook.com/vietren02032009/" target="_blank"><i class="fa fa-facebook color-facebook"></i></a></li>
+               <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank"><i class="fa fa-google-plus color-google-plus"></i></a></li>
+               <li><a href="https://www.pinterest.com/vietren999999/" target="_blank"><i class="fa fa-pinterest color-pinterest"></i></a></li>
+               <li><a href="https://www.youtube.com/channel/UCcVOqTLu33lURWPwBWLCZIg" target="_blank"><i class="fa fa-youtube color-youtube" target="_blank"></i></a></li>
               </ul>
            </div>
            <!-- /Above Navbar -->
@@ -70,8 +70,9 @@
               </li>
               <li class="menu-item  menu-item-has-children"><%= link_to t(:gallery), "#" %>
                  <ul class="sub-menu">
-                    <li class="menu-item"><%= link_to t(:picture_investment_projects), { controller: "investment_projects", action: "index" } %></li>
-                    <li class="menu-item"><%= link_to t(:picture_construction_works), { controller: "construction_work", action: "index" } %></li>
+                    <li class="menu-item"><%= link_to t(:pictures_completed_construction_works), { controller: "gallery_completed_construction", action: "index" } %></li>
+                    <li class="menu-item"><%= link_to t(:pictures_construction_works), { controller: "construction_work", action: "index" } %></li>
+                    <li class="menu-item"><%= link_to t(:pictures_investment_projects), { controller: "investment_projects", action: "index" } %></li>
                  </ul>
               </li>
               <li class="menu-item"><%= link_to t(:recruitment), { controller: "recruitment", action: "index" } %></li>
