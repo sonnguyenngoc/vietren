@@ -141,11 +141,15 @@
                                                         
                                                         <div class="form-group">
                                                             <div class="row">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-4">
+                                                                    <label>Email 1</label>
+                                                                    <input type="text" value="<%= @company.email_2 %>" class="form-control">
+                                                                </div>
+                                                                <div class="col-md-4">
                                                                     <label>Company founding date</label>
                                                                     <input type="text" value="<%= @company.founding_date %>" class="form-control">
                                                                 </div>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-4">
                                                                     <label>Authorized capital</label>
                                                                     <input type="text" value="<%= @company.authorized_capital.to_i %>" class="form-control price_input">
                                                                 </div>
@@ -159,7 +163,7 @@
                                                                     <input type="text" value="<%= @company.general_manager_vn %>" class="form-control">
                                                                 </div>
                                                                 <div class="col-md-4">
-                                                                    <label>Email</label>
+                                                                    <label>Email 2</label>
                                                                     <input type="text" value="<%= @company.email %>" class="form-control">
                                                                 </div>
                                                                 <div class="col-md-4">

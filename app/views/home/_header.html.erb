@@ -8,14 +8,6 @@
      <!-- Site navigation -->
      <nav class="site-navigation pull-right">
         <div class="mobile-wrap">
-           <!-- Mobile Search -->
-           <div class="site-search hidden-lg">
-              <form method="get" id="searchform-header" class="searchform-header">
-                 <input class="searchfield" name="s" type="text" placeholder="Search" />
-                 <button type="submit" class="submit"><i class="fa fa-search"></i></button>
-              </form>
-           </div>
-           <!-- /Mobile Search -->
            <!-- Main menu -->
            <ul id="main-menu" class="main-menu">
               <li class="menu-item"><%= link_to t(:home), root_path %>
@@ -63,8 +55,8 @@
               <li class="menu-item"><%= link_to t(:recruitment), { controller: "recruitment", action: "index" } %></li>
               <li class="menu-item"><%= link_to t(:contact), { controller: "contact", action: "index" } %></li>
               <li class="menu-item color-red">
-                <a href="<%= url_for( :locale => 'vi' ) %>" style="color: red;">VI</a>
-                <a href="<%= url_for( :locale => 'en' ) %>" style="color: blue;">EN</a>
+                <a href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/flags/vn.png" class="img-flags" ></a>
+                <a href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/flags/gb.png" class="img-flags" ></a>
               </li>
            </ul>
            <!-- /Main menu -->
