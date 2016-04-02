@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     get "letter_spring" => "letter_spring#index", as: :letter_spring
     get "under_construction" => "under_construction#index", as: :under_construction
     get "completed_construction" => "completed_construction#index", as: :completed_construction
-    get "investment_projects" => "investment_projects#index", as: :investment_projects 
+    get "investment_projects" => "investment_projects#index", as: :investment_projects
+    get "gallery_completed_construction" => "gallery_completed_construction#index", as: :gallery_completed_construction 
     get "equipment_page" => "equipment_page#index", as: :equipment_page
     get "notification" => "notification#index", as: :notification
     get "specialized_news" => "specialized_news#index", as: :specialized_news 

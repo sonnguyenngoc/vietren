@@ -6,7 +6,7 @@
            <ul class="menu about">
               <li><%= link_to t(:about_us), { controller: "about_us", action: "index" } %></li>
               <li><%= link_to t(:organizational_structure), { controller: "organization", action: "index" } %></li>
-              <li><%= link_to t(:achievements), { controller: "achivement", action: "index" } %></li>
+              <li><%= link_to t(:achievements), { controller: "achivement", action: "index" }, class: "nowrap-footer" %></li>
               <li><%= link_to t(:finance), { controller: "finance", action: "index" } %></li>
            </ul>
         </div>
@@ -21,7 +21,7 @@
               <li><%= link_to t(:notification), { controller: "notification", action: "index" } %></li>
               <li><%= link_to t(:news), { controller: "specialized_news", action: "index" } %></li>
               <li><%= link_to t(:recruitment), { controller: "recruitment", action: "index" } %></li>
-              <li><%= link_to t(:gallery), { controller: "construction_work", action: "index" } %></li>
+              <li><%= link_to t(:gallery), { controller: "gallery_completed_construction", action: "index" } %></li>
               <li><%= link_to t(:construction), { controller: "all_construction", action: "index" } %></li>
               <li><%= link_to t(:equipment), { controller: "equipment_page", action: "index" } %></li>
            </ul>
@@ -89,10 +89,10 @@
            <!-- Social Widget -->
            <div class="widget widget-social">
               <ul class="social">
-                <li><a href="https://www.facebook.com/vietren02032009/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="https://www.pinterest.com/vietren999999/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCcVOqTLu33lURWPwBWLCZIg" target="_blank"><i class="fa fa-youtube" target="_blank"></i></a></li>
+                <li><a href="https://www.facebook.com/vietren02032009/" target="_blank"><i class="fa fa-facebook color-facebook"></i></a></li>
+               <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank"><i class="fa fa-google-plus color-google-plus"></i></a></li>
+               <li><a href="https://www.pinterest.com/vietren999999/" target="_blank"><i class="fa fa-pinterest color-pinterest"></i></a></li>
+               <li><a href="https://www.youtube.com/channel/UCcVOqTLu33lURWPwBWLCZIg" target="_blank"><i class="fa fa-youtube color-youtube" target="_blank"></i></a></li>
               </ul>
            </div>
            <!-- /Social Widget -->

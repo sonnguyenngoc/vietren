@@ -4,7 +4,7 @@
         max-width: 34%;
     }
     nav.site-navigation ul li > ul.sub-menu {
-        width: 240px;
+        width: 350px;
     }
 }
 @media screen and (min-width: 767px) {
@@ -73,4 +73,37 @@ strong {
     border-style: solid;
     padding: 20px;
     display: inline-block;
+}
+.nowrap-footer {
+    white-space: nowrap;
+}
+a:hover {
+    color: #026cd0 !important;
+}
+.color-facebook {
+    color: #3f4da1;
+}
+.color-google-plus {
+    color: #d74527;
+}
+.color-pinterest {
+    color: #d74527;
+}
+.color-youtube {
+    color: #d74527;
+}
+.color-facebook:hover {
+    color: #000000;
+}
+.color-google-plus:hover {
+    color: #000000;
+}
+.color-pinterest:hover {
+    color: #000000;
+}
+.color-youtube:hover {
+    color: #000000;
+}
+.filter-dark button.selected {
+    color: #026cd0 !important;
 }
