@@ -31,4 +31,12 @@ class Information < ActiveRecord::Base
       self.order("created_at DESC").first(9)
     end
   end
+  
+  def self.get_currency
+    doc = Nokogiri::XML(open('http://vietcombank.com.vn/ExchangeRates/ExrateXML.aspx'))
+  end
+  
+  def self.get_exchange
+    @doc = Nokogiri::XML(open('http://www.sjc.com.vn/xml/tygiavang.xml'))
+  end
 end
