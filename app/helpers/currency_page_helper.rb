@@ -1,0 +1,2 @@
+module CurrencyPageHelper
+end

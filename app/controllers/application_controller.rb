@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
   layout :layout_by_resource
   protect_from_forgery with: :exception
   
+  require 'nokogiri'
+  require 'open-uri'
+  
   after_filter  :set_access_control_headers
 
   def set_access_control_headers
@@ -16,7 +19,7 @@ class ApplicationController < ActionController::Base
         controller_name == 'vietren_news' || controller_name == 'construction_work' || controller_name == 'contact' || controller_name == 'recruitment' ||
         controller_name == 'about_us' || controller_name == 'organization' || controller_name == 'finance' || controller_name == 'achivement' || controller_name == 'gallery_detail' || controller_name == 'news_single' ||
         controller_name == 'career_single' || controller_name == 'notification_single' || controller_name == 'project_detail' || controller_name == 'all_construction' || controller_name == 'all_investment_projects' || controller_name == 'all_implementing_projects' || controller_name == 'confirm_download' ||
-        controller_name == 'gallery_completed_construction'
+        controller_name == 'gallery_completed_construction' || controller_name == 'currency_page'
         
           'frontend'
           

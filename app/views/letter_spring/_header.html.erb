@@ -13,7 +13,8 @@
               <ul class="contact-info transparent">
                 <li><i class="fa fa-phone"></i> <span class="important"><%= @company.phone + " - " + @company.phone_2 %></span></li>
                 <li><i class="fa fa-envelope"></i><a href="mailto:<%= @company.email %>"><%= @company.email %></a> - <a href="mailto:<%= @company.email_2 %>"><%= @company.email_2 %></a></li>
-             </ul>
+                <li><i class="fa fa-usd"></i><%= link_to t(:currency_exchange_rates), { controller: "currency_page", action: "index" } %></li>
+              </ul>
               <ul class="social social-transparent-border">
                 <li><a href="https://www.facebook.com/vietren02032009/" target="_blank"><i class="fa fa-facebook color-facebook"></i></a></li>
                <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank"><i class="fa fa-google-plus color-google-plus"></i></a></li>

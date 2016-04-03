@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require 'nokogiri'
+//= require 'open-uri'
 //= require_tree .
