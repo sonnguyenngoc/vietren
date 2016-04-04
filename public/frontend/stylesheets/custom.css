@@ -113,6 +113,9 @@ a:hover {
 .post-content p {
     font-size: 1.1em !important;
 }
+.post-content img {
+    margin-bottom: 5px;
+}
 .icon .icon-desc {
     font-size: 1.1em !important;
 }
