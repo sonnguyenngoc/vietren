@@ -70,6 +70,7 @@
                   </article>
                <% end %>
             <% end %>
+            <%= will_paginate @notification, previous_label: '<', next_label: '>', renderer: BootstrapPagination::Rails %>
            </div>
            <aside class="sidebar sidebar-right col-md-3">
               <%= render 'letter_spring/right_menu' %>

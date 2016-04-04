@@ -122,3 +122,40 @@ a:hover {
 .color-black {
     color: black;
 }
+
+/***
+ * Page Numbers
+ */
+ul.pagination {
+  list-style: none;
+  margin-top: 45px;
+  padding: 0; }
+  ul.pagination > li {
+    display: inline-block;
+    text-align: center;
+    overflow: hidden; }
+    ul.pagination > li + li {
+      margin-left: 4px; }
+    ul.pagination > li > * {
+      background-color: #dedede;
+      border-radius: 3px;
+      color: #afafaf;
+      display: block;
+      padding: 6px;
+      width: 32px; }
+      ul.pagination > li > *.prev, ul.pagination > li > *.next {
+        padding-left: 14px;
+        padding-right: 14px;
+        width: auto; }
+    ul.pagination > li .prev .fa {
+      margin-right: 5px; }
+    ul.pagination > li .next .fa {
+      margin-left: 5px; }
+    ul.pagination > li.disabled {
+        display: none;
+    }
+    ul.pagination > li > *:hover,
+    ul.pagination > li > *:focus,
+    ul.pagination > li.active > span {
+      background-color: #fab702;
+      color: #fff; }
