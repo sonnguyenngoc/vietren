@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :customer_contacts
   devise_for :users
   scope "(:locale)", locale: /vi|en/ do
     root 'home#index'
@@ -6,7 +7,8 @@ Rails.application.routes.draw do
     get "under_construction" => "under_construction#index", as: :under_construction
     get "completed_construction" => "completed_construction#index", as: :completed_construction
     get "investment_projects" => "investment_projects#index", as: :investment_projects
-    get "gallery_completed_construction" => "gallery_completed_construction#index", as: :gallery_completed_construction 
+    get "gallery_completed_construction" => "gallery_completed_construction#index", as: :gallery_completed_construction
+    get "picture_equipment" => "picture_equipment#index", as: :picture_equipment 
     get "equipment_page" => "equipment_page#index", as: :equipment_page
     get "notification" => "notification#index", as: :notification
     get "specialized_news" => "specialized_news#index", as: :specialized_news 
@@ -56,5 +58,6 @@ Rails.application.routes.draw do
     resources :galleries
     resources :information
     resources :slides
+    resources :customer_contacts
   end
 end

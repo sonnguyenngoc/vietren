@@ -18,5 +18,9 @@ class Gallery < ActiveRecord::Base
       self.where("type_vn = 'Hình ảnh các dự án đầu tư'").order("created_at DESC")
     end
   end
-  
+  def self.get_picture_equipment
+    if self.count > 0
+      self.where("type_vn = 'Hình ảnh các thiết bị'").order("created_at DESC")
+    end
+  end
 end

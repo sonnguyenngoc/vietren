@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>-------- Original message --------</p>
+    <p>
+      From: <%= @customer_contact.email %>
+    </p>
+    <p>
+      To: vrc@vnn.vn
+    </p>
+    <p>
+      Contact Name: <%= @customer_contact.name %>
+    </p>
+    <p>
+      Subject: <%= @customer_contact.subject %>
+    </p>
+    <p>
+      Message: <%= @customer_contact.message.html_safe %>
+    </p>
+    <p>
+      Date: <%= @customer_contact.created_at.in_time_zone("Asia/Bangkok").strftime("%d/%m/%Y %H:%M") %> (GMT+07:00)
+    </p>
+  </body>
+</html>
