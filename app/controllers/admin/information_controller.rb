@@ -28,7 +28,7 @@ class Admin::InformationController < ApplicationController
 
     respond_to do |format|
       if @information.save
-        format.html { redirect_to [:admin, @information], notice: 'Information was successfully created.' }
+        format.html { redirect_to edit_admin_information_path(id: @information.id), notice: 'Information was successfully created.' }
         format.json { render :show, status: :created, location: @information }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::InformationController < ApplicationController
   def update
     respond_to do |format|
       if @information.update(information_params)
-        format.html { redirect_to [:admin, @information], notice: 'Information was successfully updated.' }
+        format.html { redirect_to edit_admin_information_path(id: @information.id), notice: 'Information was successfully updated.' }
         format.json { render :show, status: :ok, location: @information }
       else
         format.html { render :edit }
