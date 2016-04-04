@@ -48,4 +48,6 @@ gem 'carrierwave'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'paperclip', '~> 3.0'
 gem 'nokogiri'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
