@@ -37,6 +37,6 @@ class Information < ActiveRecord::Base
   end
   
   def self.get_exchange
-    @doc = Nokogiri::XML(open('http://www.sjc.com.vn/xml/tygiavang.xml'))
+    doc = Nokogiri::XML(open('http://www.sjc.com.vn/xml/tygiavang.xml'))
   end
 end

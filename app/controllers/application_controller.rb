@@ -3,9 +3,6 @@ class ApplicationController < ActionController::Base
   layout :layout_by_resource
   protect_from_forgery with: :exception
   
-  require 'nokogiri'
-  require 'open-uri'
-  
   after_filter  :set_access_control_headers
 
   def set_access_control_headers
