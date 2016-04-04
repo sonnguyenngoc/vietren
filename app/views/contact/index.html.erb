@@ -62,27 +62,27 @@
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                            <i class="fa fa-remove"></i>
                         </button>
-                        <i class="fa fa-check"></i> Tin nhắn liên hệ được gửi thành công.
+                        <i class="fa fa-check"></i> <%= t(:contact_notification) %>
                      </div>
                   <% end %>
                   <%= form_for @customer_contact, html: {class: "row"} do |f| %>  
                      <!-- Contact form -->
                         <fieldset class="form-group col-md-7">
-                           <%= f.text_field :name, placeholder: 'Họ & Tên (Bắt buộc)', required: true %>
+                           <%= f.text_field :name, placeholder: t(:contact_name), required: true %>
                            <label for="name"></label>
                         </fieldset>
                         <fieldset class="form-group col-md-7">
-                           <%= f.email_field :email, placeholder: 'Địa chỉ email (Bắt buộc)', required: true %>
+                           <%= f.email_field :email, placeholder: t(:contact_email), required: true %>
                            <label for="email"></label>
                         </fieldset>
                         <fieldset class="form-group col-md-7">
-                           <%= f.text_field :subject, placeholder: 'Tiêu đề (Bắt buộc)', required: true %>
+                           <%= f.text_field :subject, placeholder: t(:contact_subject), required: true %>
                            <label for="subject"></label>
                         </fieldset>
                         <fieldset class="form-group col-md-12">
-                           <%= f.text_area :message, placeholder: 'Nội dung (Bắt buộc)', rows: '6', required: true %>
+                           <%= f.text_area :message, placeholder: t(:contact_message), rows: '6', required: true %>
                            <label for="message"></label>
-                           <%= f.submit 'Gửi liên hệ', class: 'btn btn-normal btn-md' %>
+                           <%= f.submit t(:contact_send), class: 'btn btn-normal btn-md' %>
                         </fieldset>
                      <!-- /Contact form -->
                   <% end %>
