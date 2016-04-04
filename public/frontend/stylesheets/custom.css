@@ -107,3 +107,12 @@ a:hover {
 .filter-dark button.selected {
     color: #026cd0 !important;
 }
+.post-content p span {
+    font-size: 1.1em !important;
+}
+.post-content p {
+    font-size: 1.1em !important;
+}
+.icon .icon-desc {
+    font-size: 1.1em !important;
+}
