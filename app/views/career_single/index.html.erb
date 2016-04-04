@@ -23,21 +23,47 @@
      <div class="container">
         <div class="row">
             <div class="page-content col-md-9 padding-bottom-xl">
-              <article class="post post-single">
-                 <header>
-                    <h3 class="post-title text-uppercase"><%= @career.title_vn %></h3>
-                    <ul class="post-meta">
-                        <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>
-                        <li> <i class="fa fa-calendar"></i>
-                           <time datetime="<%= @career.created_at.strftime("%d-%m-%Y") %>"><%= @career.created_at.strftime("%d-%m-%Y") %></time>
-                        </li>
-                        <li><i class="fa fa-th-large"></i>Tuyển dụng</li>
-                     </ul>
-                 </header>
-                 <div class="post-content">
-                    <p><%= @career.content_vn.html_safe %></p>
-                 </div>
-              </article>
+               <% if params[:locale] == "en" %>
+                  <article class="post post-single">
+                     <header>
+                        <% if !@career.title_en.present? %>
+                           <h3 class="post-title text-uppercase"><%= @career.title_vn %></h3>
+                        <% else %>
+                           <h3 class="post-title text-uppercase"><%= @career.title_en %></h3>
+                        <% end %>
+                        <ul class="post-meta">
+                            <li> <i class="fa fa-user"></i> <span class="text-uppercase">POSTED BY:</span> <%= @company.name_en %></li>
+                            <li> <i class="fa fa-calendar"></i>
+                               <time datetime="<%= @career.created_at.strftime("%d-%m-%Y") %>"><%= @career.created_at.strftime("%d-%m-%Y") %></time>
+                            </li>
+                            <li><i class="fa fa-th-large"></i>Career</li>
+                         </ul>
+                     </header>
+                     <div class="post-content">
+                        <% if !@career.content_en.present? %>
+                           <p><%= @career.content_vn.html_safe %></p>
+                        <% else %>
+                           <p><%= @career.content_en.html_safe %></p>
+                        <% end %>
+                     </div>
+                  </article>
+               <% else %>
+                  <article class="post post-single">
+                     <header>
+                        <h3 class="post-title text-uppercase"><%= @career.title_vn %></h3>
+                        <ul class="post-meta">
+                            <li> <i class="fa fa-user"></i> <span class="text-uppercase">ĐĂNG BỞI:</span> <%= @company.name_vn %></li>
+                            <li> <i class="fa fa-calendar"></i>
+                               <time datetime="<%= @career.created_at.strftime("%d-%m-%Y") %>"><%= @career.created_at.strftime("%d-%m-%Y") %></time>
+                            </li>
+                            <li><i class="fa fa-th-large"></i>Tuyển dụng</li>
+                         </ul>
+                     </header>
+                     <div class="post-content">
+                        <p><%= @career.content_vn.html_safe %></p>
+                     </div>
+                  </article>
+               <% end %>
            </div>
            <aside class="sidebar sidebar-right col-md-3">
               <%= render 'letter_spring/right_menu' %>
