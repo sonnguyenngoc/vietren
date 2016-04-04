@@ -46,39 +46,46 @@
                        </tr>
                        <tr class="info-table-row">
                           <th class="info-table-icon"><i class="fa fa-envelope"></i></th>
-                          <td class="info-table-content"><a href="mailto:<%= @company.email %>"><%= @company.email %></a> - <a href="mailto:<%= @company.email_2 %>"><%= @company.email_2 %></a></td>
+                          <td class="info-table-content"><a href="mailto:<%= @company.email %>" class="color-black"><%= @company.email %></a> - <a href="mailto:<%= @company.email_2 %>" class="color-black"><%= @company.email_2 %></a></td>
                        </tr>
                        <tr class="info-table-row">
                           <th class="info-table-icon"><i class="fa fa-globe"></i></th>
-                          <td class="info-table-content"><strong><a href="http://vietren.vn/" target="_blank">http://vietren.vn/</a></strong></td>
+                          <td class="info-table-content"><strong><a href="http://vietren.vn/" target="_blank" class="color-black">http://vietren.vn/</a></strong></td>
                        </tr>
                     </tbody>
                  </table>
                  <!-- /Info Table Element -->
               </div>
               <div class="col-md-7">
-                 <!-- Contact form -->
-                 <form class="contact-form row" method="post" action="email.php" novalidate>
-                    <fieldset class="form-group col-md-7">
-                       <input id="name" name="name" type="text" placeholder="Name" required>
-                       <label for="name"></label>
-                    </fieldset>
-                    <fieldset class="form-group col-md-7">
-                       <input id="email" name="email" type="email" placeholder="Email" required>
-                       <label for="email"></label>
-                    </fieldset>
-                    <fieldset class="form-group col-md-7">
-                       <input id="subject" name="subject" type="text" placeholder="Subject" required>
-                       <label for="subject"></label>
-                    </fieldset>
-                    <fieldset class="form-group col-md-12">
-                       <textarea id="message" name="message" placeholder="Message" required></textarea>
-                       <label for="message"></label>
-                       <input type="submit" class="btn btn-normal btn-md" value="Gửi"> </fieldset>
-                    <div class="text-center spinner col-md-12 hidden"><i class="fa fa-spinner fa-pulse"></i></div>
-                    <div class="info col-md-12"></div>
-                 </form>
-                 <!-- /Contact form -->
+                  <% if params[:notice].present? %>
+                     <div class="alert alert-success-style-2">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                           <i class="fa fa-remove"></i>
+                        </button>
+                        <i class="fa fa-check"></i> Tin nhắn liên hệ được gửi thành công.
+                     </div>
+                  <% end %>
+                  <%= form_for @customer_contact, html: {class: "row"} do |f| %>  
+                     <!-- Contact form -->
+                        <fieldset class="form-group col-md-7">
+                           <%= f.text_field :name, placeholder: 'Họ & Tên (Bắt buộc)', required: true %>
+                           <label for="name"></label>
+                        </fieldset>
+                        <fieldset class="form-group col-md-7">
+                           <%= f.email_field :email, placeholder: 'Địa chỉ email (Bắt buộc)', required: true %>
+                           <label for="email"></label>
+                        </fieldset>
+                        <fieldset class="form-group col-md-7">
+                           <%= f.text_field :subject, placeholder: 'Tiêu đề (Bắt buộc)', required: true %>
+                           <label for="subject"></label>
+                        </fieldset>
+                        <fieldset class="form-group col-md-12">
+                           <%= f.text_area :message, placeholder: 'Nội dung (Bắt buộc)', rows: '6', required: true %>
+                           <label for="message"></label>
+                           <%= f.submit 'Gửi liên hệ', class: 'btn btn-normal btn-md' %>
+                        </fieldset>
+                     <!-- /Contact form -->
+                  <% end %>
               </div>
            </div>
         </div>

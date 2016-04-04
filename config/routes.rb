@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :customer_contacts
   devise_for :users
   scope "(:locale)", locale: /vi|en/ do
     root 'home#index'
@@ -56,5 +57,6 @@ Rails.application.routes.draw do
     resources :galleries
     resources :information
     resources :slides
+    resources :customer_contacts
   end
 end
