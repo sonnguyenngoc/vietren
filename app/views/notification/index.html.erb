@@ -27,7 +27,11 @@
                <% @notification.each do |item| %>
                   <article class="post">
                      <header>
-                        <h3 class="post-title text-uppercase"><%= item.title_en %></h3>
+                        <% if !item.title_en.present? %>
+                           <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
+                        <% else %>
+                           <h3 class="post-title text-uppercase"><%= item.title_en %></h3>
+                        <% end %>
                         <ul class="post-meta">
                            <li> <i class="fa fa-user"></i> <span class="text-uppercase">POSTED BY:</span> <%= @company.name_en %></li>
                            <li> <i class="fa fa-calendar"></i>
@@ -37,7 +41,11 @@
                         </ul>
                      </header>
                      <div class="post-content">
-                        <p class="post-desc"><%= truncate(strip_tags(item.content_en), length: 150) %></p>
+                        <% if !item.content_en.present? %>
+                           <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 150) %></p>
+                        <% else %>
+                           <p class="post-desc"><%= truncate(strip_tags(item.content_en), length: 150) %></p>
+                        <% end %>
                         <%= link_to "Read more", { controller: "notification_single", action: "index", notification_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
                      </div>
                   </article>
