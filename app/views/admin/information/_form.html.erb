@@ -6,6 +6,8 @@
   </div>
 <% end %>
 
+<div id="error_explanation"><p class="color-red"><%= notice %></p></div>
+
 <%= form_for [:admin, @information], html: {class: "form-horizontal"} do |f| %>
     
     <div class="tabbable tab-content-bordered">
