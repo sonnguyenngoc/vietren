@@ -35,7 +35,11 @@
                <% if params[:locale] == "en" %>
                <article class="post post-single">
                   <header>
-                     <h3 class="post-title text-uppercase"><%= @news.title_en %></h3>
+                     <% if !@news.title_en.present? %>
+                        <h3 class="post-title text-uppercase"><%= @news.title_vn %></h3>
+                     <% else %>
+                        <h3 class="post-title text-uppercase"><%= @news.title_en %></h3>
+                     <% end %>
                      <ul class="post-meta">
                          <li> <i class="fa fa-user"></i> <span class="text-uppercase">POSTED BY:</span> <%= @company.name_en %></li>
                          <li> <i class="fa fa-calendar"></i>
@@ -45,7 +49,11 @@
                       </ul>
                   </header>
                   <div class="post-content">
-                     <p><%= @news.content_en.html_safe %></p>
+                     <% if !@news.content_en.present? %>
+                        <p><%= @news.content_vn.html_safe %></p>
+                     <% else %>
+                        <p><%= @news.content_en.html_safe %></p>
+                     <% end %> 
                   </div>
                </article>
                <% else %>

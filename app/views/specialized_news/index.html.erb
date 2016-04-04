@@ -28,7 +28,11 @@
                      <article class="post">
                         <header>
                            <a href="<%= item.image_url %>" target="_blank"><img src="<%= item.image_url.big_news %>" alt="<%= item.title_en %>"></a>
-                           <h3 class="post-title text-uppercase"><%= item.title_en %></h3>
+                           <% if !item.title_en.present? %>
+                              <h3 class="post-title text-uppercase"><%= item.title_vn %></h3>
+                           <% else %>
+                              <h3 class="post-title text-uppercase"><%= item.title_en %></h3>
+                           <% end %> 
                            <ul class="post-meta">
                               <li> <i class="fa fa-user"></i> <span class="text-uppercase">POSTED BY:</span> <%= @company.name_en %></li>
                               <li> <i class="fa fa-calendar"></i>
@@ -38,7 +42,11 @@
                            </ul>
                         </header>
                         <div class="post-content">
-                           <p class="post-desc"><%= truncate(strip_tags(item.content_en), length: 250) %></p>
+                           <% if !item.content_en.present? %>
+                              <p class="post-desc"><%= truncate(strip_tags(item.content_vn), length: 250) %></p>
+                           <% else %>
+                              <p class="post-desc"><%= truncate(strip_tags(item.content_en), length: 250) %></p>
+                           <% end %> 
                            <%= link_to "Read more", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
                         </div>
                      </article>
