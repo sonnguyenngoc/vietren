@@ -14,12 +14,12 @@
          <!-- /Top Bar Left -->
          <!-- Top Bar Left -->
          <div class="above-nav-bar col-xs-4 text-right">
-           <ul class="social social-transparent-border">
-               <li><a href="https://www.facebook.com/vietren02032009/" target="_blank" class="hover-facebook"><i class="fa fa-facebook color-facebook"></i></a></li>
-               <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank" class="hover-google-plus"><i class="fa fa-google-plus color-google-plus"></i></a></li>
-               <li><a href="https://www.pinterest.com/vietren999999/" target="_blank" class="hover-pinterest"><i class="fa fa-pinterest color-pinterest"></i></a></li>
-               <li><a href="https://www.youtube.com/channel/UCcVOqTLu33lURWPwBWLCZIg" target="_blank" class="hover-youtube"><i class="fa fa-youtube color-youtube" target="_blank"></i></a></li>
-           </ul>
+            <ul class="social social-transparent-border">
+               <li><a href="https://www.facebook.com/vietren02032009/" target="_blank" style="background: #3f4da1;"><i class="fa fa-facebook color-facebook"></i></a></li>
+               <li><a href="https://plus.google.com/u/0/118217641743102960494?hl=vi" target="_blank" style="background: #dd4b38;"><i class="fa fa-google-plus color-google-plus"></i></a></li>
+               <li><a href="https://www.pinterest.com/vietren999999/" target="_blank" style="background: #dd4b38;"><i class="fa fa-pinterest-p color-pinterest"></i></a></li>
+               <li><a href="https://www.youtube.com/channel/UCcVOqTLu33lURWPwBWLCZIg" target="_blank" style="background: #dd4b38;"><i class="fa fa-youtube-play color-youtube" target="_blank"></i></a></li>
+            </ul>
         </div>
          <!-- /Top Bar Left -->
       </div>
@@ -95,10 +95,10 @@
          <div class="row">
             <div class="col-md-12">
                <h2 class="title"><%= t(:lastest_news) %></h2>
-               <div class="owl-nav text-right"> <span class="owlprev"><i class="fa fa-angle-left"></i></span> <span class="owlnext"><i class="fa fa-angle-right"></i></span> </div>
+               <div class="owl-nav text-right"> <span class="owlprev"><i class="fa fa-angle-double-left"></i></span> <span class="owlnext"><i class="fa fa-angle-double-right"></i></span> </div>
             </div>
          </div>
-         <div class="owl-carousel">
+         <div class="owl-carousel col-md-10">
             <% if params[:locale] == "en" %>
                <% @news.each do |item| %>
                   <article class="post">
