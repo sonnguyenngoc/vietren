@@ -159,3 +159,50 @@ ul.pagination {
     ul.pagination > li.active > span {
       background-color: #fab702;
       color: #fff; }
+.btn {
+    background-color: #138dff;
+}
+.post-meta i {
+    color: #138dff;
+}
+.icon-media {
+    color: #138dff;
+}
+a {
+    color: #138dff;
+}
+.btn.btn-gradient:hover,
+.btn.btn-gradient:focus {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), transparent 18px), #fab702;
+}
+.important {
+    color: #138dff !important;
+}
+.btn.btn-gradient {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), transparent 18px), #138dff;
+    color: #fff;
+}
+.bg-primary {
+    background-color: #138dff !important;
+}
+table.table > tbody.bg-primary tr, table.table > tbody tr.bg-primary, table.table > thead.bg-primary tr, table.table > thead tr.bg-primary, table.table > tfoot.bg-primary tr, table.table > tfoot tr.bg-primary {
+    background: #138dff;
+}
+::selection {
+    background-color: #138dff !important;
+}
+ul.pagination > li.active > span {
+    background-color: #138dff;
+}
+.info-table-icon {
+    color: #138dff !important;
+}
+.owl-nav > span {
+    color: #138dff !important;
+}
+.title:after {
+    background-color: #138dff !important;
+}
+.site-footer .widget-title:after {
+    background-color: #138dff !important;
+}
