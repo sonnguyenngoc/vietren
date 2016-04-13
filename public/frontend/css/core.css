@@ -138,7 +138,7 @@ header.classic {
         width: 100%; }
         nav.site-navigation ul li > ul.sub-menu a:hover {
           color: #fff;
-          background: #fab702; }
+          background: #009cd7; }
       nav.site-navigation ul li > ul.sub-menu li {
         width: 100%; }
       nav.site-navigation ul li > ul.sub-menu li:not(:last-child) {
@@ -170,9 +170,9 @@ header.classic {
     header.site-header.classic nav.site-navigation .main-menu ul li a:hover, header.site-header.classic nav.site-navigation .main-menu ul li a:focus {
       color: #fff; }
     header.site-header.classic .site-navigation .mobile-wrap > ul > li > a {
-      color: #000000; }
+      color: #ffffff; }
       header.site-header.classic .site-navigation .mobile-wrap > ul > li > a:hover, header.site-header.classic .site-navigation .mobile-wrap > ul > li > a:focus {
-        color: #fab702; }
+        color: #000000; }
     header.site-header.classic .main-menu {
       margin: 5px 0; }
     header.site-header.classic nav.site-navigation ul.main-menu > li > a {
