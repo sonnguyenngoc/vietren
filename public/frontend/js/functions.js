@@ -100,7 +100,7 @@ jQuery(function($) {
 
 	var owl = $('.recent-news .owl-carousel');
     $(owl).owlCarousel({ 
-        loop: true,
+        loop: false,
         margin: 30,
         responsiveClass: true,
         responsive: {
