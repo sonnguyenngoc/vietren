@@ -1,0 +1,18 @@
+.recent-news .owl-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+.owl-nav > span {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    background: #fff;
+    z-index: 100;
+    opacity: 0.8;
+}
+.owl-nav > span.owlnext {
+    left: auto;
+    right: 10px;
+}
