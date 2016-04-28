@@ -206,3 +206,27 @@ ul.pagination > li.active > span {
 .site-footer .widget-title:after {
     background-color: #138dff !important;
 }
+/*.table-organization table td.table {
+    width: 0%;
+    padding: 5px;
+    padding-bottom: 0px;
+}
+.table-organization table td p {
+    margin: 3px 0 3px;
+}
+.table-organization table td.table1 {
+    width: 6%;
+    padding: 5px;
+}*/
+.post-single table td {
+    width: 0%;
+    padding: 5px;
+    padding-bottom: 0px;
+    font-size: 12px;
+}
+.post-single table td p {
+    margin: 3px 0 3px;
+}
+.post-single table td p span, .post-single table td p strong {
+    font-size: 13px;
+}
