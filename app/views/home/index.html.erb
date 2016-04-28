@@ -116,7 +116,7 @@
                      </ul>
                      <div class="post-content">
                         <p class="post-desc"><%= truncate(strip_tags(item.content_en), length: 150) %></p>
-                        <%= link_to "Đọc tiếp", { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
+                        <%= link_to t(:read_more), { controller: "news_single", action: "index", news_id: item.id }, class: "btn btn-md btn-gradient btn-shadow" %>
                      </div>
                   </article>
                <% end %>

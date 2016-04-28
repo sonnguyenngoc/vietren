@@ -75,6 +75,7 @@ en:
   gold_type: "Type"
   gold_buy: "Buy"
   gold_sell: "Sell"
+  read_more: "Read More"
   contact_name : "Name (Require)"
   contact_email: "Email (Require)"
   contact_subject: "Subject (Require)"
